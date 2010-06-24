@@ -83,7 +83,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/soundback.apk:system/app/soundback.apk \
 	$(LOCAL_PATH)/proprietary/MarketUpdater.apk:system/app/MarketUpdater.apk \
 	$(LOCAL_PATH)/proprietary/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
-	$(LOCAL_PATH)/proprietary/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
 	$(LOCAL_PATH)/proprietary/SholesQuickOffice.apk:system/app/SholesQuickOffice.apk \
 	$(LOCAL_PATH)/proprietary/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
 	$(LOCAL_PATH)/proprietary/VVMStub.apk:system/app/VVMStub.apk \
@@ -106,6 +105,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
 	$(LOCAL_PATH)/proprietary/YouTube.apk:system/app/YouTube.apk
 ####################
+#	$(LOCAL_PATH)/proprietary/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
 #	$(LOCAL_PATH)/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
 #	$(LOCAL_PATH)/proprietary/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
 #	$(LOCAL_PATH)/proprietary/Maps.apk:system/app/Maps.apk \
@@ -159,7 +159,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/media_profiles.xml:system/etc/media_profiles.xml \
 	$(LOCAL_PATH)/proprietary/cameraCalFileDef.bin:system/etc/cameraCalFileDef.bin \
 	$(LOCAL_PATH)/proprietary/excluded-input-devices.xml:system/etc/excluded-input-devices.xml \
-	$(LOCAL_PATH)/proprietary/init.goldfish.sh:system/etc/init.goldfish.sh \
 	$(LOCAL_PATH)/proprietary/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
 	$(LOCAL_PATH)/proprietary/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
 	$(LOCAL_PATH)/proprietary/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
