@@ -71,3 +71,10 @@ LOCAL_SRC_FILES := proprietary/$(LOCAL_MODULE)
 OVERRIDE_BUILT_MODULE_PATH := $(TARGET_OUT_INTERMEDIATE_LIBRARIES)
 include $(BUILD_PREBUILT)
 
+file := $(TARGET_OUT)/usr/keychars/qtouch-touchscreen.kcm.bin
+ALL_PREBUILT += $(file)
+$(file) : $(TARGET_OUT)/usr/keychars/qwerty.kcm.bin
+	@echo "Symlink: $@ -> qwerty.kcm.bin"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf qwerty.kcm.bin $@
