@@ -20,7 +20,6 @@ PRODUCT_PACKAGES += \
     Launcher2 \
     Mms \
     Music \
-    Provision \
     Protips \
     QuickSearchBox \
     Settings \
@@ -29,4 +28,5 @@ PRODUCT_PACKAGES += \
     CalendarProvider \
     SyncProvider
 # The below were removed from the list above
+#    Provision \
 #    LatinIME \

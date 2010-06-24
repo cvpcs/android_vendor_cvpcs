@@ -1,5 +1,7 @@
 0.6.0:
     Updated to AOSP source for Froyo [cvpcs]
+        this update was hell in and of itself to get going, so lots of thanks to
+        Sniffle and Koush, as well as support from anyone else! :D
 
 0.5.2:
     Modified SpareParts [cvpcs]
