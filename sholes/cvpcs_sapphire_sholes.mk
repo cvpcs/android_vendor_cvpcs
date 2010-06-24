@@ -210,13 +210,11 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
 	$(LOCAL_PATH)/proprietary/VoiceSearch.apk:system/app/VoiceSearch.apk \
 	$(LOCAL_PATH)/proprietary/LatinImeTutorial.apk:system/app/LatinImeTutorial.apk \
-	$(LOCAL_PATH)/proprietary/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \
 	$(LOCAL_PATH)/proprietary/MediaUploader.apk:system/app/MediaUploader.apk \
 	$(LOCAL_PATH)/proprietary/soundback.apk:system/app/soundback.apk \
 	$(LOCAL_PATH)/proprietary/MarketUpdater.apk:system/app/MarketUpdater.apk \
 	$(LOCAL_PATH)/proprietary/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
 	$(LOCAL_PATH)/proprietary/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
-	$(LOCAL_PATH)/proprietary/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
 	$(LOCAL_PATH)/proprietary/SholesQuickOffice.apk:system/app/SholesQuickOffice.apk \
 	$(LOCAL_PATH)/proprietary/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
 	$(LOCAL_PATH)/proprietary/VVMStub.apk:system/app/VVMStub.apk \
@@ -237,9 +235,11 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/NetworkLocation.apk:system/app/NetworkLocation.apk \
 	$(LOCAL_PATH)/proprietary/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
 	$(LOCAL_PATH)/proprietary/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
+	$(LOCAL_PATH)/proprietary/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \
+	$(LOCAL_PATH)/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
+	$(LOCAL_PATH)/proprietary/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
 	$(LOCAL_PATH)/proprietary/YouTube.apk:system/app/YouTube.apk
 ####################
-#	$(LOCAL_PATH)/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
 #	$(LOCAL_PATH)/proprietary/Maps.apk:system/app/Maps.apk \
 #	$(LOCAL_PATH)/proprietary/GoogleGoggles.apk:system/app/GoogleGoggles.apk \
 #	$(LOCAL_PATH)/proprietary/Twitter.apk:system/app/Twitter.apk \
