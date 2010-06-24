@@ -1,0 +1,45 @@
+#!/system/bin/sh
+#
+# Sapphire ROM Startup Script
+# Start up vixie-cron task scheduler
+#
+# Copyright (C) 2010 Austen Dicken (cvpcs)
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+LOG="log -p i -t cvpcs"
+CRONDIR="/data/cron"
+SYSTAB="systab"
+CRON=$(busybox which cron)
+
+# make sure we have a cron to run
+if [ ! -z "${CRON}" -a -x "${CRON}" ] ; then
+
+	#
+	# Ensure that the crondir exists.  Otherwise cron can't start
+	#
+	if [ -d "${CRONDIR}" ] ; then
+		# make our directory (we don't want stuff to break)
+		busybox mkdir "${CRONDIR}"
+	fi
+
+	#
+	# Only start cron if the systab exists, otherwise cron will run,
+	# eating up battery life, without actually doing anything
+	#
+	if [ -e "${CRONDIR}/${SYSTAB}" ] ; then
+		${CRON}
+	fi
+fi

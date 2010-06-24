@@ -1,0 +1,97 @@
+#!/bin/bash
+#
+# Theme APK
+# Themes and existing APK using an overlay
+#
+# Copyright (C) <year> Austen Dicken (cvpcs)
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+
+# script to optimize APK files (and rezip/sign for our purpose)
+OPTIAPK="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/optiapk"
+if [ ! -x "${OPTIAPK}" ] ; then
+    echo "Could not find optiapk."
+    exit 1
+fi
+
+# make sure we have enough options set
+if [ $# != 2 -a $# != 3 ] ; then
+    echo "Usage: ${0} apkfile overlaydir [certkeyname]"
+    exit 1
+fi
+
+# our APK
+APKFILE="${1}"
+if [ ! -f "${APKFILE}" ] ; then
+    echo "Could not find APK file: [${APKFILE}]"
+    exit 1
+fi
+
+# the apk name
+APKNAME=$(basename "${APKFILE}")
+
+# our overlay
+OVERLAY="${2}"
+if [ ! -d "${OVERLAY}" ] ; then
+    echo "Could not find overlay: [${OVERLAY}]"
+    exit 1
+fi
+
+# create our work directory
+WORK="/tmp/${APKNAME}.work"
+rm -fr "${WORK}"
+mkdir -p "${WORK}"
+
+echo "Themeing APK: [${APKFILE}]"
+
+# unzip our apk
+unzip "${APKFILE}" -d "${WORK}"
+
+# copy all of the files from the overlay into the apk
+for file in $(find "${OVERLAY}") ; do
+    filename=$(basename "${file}")
+    sedcmd=$(echo "${OVERLAY}" | sed -r 's/\//\\\//g')
+    filedir=$(dirname "${file}" | sed -r "s/^${sedcmd}//")
+
+    echo "Found file: [${file}]"
+
+    if [ "${filename}" != "${filedir}" ] ; then
+        if [ -d "${file}" ] ; then
+            echo "Creating directory: [${filedir}/${filename}]"
+            mkdir -p "${WORK}/${filedir}/${filename}"
+        else
+            echo "Copying file: [${filedir}/${filename}]"
+            cp "${file}" "${WORK}/${filedir}/${filename}"
+        fi
+    fi
+done
+
+# time for zipping!
+olddir="$(pwd)"
+cd "${WORK}"
+zip -r "${APKNAME}" .
+cd "${olddir}"
+
+# copy the new apk back to the original location
+mv "${APKFILE}" "${APKFILE}.bak"
+cp "${WORK}/${APKNAME}" "${APKFILE}"
+
+# tell optiapk to repackage it again for us
+if [ ! -z "$3" ] ; then
+    "${OPTIAPK}" "${APKFILE}" "$3"
+else
+    "${OPTIAPK}" "${APKFILE}"
+fi

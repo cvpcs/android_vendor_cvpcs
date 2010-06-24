@@ -1,0 +1,136 @@
+#!/bin/bash
+#
+# OptiOTA
+# Optimizes an OTA (update.zip) package for release
+#
+# Copyright (C) 2010 Austen Dicken (cvpcs)
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+# NOTE: A lot of this is borrowed from Cyanogen's SQUISHER and OPTICHARGER
+#       scripts, without which I would not have been able to figure out how
+#       to elegently perform these updates
+
+# set our out target host location
+OUT_TARGET_HOST=$(uname -a | grep "Darwin")
+if [ -z "${OUT_TARGET_HOST}" ] ; then
+    OUT_TARGET_HOST="linux-x86"
+    MD5="md5sum"
+else
+    OUT_TARGET_HOST="darwin-x86"
+    MD5="md5"
+fi
+
+# verify that we have an otapackage to update, if one wasn't provided
+OTAPACKAGE="${OUT}/${TARGET_PRODUCT}-ota-${TARGET_BUILD_VARIANT}.${LOGNAME}.zip"
+if [ ! -z "${1}" ] ; then
+    OTAPACKAGE="${1}"
+fi
+if [ ! -f "${OTAPACKAGE}" ]; then
+    echo "${OTAPACKAGE} doesn't exist!";
+    exit 1
+fi
+echo "OTA Package: [${OTAPACKAGE}]"
+
+# determine where we will save the output file
+RELEASEPACKAGE=$(echo ${OTAPACKAGE} | sed -r 's/(\.[^.]+)$/.optiota\1/')
+# make sure we don't overwrite if there was no valid extension to apply
+if [ "${OTAPACKAGE}" == "${RELEASEPACKAGE}" ] ; then
+	RELEASEPACKAGE="${RELEASEPACKAGE}.optiota"
+fi
+echo "Release Package: [${RELEASEPACKAGE}]"
+
+# script to optimize APK files
+OPTIAPK="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/optiapk"
+
+# list of binaries to remove (unneeded by a ROM)
+DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
+
+# create our working directory
+WORK="/tmp/$(basename ${OTAPACKAGE}).work"
+rm -fr "${WORK}"
+mkdir -p "${WORK}"
+echo "Created work directory: [${WORK}]"
+
+# unpack
+unzip "${OTAPACKAGE}" -d "${WORK}"
+
+# optiapk all APK files within the OTA
+for apk in $(find "${WORK}/system" -name '*.apk') ; do
+    echo "Performing optiapk: [${apk}]"
+    # optiapk without a backup
+    "${OPTIAPK}" "${apk}"
+done
+
+# delete all unnecessary binaries from the bin folder
+for bin in "${DELETE_BINS}" ; do
+    echo "Removing binary: [${WORK}/system/bin/${bin}]"
+    rm -f "${WORK}/system/bin/${bin}"
+done
+
+# only mess with build.prop if it exists
+if [ -f "${WORK}/system/build.prop" ] ; then
+    # grab the modversion from the build.prop
+    MODVERSION=$(grep "ro.modversion" "${WORK}/system/build.prop" \
+        | sed -e "s/^.*=//g")
+    echo "Found modversion: [${MODVERSION}]"
+
+    # modify build prop to our liking
+    echo "Modifying build.prop: [${WORK}/system/build.prop]"
+    grep -v "ro.kernel.android.checkjni" "${WORK}/system/build.prop" \
+        | sed -e "s/^ro\.build\.type=eng$/ro\.build\.type=user/g" \
+        > "${WORK}/system/build.prop.tmp"
+    mv "${WORK}/system/build.prop.tmp" "${WORK}/system/build.prop"
+fi
+
+# just to be extra extra safe, we'll make sure recovery isn't there
+rm -fr "${WORK}/recovery"
+echo "Removed recovery: [${WORK}/recovery]"
+
+# if we don't have a modversion, don't bother with a header for the script
+if [ ! -z "${MODVERSION}" ] ; then
+    # place a header at the top of the updater script
+    echo "Adding header to updater-script..."
+    cp "${WORK}/META-INF/com/google/android/updater-script" \
+        "${WORK}/META-INF/com/google/android/updater-script.tmp"
+    echo "ui_print(\"Welcome to ${MODVERSION}!\");" \
+        > "${WORK}/META-INF/com/google/android/updater-script"
+    cat "${WORK}/META-INF/com/google/android/updater-script.tmp" \
+        >> "${WORK}/META-INF/com/google/android/updater-script"
+    rm "${WORK}/META-INF/com/google/android/updater-script.tmp"
+fi
+
+# time for zipping!
+olddir="$(pwd)"
+cd "${WORK}"
+zip -r update.zip .
+cd "${olddir}"
+
+# time for signing!
+echo "Signing: [${WORK}/update-signed.zip]"
+java -Xmx2048m \
+    -jar "${ANDROID_BUILD_TOP}/out/host/${OUT_TARGET_HOST}/framework/signapk.jar" \
+    -w "${ANDROID_BUILD_TOP}/build/target/product/security/testkey.x509.pem" \
+    "${ANDROID_BUILD_TOP}/build/target/product/security/testkey.pk8" \
+    "${WORK}/update.zip" "${WORK}/update-signed.zip"
+
+# time for release!
+mv "${WORK}/update-signed.zip" "${RELEASEPACKAGE}"
+"${MD5}" "${RELEASEPACKAGE}" \
+    > "${RELEASEPACKAGE}.md5sum"
+MD5SUM=$(cat "${RELEASEPACKAGE}.md5sum" | awk '{print $1}')
+
+echo "Released: [${RELEASEPACKAGE}]"
+echo "MD5: [${MD5SUM}]"

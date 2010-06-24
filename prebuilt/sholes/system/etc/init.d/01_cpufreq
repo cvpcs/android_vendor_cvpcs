@@ -1,0 +1,48 @@
+#!/system/bin/sh
+#
+# Sapphire ROM Startup Script
+# Begin CPU frequency scaling for those kernels that support it
+#
+# Copyright (C) 2010 Austen Dicken (cvpcs)
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+LOG="log -p i -t cvpcs"
+CPUFREQ="/sys/devices/system/cpu/cpu0/cpufreq"
+
+# is our directory here?
+if busybox [ -d "${CPUFREQ}" ] ; then
+	# ensure all of the files are there
+	if busybox [ -e "${CPUFREQ}/scaling_governor" \
+			-a -e "${CPUFREQ}/scaling_available_governors" \
+			-a ! -z "$(busybox grep ondemand ${CPUFREQ}/scaling_available_governors)" \
+			-a -e "${CPUFREQ}/scaling_governor" \
+			-a -e "${CPUFREQ}/cpuinfo_max_freq" \
+			-a -e "${CPUFREQ}/scaling_max_freq" \
+			-a -e "${CPUFREQ}/cpuinfo_min_freq" \
+			-a -e "${CPUFREQ}/scaling_min_freq" \
+			-a -d "${CPUFREQ}/ondemand" \
+			-a -e "${CPUFREQ}/ondemand/up_threshold" \
+			-a -e "${CPUFREQ}/ondemand/sampling_rate" ] ; then
+
+		${LOG} "enabling cpu frequency scaling"
+
+		busybox echo "ondemand" > "${CPUFREQ}/scaling_governor"
+		busybox cat "${CPUFREQ}/cpuinfo_max_freq" > "${CPUFREQ}/scaling_max_freq"
+		busybox cat "${CPUFREQ}/cpuinfo_min_freq" > "${CPUFREQ}/scaling_min_freq"
+		busybox echo "50" > "${CPUFREQ}/ondemand/up_threshold"
+		busybox echo "32000" > "${CPUFREQ}/ondemand/sampling_rate"
+	fi
+fi

@@ -1,0 +1,147 @@
+#!/bin/bash
+#
+# Theme OTA
+# Given a theme OTA, it will unzip and re-theme every apk in it.
+#
+# Copyright (C) <year> Austen Dicken (cvpcs)
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+
+# apk certificates file
+if [ -z "${APKCERTS}" ] ; then
+    APKCERTS="${OUT}/obj/PACKAGING/target_files_intermediates/${TARGET_PRODUCT}-target_files-${TARGET_BUILD_VARIANT}.${LOGNAME}/META/apkcerts.txt"
+fi
+if [ ! -f "${APKCERTS}" ] ; then
+    echo "Set APKCERTS to the path to your apkcerts.txt file"
+    exit 1
+fi
+
+# script to optimize APK files (and rezip/sign for our purpose)
+THEMEAPK="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/themeapk"
+if [ ! -x "${THEMEAPK}" ] ; then
+    echo "Could not find themeapk."
+    exit 1
+fi
+
+# script to optimize APK files (and rezip/sign for our purpose)
+OPTIOTA="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/optiota"
+if [ ! -x "${OPTIOTA}" ] ; then
+    echo "Could not find optiota."
+    exit 1
+fi
+
+# make sure we have enough options set
+if [ $# != 2 ] ; then
+    echo "Usage: ${0} themeotafile origotafile"
+    exit 1
+fi
+
+# our OTA files
+THEMEOTA="${1}"
+ORIGIOTA="${2}"
+
+echo "Theme OTA File: [${THEMEOTA}]"
+echo "Original OTA File: [${ORIGIOTA}]"
+
+# make our work directory
+echo "Creating work directories ..."
+WORK="/tmp/${THEMEOTA}.work"
+rm -fr "${WORK}"
+mkdir -p "${WORK}"
+
+# our work directories
+TWORK="${WORK}/theme";
+OWORK="${WORK}/origi";
+
+# our new directory
+NWORK="${WORK}/new";
+mkdir -p "${NWORK}";
+
+# unpack our ota files
+echo "Unzipping Theme OTA ..."
+unzip "${THEMEOTA}" -d "${TWORK}" > /dev/null
+echo "Unzipping Original OTA ..."
+unzip "${ORIGIOTA}" -d "${OWORK}" > /dev/null
+
+# begin our transfer
+
+# transfer all files that are NOT apk files
+echo "Transferring files ..."
+for i in $(find "${TWORK}") ; do
+    sedcmd=$(echo "${TWORK}" | sed -r 's/\//\\\//g')
+    path=$(echo "${i}" | sed -r "s/^${sedcmd}(.*)$/\1/")
+    file=$(basename "${i}")
+    ext=$(echo "${file}" | sed -r 's/^([^.]*\.)*([^.]*)$/\2/')
+
+    # make sure we have a valid file
+    if [ ! -z "${path}" ] ; then
+        echo "  Found file: [${path}]"
+        # apk?
+        if [ "${ext}" == "apk" ] ; then
+            # extract the theme apk
+            echo "    Unzipping APK ..."
+            unzip "${i}" -d "${i}.dir" > /dev/null
+
+            # wipe non-pngs from the overlay
+            echo "    Wiping non-image contents ..."
+            find "${i}.dir" ! -name '*.png' -delete
+
+            # remove the theme apk
+            echo "    Replacing theme APK ..."
+            rm "${i}"
+
+            # copy the file from our original ota
+            cp "${OWORK}/${path}" "${i}"
+
+            # themeapk!
+            echo "    Running THEMEAPK ..."
+            apkinfo=$(grep "${file}" "${APKCERTS}")
+            if [ -z "${apkinfo}" ] ; then
+                "${THEMEAPK}" "${i}" "${i}.dir" testkey
+            else
+                "${THEMEAPK}" "${i}" "${i}.dir"
+            fi
+
+            # now copy the result
+            echo "    Copying result ..."
+            cp "${i}" "${NWORK}/${path}"
+        else
+            # no apk, straight copy
+            echo "    Copying file ..."
+            if [ -d "${i}" ] ; then
+                mkdir -p "${NWORK}/${path}"
+            else
+                cp "${i}" "${NWORK}/${path}"
+            fi
+        fi
+    fi
+done
+
+# repackage the new zip
+echo "Repackaging new OTA ..."
+olddir=$(pwd)
+cd "${NWORK}"
+zip -r update.zip .
+cd "${olddir}"
+
+# copy this new zip over
+echo "Copying result to original location ..."
+mv "${THEMEOTA}" "${THEMEOTA}.bak"
+cp "${NWORK}/update.zip" "${THEMEOTA}"
+
+# and finally, we optiota the whole damn thing
+echo "Running OPTIOTA on the result ..."
+"${OPTIOTA}" "${THEMEOTA}"

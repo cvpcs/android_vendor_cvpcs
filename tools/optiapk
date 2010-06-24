@@ -1,0 +1,188 @@
+#!/bin/bash
+#
+# OPTIAPK
+# Optimizes an APK file for release
+#
+# Copyright (C) <year> Austen Dicken (cvpcs)
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+# NOTE: A lot of this is borrowed from Cyanogen's OPTICHARGER script, without
+#       which I would not have been able to figure out how to elegently perform
+#       these updates
+
+# determine our host
+OUT_TARGET_HOST=$(uname -a | grep "Darwin")
+if [ -z "${OUT_TARGET_HOST}" ] ; then
+    OUT_TARGET_HOST="linux-x86"
+else
+    OUT_TARGET_HOST="darwin-x86"
+fi
+
+# attempt to find an APK certificates file
+if [ -z "${APKCERTS}" ] ; then
+    APKCERTS="${OUT}/obj/PACKAGING/target_files_intermediates/${TARGET_PRODUCT}-target_files-${TARGET_BUILD_VARIANT}.${LOGNAME}/META/apkcerts.txt"
+fi
+if [ ! -f "${APKCERTS}" ] ; then
+    echo "Set APKCERTS to the path to your apkcerts.txt file"
+    exit 1
+fi
+
+# make sure we have optipng (for PNG optimizing)
+OPTIPNG=$(which "optipng")
+if [ ! -x "${OPTIPNG}" ] ; then
+    echo "Please install optipng"
+    exit 1
+fi
+
+# make sure we can find aapt
+AAPT=$(which "aapt")
+if [ ! -x "${AAPT}" ] ; then
+    echo "Please ensure aapt is in your \$PATH"
+    exit 1
+fi
+
+# make sure we can find zipalign
+ZIPALIGN=$(which "zipalign")
+if [ ! -x "${ZIPALIGN}" ] ; then
+    echo "Please ensure zipalign is in your \$PATH"
+    exit 1
+fi
+
+# set our inputs
+APKFILE="${1}"
+BACKUPCERTNAME="${2}"
+
+# make sure they provided an apkfile
+if [ -z "${APKFILE}" ] ; then
+    echo "Usage: ${0} apkfile [backupcertname]"
+    echo
+    echo "NOTE: If [backupcertname] is provided (typically \"testkey\"), then"
+    echo "      ${0} will use it if it cannot find a value in the APKCERTS"
+    echo "      file"
+    exit 1
+fi
+
+# make sure apkfile exists
+if [ ! -f "${APKFILE}" ] ; then
+    echo "Could not find apkfile: [${APKFILE}]"
+    exit 1
+fi
+
+# set some more useful variables
+APKNAME=$(basename "${APKFILE}")
+echo "Optimizing apk file: [${APKFILE}]"
+
+# check if we have a backup cert
+if [ ! -z "${BACKUPCERTNAME}" ] ; then
+    BACKUPCERT="${ANDROID_BUILD_TOP}/build/target/product/security/${BACKUPCERTNAME}.x509.pem"
+    BACKUPKEY="${ANDROID_BUILD_TOP}/build/target/product/security/${BACKUPCERTNAME}.pk8"
+
+    if [ ! -f "${BACKUPCERT}" ] ; then
+        echo "Could not find backup cert: [${BACKUPCERT}]"
+        exit 1
+    fi
+    if [ ! -f "${BACKUPKEY}" ] ; then
+        echo "Could not find backup key: [${BACKUPKEY}]"
+        exit 1
+    fi
+fi
+
+# determine our line from apkinfo
+APKINFO=$(grep "name=\"${APKNAME}\"" "${APKCERTS}");
+echo "Apkinfo: [${APKINFO}]";
+
+# check if we have a cert defined
+if [ -z "${APKINFO}" ];then
+    # no cert defined, so do we have a backup?
+    if [ ! -z "${BACKUPCERTNAME}" ] ; then
+        # yes we do! use it!
+        CERT="${BACKUPCERT}"
+        KEY="${BACKUPKEY}"
+    else
+        # no we don't FAIL
+        echo "No APKINFO and no BACKUPCERT, exiting"
+        exit 1
+    fi
+else
+    # cert defined, so grab it
+    CERT=$(echo "${APKINFO}" | awk '{print $2}' | cut -f 2 -d "=" | tr -d "\"")
+    CERT="${ANDROID_BUILD_TOP}/${CERT}"
+    KEY=$(echo "${APKINFO}" | awk '{print $3}' | cut -f 2 -d "=" | tr -d "\"")
+    KEY="${ANDROID_BUILD_TOP}/${KEY}"
+fi
+
+# ensure we have some keys
+if [ ! -f "${CERT}" ] ; then
+    echo "Could not find cert: [${CERT}]"
+    exit 1
+fi
+if [ ! -f "${KEY}" ] ; then
+    echo "Could not find key: [${KEY}]"
+    exit 1
+fi
+echo "Certificate: [${CERT}]"
+echo "Key: [${KEY}]"
+
+# set up our work directory
+WORK="/tmp/${APKNAME}.work"
+rm -fr "${WORK}"
+mkdir -p "${WORK}"
+
+# unzip our apk
+unzip "${APKFILE}" -d "${WORK}"
+
+# now the real magick happens!
+# find all pngs that are NOT .9.png, and optipng them!
+for png in $(find "${WORK}" -name '*.png' | grep -v "\.9.png$" | tr "\n" " ") ; do
+    # optipng the image
+    echo "Optipng: [${png}]"
+    "${OPTIPNG}" -zc1-9 -zm1-9 -zs0-3 -f0-5 \
+        -out "${png}.tmp" -preserve "${png}" \
+        > /dev/null
+
+    # if success, replace the original
+    if [ -e "${png}.tmp" ] ; then
+        mv "${png}.tmp" "${png}"
+    fi
+done
+
+# save the old file for now
+cp "${APKFILE}" "${APKFILE}.old"
+
+# repackage our APK
+echo "Repacking apk: [${APKFILE}.new]"
+"${AAPT}" p -0 res/raw -0 res/raw-en -F "${APKFILE}.new" "${WORK}"
+
+# resign
+echo "Resigning apk: [${APKFILE}.signed]"
+java \
+    -jar "${ANDROID_BUILD_TOP}/out/host/${OUT_TARGET_HOST}/framework/signapk.jar" \
+    "${CERT}" "${KEY}" \
+    "${APKFILE}.new" "${APKFILE}.signed"
+
+# zipalign
+echo "Zipaligning apk: [${APKFILE}]"
+"${ZIPALIGN}" -f 4 "${APKFILE}.signed" "${APKFILE}"
+
+# display difference in sizes
+ls -l "${APKFILE}.old"
+ls -l "${APKFILE}"
+
+# clean up some extra crap
+rm "${APKFILE}.old"
+rm "${APKFILE}.new"
+rm "${APKFILE}.signed"
+

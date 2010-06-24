@@ -1,0 +1,255 @@
+0.6.0:
+    Updated to AOSP source for Froyo [cvpcs]
+
+0.5.2:
+    Modified SpareParts [cvpcs]
+        added ability to customize text colors for download notifications
+
+    Fixed MMS [cvpcs]
+        provided proper carrier file (credit to cyanogen for the file itself) to
+        properly connect to verizon
+
+0.5.1:
+    Added Color Picker in Spare Parts [cvpcs (modifications)]
+                                      [cyanogen (base work and commit)]
+        provides a method to set the various text colors in the notifcation and
+        status bars
+
+    Modified scriptybox [cvpcs]
+        added commands:
+            help (must invoke as "scriptybox help")
+                provides an easy way to get information about the various commands
+                included in scriptybox, without actually running those commands
+        modified commands:
+            {all}
+                all commands were updated so that if you run them as:
+                  [command] --help
+                they will be guaranteed to print out their usage information
+
+    Added command line knock executable [cvpcs]
+        provides low-level port knocking functionality without the need for an app
+
+    Other tweaks:
+        optipng'ed the entire system [cvpcs (redone with optipng)]
+                                     [cyanogen/koush (base optimizer scripts)]
+
+0.5.0:
+    Modified scriptybox [cvpcs]
+        modified commands:
+            mtdinfo
+                added code to ensure that the proper functions actually get called
+            rmapk
+                added code to remove IM
+
+    Other tweaks:
+	added new Sapphire brand bootanimation [cvpcs]
+
+0.4.6:
+    Added native IM app [pete? (found in one of pete's forums)]
+        app to connect to MSN, Yahoo!, and AOL messenger, originally natively included
+          with android.
+
+    Modified scriptybox [cvpcs]
+	added commands:
+            mtdinfo
+                displays information about all of the internal system partitions
+
+    Other tweaks:
+        changed default kernel to STOCK (no overclock) [cvpcs]
+        added basic support for ROMManager [cvpcs]
+
+0.4.5:
+    Modified scriptybox
+        fixed sysro syncing issues [pete]
+
+0.4.4:
+    Modified scriptybox [cvpcs]
+	finished changing scriptybox to be bash-based
+        fixed a minor typo in the script
+	fixed a problem with switchapk not getting the system to recognize the change
+
+    Other features:
+        added regular "Reboot" option [cvpcs]
+        moved "Reboot into Recovery" under "Reboot" option [cvpcs]
+
+    Other tweaks:
+        re-added unknown terminfo file [cvpcs]
+
+0.4.3:
+    Modified scriptybox [cvpcs]
+        switched over to the new bash shell to make scripts more sleek and managable
+
+0.4.2:
+    Added nano text editor [cvpcs]
+        provides a simple text editor for use in modifying text files from
+          the command line
+        provides basic syntax highlighting to common source files such as:
+          asm, c, css, html, java, perl, php, sh, xml, and more
+
+    Added Bourne Again SHell (bash) [cvpcs]
+        provides a bash shell with much more feature support than the native
+          system shell
+        is dynamically linked to reduce size, as opposed to other roms which
+          use a statically linked bash shell
+        provides basic color highlighting features
+        set as default shell
+
+    Modified compcache [cvpcs]
+        fixed a bug where the ramzswap module would not unload on stop
+
+    Modified scriptybox [cvpcs]
+        fixed a bug where scriptybox wouldn't mount the system read-only on some occassions
+
+    Other features:
+        added native FLAC support [kruton]
+        added "Reboot into recovery" option to power dialog [cvpcs]
+
+    Other tweaks:
+        moved wminput from /system/bin to /system/xbin [cvpcs]
+
+0.4.1:
+    Modified scriptybox [cvpcs]
+        fixed several typos
+	fixed bug in switchapk command
+        changed internal structure
+
+0.4:
+    Switched to default android-omap-2.6.29-bekit_sapphire kernel [cvpcs]
+                                                                  [bekit (base)]
+        provides overclocking of 250-1000mhz at low-voltage, is patched for
+        compcache support, and also includes the following modules:
+            cifs, ext2, ext3, ext4, fuse, isofs, jfs, nfsd, nfs, ntfs,
+            ramzswap, reiserfs, squashfs, tiwlan_drv, xfs
+        also supports wired and wireless tether
+
+    Replaced stock Launcher2 [sniffle]
+        provides more columns in the app drawer
+        based off helix launcher2
+
+    Added vixie-cron task scheduler [cvpcs]
+        ported the vixie-cron (cron) task scheduler to android.  this allows for
+        system-level processes to be run periodically whenever the phone is on.
+        search google for "cron" to learn more about how this works.  system
+        cron tab should be placed at /data/cron/systab.
+
+    Modified scriptybox [cvpcs]
+        fixed some typos
+        added new commands:
+            adblock [cvpcs (speed increase for blocking)]
+                    [pete (original blocklist)]
+                turns ad blocking on or off
+            halt [cvpcs]
+                replacement for "shutdown" command
+            switch [cvpcs]
+                replaces certain apps with replacement versions of them (such as
+                2.1 music and milestone music)
+        modified commands:
+            rmapk
+                fixed code to remove the Amazon MP3 app
+                added code to remove the AlarmClock app
+                added code to remove the Music app
+        removed commands:
+            shutdown
+                removed because it is renamed to "halt"
+
+    Modified init process [cvpcs]
+        added script to enable ondemand overclocking upon boot
+        added script to start cron daemon if a systab exists
+
+    Other features:
+        added animated gif support to webkit [cyanogen]
+
+0.3:
+    Added default android-omap-2.6.29-sapphire kernel [cvpcs]
+                                                      [AdamZ (base)]
+        provides overclocking of 250-1000mhz at low-voltage, is patched for
+        unionfs support, is patched for compcache support, and also includes
+        the following modules:
+            unionfs, squashfs, cifs, xfs, ext2, ext3, ext4, reiserfs, isofs,
+            jfs, nfsd, nfs, ntfs, fuse, ramzswap, tiwlan_drv
+        also supports wired and wireless tether
+
+    Added scriptybox [cvpcs]
+        provides a busybox-like interface to many different command scripts that
+        implement a barrage of features.  these commands are:
+            camsounds [pete]
+                turns the camera shutter and video sounds on and off
+            cpuinfo [cvpcs]
+                displays information about the cpu
+            freemem [cvpcs (added default setting)]
+                    [pete (base)]
+                ensures that stale processes are killed to keep a specific
+                amount of RAM available
+            dalvikjit [cvpcs]
+                enables or disables JIT compiling in the Dalvik Virtual Mahcine
+                (requires a reboot)
+            meminfo [cvpcs]
+                displays information about memory in the system
+            rmapk [cvpcs (streamlined the script)]
+                  [pete (idea for the scripts)]
+                removes certain applications from the system if they exist
+            shutdown [cvpcs]
+                powers off the system without reboot
+            sysro [cvpcs]
+                mounts the system partition read-only and syncs the system
+            sysrw [cvpcs]
+                mounts the system partition read-write
+            swapinfo [cvpcs]
+                displays information about swap partitions in the system
+            zipalign_apks [cvpcs (streamlined the process)]
+                          [pete (base)]
+                zipaligns all APKs on your entire system
+
+    Added a custom init system [cvpcs (customizations)]
+                               [cyanogen (base ideas)]
+        provides a series of scripts that get ran upon boot
+        added the following scripts:
+            00 - banner: prints a banner upon boot to the syslog
+            10 - sysrw: mounts the system partition read-write for the 1* 
+                        script block
+            11 - depmod: sets up the kernel module directory to ensure that
+                         modprobe works
+            19 - sysro: remounts the system read-only
+            99 - ready: notifies the system that our init process is finished
+
+    Added some tweaks:
+        increased the wireless scan interval to 90 seconds [cvpcs]
+        increased the default video record quality [fede]
+
+    Other features:
+        switched to ChainsDD's Superuser [chainsdd]
+        added a default ringtone [cvpcs]
+
+0.2:
+    Added custom init.rc [cvpcs]
+        provides a way to customize the boot process
+
+    Other features:
+        added HQ YouTube app [pete]
+
+0.1:
+    Added Superuser [cyanogen]
+        provides root access via su
+
+    Added busybox [cvpcs (removed need for modified bionic)]
+                  [cyanogen (base)]
+        provides a large set of command line executables
+
+    Added libc-ext [cvpcs]
+        provides syscalls not included in bionic used by busybox
+
+    Created cvpcs vendor [cvpcs (customizations for my custom build)]
+                         [cyanogen (base vendor setup)]
+                         [koush (base device setup)]
+        removed the need for koush's motorola/sholes-open device or cyanogen's
+        vendor/cyanogen vendor setup.
+
+    Customized build setup [cvpcs]
+                           [cyanogen (used his ideas for build.prop overrides)]
+        modified the build setup from scratch to support some extra features.
+
+    Added CWiid library [cvpcs]
+        provides support for connecting wiimotes to the phone via bluetooth
+
+    Other features:
+        added custom boot animation [cvpcs]
