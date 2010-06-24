@@ -74,13 +74,11 @@ include $(BUILD_PREBUILT)
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/CorpCal.apk:system/app/CorpCal.apk \
 	$(LOCAL_PATH)/proprietary/kickback.apk:system/app/kickback.apk \
-	$(LOCAL_PATH)/proprietary/CameraGoogle.apk:system/app/CameraGoogle.apk \
 	$(LOCAL_PATH)/proprietary/Vending.apk:system/app/Vending.apk \
 	$(LOCAL_PATH)/proprietary/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
 	$(LOCAL_PATH)/proprietary/VoiceSearch.apk:system/app/VoiceSearch.apk \
 	$(LOCAL_PATH)/proprietary/LatinImeTutorial.apk:system/app/LatinImeTutorial.apk \
 	$(LOCAL_PATH)/proprietary/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \
-	$(LOCAL_PATH)/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
 	$(LOCAL_PATH)/proprietary/MediaUploader.apk:system/app/MediaUploader.apk \
 	$(LOCAL_PATH)/proprietary/soundback.apk:system/app/soundback.apk \
 	$(LOCAL_PATH)/proprietary/MarketUpdater.apk:system/app/MarketUpdater.apk \
@@ -101,22 +99,25 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
 	$(LOCAL_PATH)/proprietary/DroidEmailPolicy.apk:system/app/DroidEmailPolicy.apk \
 	$(LOCAL_PATH)/proprietary/CertInstaller.apk:system/app/CertInstaller.apk \
-	$(LOCAL_PATH)/proprietary/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
 	$(LOCAL_PATH)/proprietary/SetupWizard.apk:system/app/SetupWizard.apk \
 	$(LOCAL_PATH)/proprietary/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
 	$(LOCAL_PATH)/proprietary/NetworkLocation.apk:system/app/NetworkLocation.apk \
 	$(LOCAL_PATH)/proprietary/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
-	$(LOCAL_PATH)/proprietary/Maps.apk:system/app/Maps.apk \
 	$(LOCAL_PATH)/proprietary/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
-	$(LOCAL_PATH)/proprietary/YouTube.apk:system/app/YouTube.apk \
-	$(LOCAL_PATH)/proprietary/CalendarGoogle.apk:system/app/CalendarGoogle.apk \
-	$(LOCAL_PATH)/proprietary/GoogleGoggles.apk:system/app/GoogleGoggles.apk \
-	$(LOCAL_PATH)/proprietary/Twitter.apk:system/app/Twitter.apk \
-	$(LOCAL_PATH)/proprietary/MusicGoogle.apk:system/app/MusicGoogle.apk \
-	$(LOCAL_PATH)/proprietary/Facebook.apk:system/app/Facebook.apk \
-	$(LOCAL_PATH)/proprietary/EmailGoogle.apk:system/app/EmailGoogle.apk \
-	$(LOCAL_PATH)/proprietary/Gallery3DGoogle.apk:system/app/Gallery3DGoogle.apk \
-	$(LOCAL_PATH)/proprietary/DeskClockGoogle.apk:system/app/DeskClockGoogle.apk
+	$(LOCAL_PATH)/proprietary/YouTube.apk:system/app/YouTube.apk
+####################
+#	$(LOCAL_PATH)/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
+#	$(LOCAL_PATH)/proprietary/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
+#	$(LOCAL_PATH)/proprietary/Maps.apk:system/app/Maps.apk \
+#	$(LOCAL_PATH)/proprietary/GoogleGoggles.apk:system/app/GoogleGoggles.apk \
+#	$(LOCAL_PATH)/proprietary/Twitter.apk:system/app/Twitter.apk \
+#	$(LOCAL_PATH)/proprietary/MusicGoogle.apk:system/app/MusicGoogle.apk \
+#	$(LOCAL_PATH)/proprietary/Facebook.apk:system/app/Facebook.apk \
+#	$(LOCAL_PATH)/proprietary/EmailGoogle.apk:system/app/EmailGoogle.apk \
+#	$(LOCAL_PATH)/proprietary/Gallery3DGoogle.apk:system/app/Gallery3DGoogle.apk \
+#	$(LOCAL_PATH)/proprietary/DeskClockGoogle.apk:system/app/DeskClockGoogle.apk
+#	$(LOCAL_PATH)/proprietary/CalendarGoogle.apk:system/app/CalendarGoogle.apk \
+#	$(LOCAL_PATH)/proprietary/CameraGoogle.apk:system/app/CameraGoogle.apk \
 
 # modules to include (default)
 PRODUCT_COPY_FILES += \
