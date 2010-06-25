@@ -1,6 +1,7 @@
 0.6.1:
     Modified scriptybox [cvpcs]
         updated to be relevent to froyo
+        added Visual VM to rmapk
 
     Switched to bekit's kernel [bekit]
         seems to provide more stability for wifi.  also includes various other
