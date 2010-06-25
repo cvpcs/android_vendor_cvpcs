@@ -49,49 +49,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.modversion=Sapphire-0.6.0-Droid \
 	ro.rommanager.developerid=cvpcs
 
-# include all of the files for the prebuilt kernel
-# available kernels are:
-#     bekit_sapphire_sholes_7x1000LV_defconfig
-#     bekit_sapphire_sholes_7x1000SV_defconfig
-#     bekit_sapphire_sholes_7x1100IV_defconfig
-#     bekit_sapphire_sholes_7x1100LV_defconfig
-#     bekit_sapphire_sholes_7x1100SV_defconfig
-#     bekit_sapphire_sholes_7x1200IV_defconfig
-#     bekit_sapphire_sholes_7x1200LV_defconfig
-#     bekit_sapphire_sholes_7x1200SV_defconfig
-#     bekit_sapphire_sholes_7x1300IV_defconfig
-#     bekit_sapphire_sholes_7x1300LV_defconfig
-#     bekit_sapphire_sholes_7x1300SV_defconfig
-#     bekit_sapphire_sholes_7x800LV_defconfig
-#     bekit_sapphire_sholes_7x800SV_defconfig
-#     bekit_sapphire_sholes_stock_defconfig
-#kern_sholes_oc := bekit_sapphire_sholes_stock_defconfig
-#TARGET_PREBUILT_KERNEL := device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/zImage
-#PRODUCT_COPY_FILES += \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/cifs.ko:system/lib/modules/cifs.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/exportfs.ko:system/lib/modules/exportfs.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/ext2.ko:system/lib/modules/ext2.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/ext3.ko:system/lib/modules/ext3.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/ext4.ko:system/lib/modules/ext4.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/fuse.ko:system/lib/modules/fuse.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/hid-dummy.ko:system/lib/modules/hid-dummy.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/isofs.ko:system/lib/modules/isofs.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/jbd2.ko:system/lib/modules/jbd2.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/jbd.ko:system/lib/modules/jbd.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/jfs.ko:system/lib/modules/jfs.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/lockd.ko:system/lib/modules/lockd.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/mbcache.ko:system/lib/modules/mbcache.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/nfs_acl.ko:system/lib/modules/nfs_acl.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/nfsd.ko:system/lib/modules/nfsd.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/nfs.ko:system/lib/modules/nfs.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/ntfs.ko:system/lib/modules/ntfs.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/ramzswap.ko:system/lib/modules/ramzswap.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/reiserfs.ko:system/lib/modules/reiserfs.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/squashfs.ko:system/lib/modules/squashfs.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/sunrpc.ko:system/lib/modules/sunrpc.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
-#	device/cvpcs/prebuilt/sholes/kernels/$(kern_sholes_oc)/xfs.ko:system/lib/modules/xfs.ko
-
 # use our custom init.rc script for our rootdir
 TARGET_PROVIDES_INIT_RC := true
 
@@ -253,15 +210,30 @@ PRODUCT_COPY_FILES += \
 
 # modules to include (default)
 PRODUCT_COPY_FILES += \
-	device/cvpcs/sholes/kernel/act_mirred.ko:system/lib/modules/act_mirred.ko \
-	device/cvpcs/sholes/kernel/act_police.ko:system/lib/modules/act_police.ko \
-	device/cvpcs/sholes/kernel/cls_u32.ko:system/lib/modules/cls_u32.ko \
-	device/cvpcs/sholes/kernel/em_u32.ko:system/lib/modules/em_u32.ko \
-	device/cvpcs/sholes/kernel/ifb.ko:system/lib/modules/ifb.ko \
-	device/cvpcs/sholes/kernel/sch_htb.ko:system/lib/modules/sch_htb.ko \
-	device/cvpcs/sholes/kernel/sch_ingress.ko:system/lib/modules/sch_ingress.ko \
+	device/cvpcs/sholes/kernel/ah6.ko:system/lib/modules/ah6.ko \
+	device/cvpcs/sholes/kernel/auth_rpcgss.ko:system/lib/modules/auth_rpcgss.ko \
+	device/cvpcs/sholes/kernel/cifs.ko:system/lib/modules/cifs.ko \
+	device/cvpcs/sholes/kernel/esp6.ko:system/lib/modules/esp6.ko \
+	device/cvpcs/sholes/kernel/fuse.ko:system/lib/modules/fuse.ko \
+	device/cvpcs/sholes/kernel/ip6_tunnel.ko:system/lib/modules/ip6_tunnel.ko \
+	device/cvpcs/sholes/kernel/ipcomp6.ko:system/lib/modules/ipcomp6.ko \
+	device/cvpcs/sholes/kernel/ipv6.ko:system/lib/modules/ipv6.ko \
+	device/cvpcs/sholes/kernel/lockd.ko:system/lib/modules/lockd.ko \
+	device/cvpcs/sholes/kernel/mip6.ko:system/lib/modules/mip6.ko \
+	device/cvpcs/sholes/kernel/nfs_acl.ko:system/lib/modules/nfs_acl.ko \
+	device/cvpcs/sholes/kernel/nfs.ko:system/lib/modules/nfs.ko \
+	device/cvpcs/sholes/kernel/output.ko:system/lib/modules/output.ko \
+	device/cvpcs/sholes/kernel/rpcsec_gss_krb5.ko:system/lib/modules/rpcsec_gss_krb5.ko \
+	device/cvpcs/sholes/kernel/sit.ko:system/lib/modules/sit.ko \
+	device/cvpcs/sholes/kernel/sunrpc.ko:system/lib/modules/sunrpc.ko \
 	device/cvpcs/sholes/kernel/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
-	device/cvpcs/sholes/kernel/wl127x_test.ko:system/lib/modules/wl127x_test.ko
+	device/cvpcs/sholes/kernel/tunnel4.ko:system/lib/modules/tunnel4.ko \
+	device/cvpcs/sholes/kernel/tunnel6.ko:system/lib/modules/tunnel6.ko \
+	device/cvpcs/sholes/kernel/xfrm6_mode_beet.ko:system/lib/modules/xfrm6_mode_beet.ko \
+	device/cvpcs/sholes/kernel/xfrm6_mode_transport.ko:system/lib/modules/xfrm6_mode_transport.ko \
+	device/cvpcs/sholes/kernel/xfrm6_mode_tunnel.ko:system/lib/modules/xfrm6_mode_tunnel.ko \
+	device/cvpcs/sholes/kernel/xfrm6_tunnel.ko:system/lib/modules/xfrm6_tunnel.ko \
+	device/cvpcs/sholes/kernel/xfrm_ipcomp.ko:system/lib/modules/xfrm_ipcomp.ko
 
 PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
@@ -283,7 +255,7 @@ PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/01_Vendor_ti_omx.cfg:system/etc/01_Vendor_ti_omx.cfg \
 	device/cvpcs/sholes/proprietary/gps.conf:system/etc/gps.conf \
 	device/cvpcs/sholes/proprietary/fw_wlan1271.bin:system/etc/wifi/fw_wlan1271.bin \
-	device/cvpcs/sholes/proprietary/tiwlan.ini.diff:system/etc/wifi/tiwlan.ini.diff \
+	device/cvpcs/sholes/proprietary/tiwlan.ini:system/etc/wifi/tiwlan.ini \
 	device/cvpcs/sholes/proprietary/cacerts.bks:system/etc/security/cacerts.bks \
 	device/cvpcs/sholes/proprietary/otacerts.zip:system/etc/security/otacerts.zip \
 	device/cvpcs/sholes/proprietary/NOTICE.html.gz:system/etc/NOTICE.html.gz \
