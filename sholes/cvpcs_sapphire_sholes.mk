@@ -7,7 +7,7 @@ PRODUCT_MODEL := Droid
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_BUILD_PROP_OVERRIDES := \
 	BUILD_ID=FRF57 \
-	BUILD_DISPLAY_ID=Sapphire-0.6.0-Droid \
+	BUILD_DISPLAY_ID=Sapphire-0.6.1-Droid \
 	PRODUCT_NAME=voles \
 	TARGET_DEVICE=sholes \
 	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
@@ -27,6 +27,7 @@ PRODUCT_PACKAGES += \
 # copy some prebuilts
 PRODUCT_COPY_FILES +=  \
 	device/cvpcs/CHANGELOG:system/etc/CHANGELOG-SR \
+	device/cvpcs/prebuilt/sholes/system/app/IM.apk:system/app/IM.apk \
         device/cvpcs/prebuilt/sholes/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
 	device/cvpcs/prebuilt/sholes/system/etc/init.d/00_banner:system/etc/init.d/00_banner \
 	device/cvpcs/prebuilt/sholes/system/etc/init.d/01_cpufreq:system/etc/init.d/01_cpufreq \
@@ -46,7 +47,7 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.notification_sound=Incoming_Message.ogg \
 	ro.config.ringtone=Hana_Maru_Caramell.ogg \
-	ro.modversion=Sapphire-0.6.0-Droid \
+	ro.modversion=Sapphire-0.6.1-Droid \
 	ro.rommanager.developerid=cvpcs
 
 # use our custom init.rc script for our rootdir

@@ -1,3 +1,19 @@
+0.6.1:
+    Modified scriptybox [cvpcs]
+        updated to be relevent to froyo
+
+    Switched to bekit's kernel [bekit]
+        seems to provide more stability for wifi.  also includes various other
+        modules that weren't included before
+
+    Fixed a problem with the qwerty touchscreen file not being found [cvpcs]
+        didn't really seem to cause any problems, but hey, i hate that it was
+        spitting out errors to the log...
+
+    Other tweaks:
+        Optipng-ed the whole system [cvpcs]
+        Re-added native IM app [cvpcs]
+
 0.6.0:
     Updated to AOSP source for Froyo [cvpcs]
         this update was hell in and of itself to get going, so lots of thanks to
