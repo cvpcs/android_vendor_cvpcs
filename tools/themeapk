@@ -67,7 +67,7 @@ for i in $(find "${OVERLAY}") ; do
     file=$(basename "${i}")
     ext=$(echo "${file}" | sed -r 's/^([^.]*\.)*([^.]*)$/\2/')
 
-    echo "Found file: [${file}]"
+    echo "Found file: [${path}]"
 
     if [ ! -z "${path}" \
          -a ! -d "${i}" \
