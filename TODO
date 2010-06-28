@@ -1,11 +1,7 @@
 BUGS:
-?   hard reboots (kernel panics????)
-    market download errors
     kernels
     facebook doesn't allow sync
 
 TODO:
     [sniffle] res/res/drawable-hdpi/stat_sys_battery-#.png : res/res/drawable/stat_sys_battery.xml
-    update scriptybox
-    enable FLAC
     

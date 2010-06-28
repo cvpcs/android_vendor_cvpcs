@@ -21,7 +21,7 @@
 #
 
 # script to optimize APK files (and rezip/sign for our purpose)
-OPTIAPK="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/optiapk"
+OPTIAPK="${ANDROID_BUILD_TOP}/device/cvpcs/tools/optiapk"
 if [ ! -x "${OPTIAPK}" ] ; then
     echo "Could not find optiapk."
     exit 1
@@ -61,21 +61,19 @@ echo "Themeing APK: [${APKFILE}]"
 unzip "${APKFILE}" -d "${WORK}"
 
 # copy all of the files from the overlay into the apk
-for file in $(find "${OVERLAY}") ; do
-    filename=$(basename "${file}")
+for i in $(find "${OVERLAY}") ; do
     sedcmd=$(echo "${OVERLAY}" | sed -r 's/\//\\\//g')
-    filedir=$(dirname "${file}" | sed -r "s/^${sedcmd}//")
+    path=$(echo "${i}" | sed -r "s/^${sedcmd}(.*)$/\1/")
+    file=$(basename "${i}")
+    ext=$(echo "${file}" | sed -r 's/^([^.]*\.)*([^.]*)$/\2/')
 
     echo "Found file: [${file}]"
 
-    if [ "${filename}" != "${filedir}" ] ; then
-        if [ -d "${file}" ] ; then
-            echo "Creating directory: [${filedir}/${filename}]"
-            mkdir -p "${WORK}/${filedir}/${filename}"
-        else
-            echo "Copying file: [${filedir}/${filename}]"
-            cp "${file}" "${WORK}/${filedir}/${filename}"
-        fi
+    if [ ! -z "${path}" \
+         -a ! -d "${i}" \
+         -a -e "${WORK}/${path}" ] ; then
+            echo "Copying file: [${path}]"
+            cp "${i}" "${WORK}/${path}"
     fi
 done
 

@@ -1,3 +1,16 @@
+0.6.2:
+    Fixed a control race condition for bluetooth [cyanogen]
+        There was a race condition that would cause connections to fail for
+        certain bluetooth devices.  Kudos to cyanogen's team for finding this
+        error as well as the fix.
+
+    Other tweaks:
+        Reduced ring delay [cvpcs]
+        Re-added FLAC support [cyanogen]
+        Re-added the droid notification sound back [cvpcs]
+        Updated to wpa-supplicant 0.6.x [koush]
+        Added ChromeToPhone app [cvpcs]
+
 0.6.1:
     Modified scriptybox [cvpcs]
         updated to be relevent to froyo
