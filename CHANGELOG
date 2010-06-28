@@ -1,4 +1,9 @@
 0.6.2:
+    Re-added compcache executable
+        NOTE: compcache support is not yet enabled in the kernel, so although
+        the executable is there, unless you load a new kernel with compcache
+        support.  Expect support in the next kernel.
+
     Fixed a control race condition for bluetooth [cyanogen]
         There was a race condition that would cause connections to fail for
         certain bluetooth devices.  Kudos to cyanogen's team for finding this
