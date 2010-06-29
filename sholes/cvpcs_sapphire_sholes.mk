@@ -283,7 +283,6 @@ PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/key_code_map.txt:system/etc/motorola/12m/key_code_map.txt \
 	device/cvpcs/sholes/proprietary/wl1271.bin:system/etc/firmware/wl1271.bin \
 	device/cvpcs/sholes/proprietary/contributors.css:system/etc/contributors.css \
-	device/cvpcs/sholes/proprietary/event-log-tags.diff:system/etc/event-log-tags.diff \
 	device/cvpcs/sholes/proprietary/mp4vdec_sn.dll64P:system/lib/dsp/mp4vdec_sn.dll64P \
 	device/cvpcs/sholes/proprietary/ringio.dll64P:system/lib/dsp/ringio.dll64P \
 	device/cvpcs/sholes/proprietary/wmv9dec_sn.dll64P:system/lib/dsp/wmv9dec_sn.dll64P \
