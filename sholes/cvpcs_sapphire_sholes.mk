@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.notification_sound=Incoming_Message.ogg \
 	ro.config.ringtone=Hana_Maru_Caramell.ogg \
-	ro.modversion=Sapphire-0.6.2-Droid \
+	ro.modversion=Sapphire-0.7.0-Droid \
 	ro.rommanager.developerid=cvpcs
 
 # use our custom init.rc script for our rootdir
