@@ -1,3 +1,13 @@
+0.7.0:
+    Switched to FRF84B proprietaries [cvpcs]
+        Based the hardware/system files off of the latest FRF84B leak from
+        motorola.  Thanks to P3Droid for the leak!
+
+    Added control of media based on volume/camera buttons [cvpcs (camera)]
+                                                          [cyanogen (vol)]
+        Long-pressing the volume up/down buttons changes tracks
+        Long-pressing the camera button play/pauses tracks
+
 0.6.2:
     Re-added compcache executable
         NOTE: compcache support is not yet enabled in the kernel, so although

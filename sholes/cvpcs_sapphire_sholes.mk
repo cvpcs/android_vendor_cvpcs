@@ -6,8 +6,8 @@ PRODUCT_DEVICE := sholes
 PRODUCT_MODEL := Droid
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_BUILD_PROP_OVERRIDES := \
-	BUILD_ID=FRF57 \
-	BUILD_DISPLAY_ID=Sapphire-0.6.2-Droid \
+	BUILD_ID=FRF84B \
+	BUILD_DISPLAY_ID=Sapphire-0.7.0-Droid \
 	PRODUCT_NAME=voles \
 	TARGET_DEVICE=sholes \
 	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
@@ -213,30 +213,30 @@ PRODUCT_COPY_FILES += \
 
 # modules to include (default)
 PRODUCT_COPY_FILES += \
-	device/cvpcs/sholes/kernel/ah6.ko:system/lib/modules/ah6.ko \
-	device/cvpcs/sholes/kernel/auth_rpcgss.ko:system/lib/modules/auth_rpcgss.ko \
-	device/cvpcs/sholes/kernel/cifs.ko:system/lib/modules/cifs.ko \
-	device/cvpcs/sholes/kernel/esp6.ko:system/lib/modules/esp6.ko \
-	device/cvpcs/sholes/kernel/fuse.ko:system/lib/modules/fuse.ko \
-	device/cvpcs/sholes/kernel/ip6_tunnel.ko:system/lib/modules/ip6_tunnel.ko \
-	device/cvpcs/sholes/kernel/ipcomp6.ko:system/lib/modules/ipcomp6.ko \
-	device/cvpcs/sholes/kernel/ipv6.ko:system/lib/modules/ipv6.ko \
-	device/cvpcs/sholes/kernel/lockd.ko:system/lib/modules/lockd.ko \
-	device/cvpcs/sholes/kernel/mip6.ko:system/lib/modules/mip6.ko \
-	device/cvpcs/sholes/kernel/nfs_acl.ko:system/lib/modules/nfs_acl.ko \
-	device/cvpcs/sholes/kernel/nfs.ko:system/lib/modules/nfs.ko \
-	device/cvpcs/sholes/kernel/output.ko:system/lib/modules/output.ko \
-	device/cvpcs/sholes/kernel/rpcsec_gss_krb5.ko:system/lib/modules/rpcsec_gss_krb5.ko \
-	device/cvpcs/sholes/kernel/sit.ko:system/lib/modules/sit.ko \
-	device/cvpcs/sholes/kernel/sunrpc.ko:system/lib/modules/sunrpc.ko \
-	device/cvpcs/sholes/kernel/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
-	device/cvpcs/sholes/kernel/tunnel4.ko:system/lib/modules/tunnel4.ko \
-	device/cvpcs/sholes/kernel/tunnel6.ko:system/lib/modules/tunnel6.ko \
-	device/cvpcs/sholes/kernel/xfrm6_mode_beet.ko:system/lib/modules/xfrm6_mode_beet.ko \
-	device/cvpcs/sholes/kernel/xfrm6_mode_transport.ko:system/lib/modules/xfrm6_mode_transport.ko \
-	device/cvpcs/sholes/kernel/xfrm6_mode_tunnel.ko:system/lib/modules/xfrm6_mode_tunnel.ko \
-	device/cvpcs/sholes/kernel/xfrm6_tunnel.ko:system/lib/modules/xfrm6_tunnel.ko \
-	device/cvpcs/sholes/kernel/xfrm_ipcomp.ko:system/lib/modules/xfrm_ipcomp.ko
+	device/cvpcs/sholes/kernel/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko
+#	device/cvpcs/sholes/kernel/ah6.ko:system/lib/modules/ah6.ko \
+#	device/cvpcs/sholes/kernel/auth_rpcgss.ko:system/lib/modules/auth_rpcgss.ko \
+#	device/cvpcs/sholes/kernel/cifs.ko:system/lib/modules/cifs.ko \
+#	device/cvpcs/sholes/kernel/esp6.ko:system/lib/modules/esp6.ko \
+#	device/cvpcs/sholes/kernel/fuse.ko:system/lib/modules/fuse.ko \
+#	device/cvpcs/sholes/kernel/ip6_tunnel.ko:system/lib/modules/ip6_tunnel.ko \
+#	device/cvpcs/sholes/kernel/ipcomp6.ko:system/lib/modules/ipcomp6.ko \
+#	device/cvpcs/sholes/kernel/ipv6.ko:system/lib/modules/ipv6.ko \
+#	device/cvpcs/sholes/kernel/lockd.ko:system/lib/modules/lockd.ko \
+#	device/cvpcs/sholes/kernel/mip6.ko:system/lib/modules/mip6.ko \
+#	device/cvpcs/sholes/kernel/nfs_acl.ko:system/lib/modules/nfs_acl.ko \
+#	device/cvpcs/sholes/kernel/nfs.ko:system/lib/modules/nfs.ko \
+#	device/cvpcs/sholes/kernel/output.ko:system/lib/modules/output.ko \
+#	device/cvpcs/sholes/kernel/rpcsec_gss_krb5.ko:system/lib/modules/rpcsec_gss_krb5.ko \
+#	device/cvpcs/sholes/kernel/sit.ko:system/lib/modules/sit.ko \
+#	device/cvpcs/sholes/kernel/sunrpc.ko:system/lib/modules/sunrpc.ko \
+#	device/cvpcs/sholes/kernel/tunnel4.ko:system/lib/modules/tunnel4.ko \
+#	device/cvpcs/sholes/kernel/tunnel6.ko:system/lib/modules/tunnel6.ko \
+#	device/cvpcs/sholes/kernel/xfrm6_mode_beet.ko:system/lib/modules/xfrm6_mode_beet.ko \
+#	device/cvpcs/sholes/kernel/xfrm6_mode_transport.ko:system/lib/modules/xfrm6_mode_transport.ko \
+#	device/cvpcs/sholes/kernel/xfrm6_mode_tunnel.ko:system/lib/modules/xfrm6_mode_tunnel.ko \
+#	device/cvpcs/sholes/kernel/xfrm6_tunnel.ko:system/lib/modules/xfrm6_tunnel.ko \
+#	device/cvpcs/sholes/kernel/xfrm_ipcomp.ko:system/lib/modules/xfrm_ipcomp.ko
 
 PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
