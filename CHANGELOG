@@ -3,13 +3,24 @@
         The latest build uses the fingerprint from verizon's FRF84B leak,
         which is for Android 2.2 instead of android 2.1 (as was used before).
 
+    New kernels courtesy of P3Droid [p3droid]
+        p3droid has graciously made a slough of fresh froyo kernels for use
+        with sapphire!  they include compcache support, squashfs, cifs, nfs,
+        and many other features that will be utilized in the future.
+
     Modified scriptybox [cvpcs]
         Modified rmapk:
             added ability to remove ChromeToPhone and Tips
+        Added compcache:
+            enables and disables compcache support
 
     Switched to FRF84B proprietaries [cvpcs]
         Based the hardware/system files off of the latest FRF84B leak from
         motorola.  Thanks to P3Droid for the leak!
+
+    Added compcache userspace [cvpcs]
+        allows for in-RAM swap space, which essentially slightly increases
+        the amount of virtual RAM available to the system.
 
     Added control of media based on volume/camera buttons [cvpcs (camera)]
                                                           [cyanogen (vol)]

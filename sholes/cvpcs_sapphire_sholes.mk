@@ -7,7 +7,7 @@ PRODUCT_MODEL := Droid
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_BUILD_PROP_OVERRIDES := \
 	BUILD_ID=FRF84B \
-	BUILD_DISPLAY_ID=Sapphire-0.7.0-Droid \
+	BUILD_DISPLAY_ID=Sapphire-0.7.0_pre2-Droid \
 	PRODUCT_NAME=voles \
 	TARGET_DEVICE=sholes \
 	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRF84B/42477:user/release-keys \
@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.notification_sound=Incoming_Message.ogg \
 	ro.config.ringtone=Hana_Maru_Caramell.ogg \
-	ro.modversion=Sapphire-0.7.0-Droid \
+	ro.modversion=Sapphire-0.7.0_pre2-Droid \
 	ro.rommanager.developerid=cvpcs
 
 # use our custom init.rc script for our rootdir
