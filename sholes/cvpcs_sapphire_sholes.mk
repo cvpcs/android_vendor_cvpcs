@@ -10,8 +10,9 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
 	BUILD_DISPLAY_ID=Sapphire-0.7.0-Droid \
 	PRODUCT_NAME=voles \
 	TARGET_DEVICE=sholes \
-	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
+	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRF84B/42477:user/release-keys \
 	PRODUCT_BRAND=verizon
+#	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
 
 # grab hdpi versions of this stuff
 PRODUCT_PACKAGES += \

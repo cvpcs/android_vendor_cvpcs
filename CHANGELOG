@@ -1,4 +1,12 @@
 0.7.0:
+    Updated build fingerprint to 2.2 [cvpcs]
+        The latest build uses the fingerprint from verizon's FRF84B leak,
+        which is for Android 2.2 instead of android 2.1 (as was used before).
+
+    Modified scriptybox [cvpcs]
+        Modified rmapk:
+            added ability to remove ChromeToPhone and Tips
+
     Switched to FRF84B proprietaries [cvpcs]
         Based the hardware/system files off of the latest FRF84B leak from
         motorola.  Thanks to P3Droid for the leak!
