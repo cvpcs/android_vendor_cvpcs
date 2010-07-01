@@ -1,4 +1,7 @@
 0.7.0:
+    Added Eliot Stocker's Music App [eliotstocker]
+        Overhaul of the stock Music app.  Now available using switchapk.
+
     Updated build fingerprint to 2.2 [cvpcs]
         The latest build uses the fingerprint from verizon's FRF84B leak,
         which is for Android 2.2 instead of android 2.1 (as was used before).
