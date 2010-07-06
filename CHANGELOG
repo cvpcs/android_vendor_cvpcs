@@ -1,3 +1,18 @@
+HEAD:
+    Added battery percentage overlay [cvpcs (minor rework)]
+                                     [cyanogen (base)]
+        Optional text display over the battery icon that notifies of the
+        percentage of battery life remaining.  This display can be turned off
+        in spare parts.  It also does not display if plugged in or at 100%.
+
+    Added ability to remove status bar clock [cvpcs]
+        Using spare parts, one can now remove the clock in the status bar.
+
+    Custom-built kernels [p3droid]
+        P3Droid has custom-built some kernels for sapphire!  Thanks goes out
+        to him for all the hard work.  These new kernels now provide several
+        missing modules such as compcache and cifs and more.
+
 0.7.0:
     Added Eliot Stocker's Music App [eliotstocker]
         Overhaul of the stock Music app.  Now available using switchapk.
