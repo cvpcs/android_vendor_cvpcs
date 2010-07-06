@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
 # include cvpcs-specific packages
 PRODUCT_PACKAGES += \
 	cvpcs_Mms \
-	cvpcs_Music
+	cvpcs_Music \
+	GEMSettings
 
 # copy some prebuilts
 PRODUCT_COPY_FILES +=  \
