@@ -6,10 +6,9 @@
         The latest build uses the fingerprint from verizon's FRF84B leak,
         which is for Android 2.2 instead of android 2.1 (as was used before).
 
-    New kernels courtesy of P3Droid [p3droid]
-        p3droid has graciously made a slough of fresh froyo kernels for use
-        with sapphire!  they include compcache support, squashfs, cifs, nfs,
-        and many other features that will be utilized in the future.
+    New kernel [p3droid]
+        This build of sapphire sports the LV125-1000-v32 kernel from P3Droid's
+        website natively
 
     Modified scriptybox [cvpcs]
         Modified rmapk:

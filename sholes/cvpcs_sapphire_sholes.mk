@@ -10,8 +10,9 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
 	BUILD_DISPLAY_ID=Sapphire-0.7.0-Droid \
 	PRODUCT_NAME=voles \
 	TARGET_DEVICE=sholes \
-	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRF84B/42477:user/release-keys \
+	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
 	PRODUCT_BRAND=verizon
+#	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRF84B/42477:user/release-keys \
 
 # grab hdpi versions of this stuff
 PRODUCT_PACKAGES += \
@@ -204,17 +205,6 @@ PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
 	device/cvpcs/sholes/proprietary/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
 	device/cvpcs/sholes/proprietary/YouTube.apk:system/app/YouTube.apk
-####################
-#	device/cvpcs/sholes/proprietary/Maps.apk:system/app/Maps.apk \
-#	device/cvpcs/sholes/proprietary/GoogleGoggles.apk:system/app/GoogleGoggles.apk \
-#	device/cvpcs/sholes/proprietary/Twitter.apk:system/app/Twitter.apk \
-#	device/cvpcs/sholes/proprietary/MusicGoogle.apk:system/app/MusicGoogle.apk \
-#	device/cvpcs/sholes/proprietary/Facebook.apk:system/app/Facebook.apk \
-#	device/cvpcs/sholes/proprietary/EmailGoogle.apk:system/app/EmailGoogle.apk \
-#	device/cvpcs/sholes/proprietary/Gallery3DGoogle.apk:system/app/Gallery3DGoogle.apk \
-#	device/cvpcs/sholes/proprietary/DeskClockGoogle.apk:system/app/DeskClockGoogle.apk
-#	device/cvpcs/sholes/proprietary/CalendarGoogle.apk:system/app/CalendarGoogle.apk \
-#	device/cvpcs/sholes/proprietary/CameraGoogle.apk:system/app/CameraGoogle.apk \
 
 # modules to include (default)
 PRODUCT_COPY_FILES += \

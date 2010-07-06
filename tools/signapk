@@ -34,10 +34,11 @@ else
 fi
 
 APK="$1"
+KEY="$2"
 
-if [ -z "${APK}" -o ! -e "${APK}" ] ; then
+if [ -z "${APK}" -o ! -e "${APK}" -o -z "${KEY}" ] ; then
     echo "Usage:"
-    echo "  $0 apkfile"
+    echo "  $0 apkfile key"
     exit 1
 fi
 
@@ -49,6 +50,6 @@ mv "${APK}" "${APK}.bak"
 echo "Signing: [${APK}]"
 java -Xmx2048m \
     -jar "${ANDROID_BUILD_TOP}/out/host/${OUT_TARGET_HOST}/framework/signapk.jar" \
-    -w "${ANDROID_BUILD_TOP}/build/target/product/security/testkey.x509.pem" \
-    "${ANDROID_BUILD_TOP}/build/target/product/security/testkey.pk8" \
+    -w "${ANDROID_BUILD_TOP}/build/target/product/security/${KEY}.x509.pem" \
+    "${ANDROID_BUILD_TOP}/build/target/product/security/${KEY}.pk8" \
     "${APK}.bak" "${APK}"
