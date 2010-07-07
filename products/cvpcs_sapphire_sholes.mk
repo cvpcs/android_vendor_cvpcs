@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 
 # copy some prebuilts
 PRODUCT_COPY_FILES +=  \
-	vendor/cvpcs/CHANGELOG:system/etc/CHANGELOG-SR \
+	vendor/cvpcs/CHANGELOG-SR:system/etc/CHANGELOG-SR \
 	vendor/cvpcs/prebuilt/common/system/app/IM.apk:system/app/IM.apk \
         vendor/cvpcs/prebuilt/common/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
 	vendor/cvpcs/prebuilt/common/system/etc/init.d/00_banner:system/etc/init.d/00_banner \
@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES +=  \
 	vendor/cvpcs/prebuilt/common/system/media/audio/ringtones/Hana_Maru_Caramell.ogg:system/media/audio/ringtones/Hana_Maru_Caramell.ogg \
 	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/droid.ogg:system/media/audio/notifications/droid.ogg \
 	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/Incoming_Message.ogg:system/media/audio/notifications/Incoming_Message.ogg \
-	vendor/cvpcs/prebuilt/common/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
+	vendor/cvpcs/prebuilt/sholes/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
 
 # some standard overrides
 PRODUCT_PROPERTY_OVERRIDES += \
