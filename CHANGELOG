@@ -1,3 +1,9 @@
+HEAD:
+    Added Notification LED always blinks setting [cvpcs]
+        There is now a setting in GEM Settings that enables the notification
+        LED to blink regardless of whether the screen is on or not. (defaults
+        to standard behavior of blinking only when screen is off)
+
 0.8.0:
     Moved FLAC scanning support to libstagefright [cyanogen]
         To better conform with froyo, flac scanning was removed from opencore
