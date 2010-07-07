@@ -4,6 +4,9 @@ HEAD:
         LED to blink regardless of whether the screen is on or not. (defaults
         to standard behavior of blinking only when screen is off)
 
+    Moved to new vendor setup to support multiple hardware [cvpcs]
+        Changed vendor setups to support multiple hardware in the future
+
 0.8.0:
     Moved FLAC scanning support to libstagefright [cyanogen]
         To better conform with froyo, flac scanning was removed from opencore

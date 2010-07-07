@@ -44,7 +44,6 @@ PRODUCT_PACKAGES += \
 # copy some prebuilts
 PRODUCT_COPY_FILES +=  \
 	vendor/cvpcs/CHANGELOG:system/etc/CHANGELOG-SR \
-	vendor/cvpcs/prebuilt/common/system/app/ChromeToPhone.apk:system/app/ChromeToPhone.apk \
 	vendor/cvpcs/prebuilt/common/system/app/IM.apk:system/app/IM.apk \
         vendor/cvpcs/prebuilt/common/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
 	vendor/cvpcs/prebuilt/common/system/etc/init.d/00_banner:system/etc/init.d/00_banner \
@@ -85,8 +84,8 @@ USE_CAMERA_STUB := false
 PRODUCT_PACKAGES += Superuser
 
 # include proprietaries for now
-USE_MOTOROLA_PROPRIETARIES += true
-USE_GOOGLE_PROPRIETARIES += true
+USE_MOTOROLA_PROPRIETARIES := true
+USE_GOOGLE_PROPRIETARIES := true
 
 # grab some sounds
 include frameworks/base/data/sounds/OriginalAudio.mk
