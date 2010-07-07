@@ -1,11 +1,12 @@
-HEAD:
+0.8.0:
     Moved FLAC scanning support to libstagefright [cyanogen]
         To better conform with froyo, flac scanning was removed from opencore
         and placed in libstagefright
 
     Added GEM Settings app [cvpcs]
         Removes the need to modify the development portion of AOSP.  All
-        sapphire-specific settings will be held in this app now.
+        sapphire-specific settings will be held in this app now.  All color
+        settings have been moved from spare parts to this app.
 
     Added battery percentage overlay [cvpcs (minor rework)]
                                      [cyanogen (base)]
@@ -13,13 +14,14 @@ HEAD:
         percentage of battery life remaining.  This display can be turned off
         in spare parts.  It also does not display if plugged in or at 100%.
 
-    Added ability to remove status bar clock [cvpcs]
-        Using spare parts, one can now remove the clock in the status bar.
-
     Custom-built kernels [p3droid]
         P3Droid has custom-built some kernels for sapphire!  Thanks goes out
         to him for all the hard work.  These new kernels now provide several
         missing modules such as compcache and cifs and more.
+
+    Other tweaks:
+        Added ability to shut off USB Debugging notification [cvpcs]
+        Added ability to remove status bar clock [cvpcs]
 
 0.7.0:
     Added Eliot Stocker's Music App [eliotstocker]

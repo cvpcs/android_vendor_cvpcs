@@ -1,13 +1,23 @@
 $(call inherit-product, device/cvpcs/sholes/cvpcs_generic.mk)
 
+build_name := Sapphire
+build_version_major := 0
+build_version_minor := 8
+build_version_revision := 0
+
+build_version := $(build_version_major).$(build_version_minor).$(build_version_revision)
+
 PRODUCT_NAME := cvpcs_sapphire_sholes
 PRODUCT_BRAND := cvpcs
 PRODUCT_DEVICE := sholes
 PRODUCT_MODEL := Droid
 PRODUCT_MANUFACTURER := Motorola
+
+product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
+
 PRODUCT_BUILD_PROP_OVERRIDES := \
 	BUILD_ID=FRF84B \
-	BUILD_DISPLAY_ID=Sapphire-0.7.0-Droid \
+	BUILD_DISPLAY_ID=$(product_version) \
 	PRODUCT_NAME=voles \
 	TARGET_DEVICE=sholes \
 	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
@@ -56,7 +66,7 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.notification_sound=Incoming_Message.ogg \
 	ro.config.ringtone=Hana_Maru_Caramell.ogg \
-	ro.modversion=Sapphire-0.7.0-Droid \
+	ro.modversion=$(product_version) \
 	ro.rommanager.developerid=cvpcs
 
 # use our custom init.rc script for our rootdir
@@ -73,6 +83,10 @@ USE_CAMERA_STUB := false
 
 # include superuser
 PRODUCT_PACKAGES += Superuser
+
+# include proprietaries for now
+USE_MOTOROLA_PROPRIETARIES += true
+USE_GOOGLE_PROPRIETARIES += true
 
 # grab some sounds
 include frameworks/base/data/sounds/OriginalAudio.mk
@@ -170,6 +184,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.lockprof.threshold=500 \
 	dalvik.vm.dexopt-flags=m=y
 
+ifeq ($(USE_GOOGLE_PROPRIETARIES),true)
 PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/CorpCal.apk:system/app/CorpCal.apk \
 	device/cvpcs/sholes/proprietary/kickback.apk:system/app/kickback.apk \
@@ -205,7 +220,11 @@ PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \
 	device/cvpcs/sholes/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
 	device/cvpcs/sholes/proprietary/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
-	device/cvpcs/sholes/proprietary/YouTube.apk:system/app/YouTube.apk
+	device/cvpcs/sholes/proprietary/YouTube.apk:system/app/YouTube.apk \
+	device/cvpcs/sholes/proprietary/google_generic_update.txt:system/etc/updatecmds/google_generic_update.txt \
+	device/cvpcs/sholes/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+	device/cvpcs/sholes/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar
+endif
 
 # modules to include (default)
 PRODUCT_COPY_FILES += \
@@ -234,8 +253,8 @@ PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/kernel/wl127x_test.ko:system/lib/modules/wl127x_test.ko \
 	device/cvpcs/sholes/kernel/xfs.ko:system/lib/modules/xfs.ko \
 
+ifeq ($(USE_MOTOROLA_PROPRIETARIES),true)
 PRODUCT_COPY_FILES += \
-	device/cvpcs/sholes/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
 	device/cvpcs/sholes/proprietary/bthelp:system/bin/bthelp \
 	device/cvpcs/sholes/proprietary/mdm_panicd:system/bin/mdm_panicd \
 	device/cvpcs/sholes/proprietary/SaveBPVer:system/bin/SaveBPVer \
@@ -272,8 +291,6 @@ PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
 	device/cvpcs/sholes/proprietary/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	device/cvpcs/sholes/proprietary/features.xml:system/etc/permissions/features.xml \
-	device/cvpcs/sholes/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
-	device/cvpcs/sholes/proprietary/google_generic_update.txt:system/etc/updatecmds/google_generic_update.txt \
 	device/cvpcs/sholes/proprietary/hosts:system/etc/hosts \
 	device/cvpcs/sholes/proprietary/vold.fstab:system/etc/vold.fstab \
 	device/cvpcs/sholes/proprietary/key_code_map.txt:system/etc/motorola/12m/key_code_map.txt \
@@ -348,3 +365,4 @@ PRODUCT_COPY_FILES += \
 	device/cvpcs/sholes/proprietary/de-DE_gl0_sg.bin:system/tts/lang_pico/de-DE_gl0_sg.bin \
 	device/cvpcs/sholes/proprietary/fr-FR_nk0_sg.bin:system/tts/lang_pico/fr-FR_nk0_sg.bin \
 	device/cvpcs/sholes/proprietary/it-IT_ta.bin:system/tts/lang_pico/it-IT_ta.bin
+endif
