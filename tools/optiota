@@ -53,7 +53,7 @@ fi
 echo "Release Package: [${RELEASEPACKAGE}]"
 
 # script to optimize APK files
-OPTIAPK="${ANDROID_BUILD_TOP}/device/cvpcs/tools/optiapk"
+OPTIAPK="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/optiapk"
 
 # list of binaries to remove (unneeded by a ROM)
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"

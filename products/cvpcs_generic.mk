@@ -1,8 +1,8 @@
-$(call inherit-product, device/cvpcs/sholes/cvpcs_core.mk)
+$(call inherit-product, vendor/cvpcs/products/cvpcs_core.mk)
 
 PRODUCT_NAME := cvpcs_generic
 PRODUCT_BRAND := cvpcs
-PRODUCT_DEVICE := sholes
+PRODUCT_DEVICE :=
 
 PRODUCT_PACKAGES += \
     AccountAndSyncSettings \

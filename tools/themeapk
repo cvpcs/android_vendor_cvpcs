@@ -21,7 +21,7 @@
 #
 
 # script to optimize APK files (and rezip/sign for our purpose)
-OPTIAPK="${ANDROID_BUILD_TOP}/device/cvpcs/tools/optiapk"
+OPTIAPK="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/optiapk"
 if [ ! -x "${OPTIAPK}" ] ; then
     echo "Could not find optiapk."
     exit 1

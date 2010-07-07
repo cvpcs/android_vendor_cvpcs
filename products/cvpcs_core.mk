@@ -1,6 +1,6 @@
 PRODUCT_NAME := cvpcs_core
 PRODUCT_BRAND := cvpcs
-PRODUCT_DEVICE := sholes
+PRODUCT_DEVICE :=
 
 PRODUCT_POLICY := android.policy_phone
 

@@ -30,14 +30,14 @@ if [ ! -f "${APKCERTS}" ] ; then
 fi
 
 # script to optimize APK files (and rezip/sign for our purpose)
-THEMEAPK="${ANDROID_BUILD_TOP}/device/cvpcs/tools/themeapk"
+THEMEAPK="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/themeapk"
 if [ ! -x "${THEMEAPK}" ] ; then
     echo "Could not find themeapk."
     exit 1
 fi
 
 # script to optimize APK files (and rezip/sign for our purpose)
-OPTIOTA="${ANDROID_BUILD_TOP}/device/cvpcs/tools/optiota"
+OPTIOTA="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/optiota"
 if [ ! -x "${OPTIOTA}" ] ; then
     echo "Could not find optiota."
     exit 1
