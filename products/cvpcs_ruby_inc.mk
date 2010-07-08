@@ -2,14 +2,14 @@ $(call inherit-product, vendor/cvpcs/products/cvpcs_generic.mk)
 
 # set up version info
 include vendor/cvpcs/products/cvpcs_version.mk
-build_name := Sapphire
+build_name := Ruby
 build_version := $(build_version_major).$(build_version_minor).$(build_version_revision)
 
-PRODUCT_NAME := cvpcs_sapphire_sholes
+PRODUCT_NAME := cvpcs_ruby_inc
 PRODUCT_BRAND := cvpcs
-PRODUCT_DEVICE := sholes
-PRODUCT_MODEL := Droid
-PRODUCT_MANUFACTURER := Motorola
+PRODUCT_DEVICE := inc
+PRODUCT_MODEL := Incredible
+PRODUCT_MANUFACTURER := HTC
 
 product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 
@@ -55,7 +55,7 @@ PRODUCT_COPY_FILES +=  \
 	vendor/cvpcs/prebuilt/common/system/media/audio/ringtones/Hana_Maru_Caramell.ogg:system/media/audio/ringtones/Hana_Maru_Caramell.ogg \
 	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/droid.ogg:system/media/audio/notifications/droid.ogg \
 	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/Incoming_Message.ogg:system/media/audio/notifications/Incoming_Message.ogg \
-	vendor/cvpcs/prebuilt/sholes/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
+	vendor/cvpcs/prebuilt/inc/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
 
 # some standard overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -80,7 +80,7 @@ USE_CAMERA_STUB := false
 PRODUCT_PACKAGES += Superuser
 
 # include proprietaries for now
-USE_MOTOROLA_PROPRIETARIES := true
+USE_HTC_PROPRIETARIES := true
 USE_GOOGLE_PROPRIETARIES := true
 
 # grab some sounds
@@ -149,4 +149,4 @@ PRODUCT_LOCALES := \
 	zh_TW \
 
 # include the device makefile
-$(call inherit-product, device/motorola/sholes/device.mk)
+$(call inherit-product, device/htc/inc/device.mk)

@@ -26,5 +26,6 @@
 #
 
 PRODUCT_MAKEFILES := \
+	$(LOCAL_DIR)/cvpcs_ruby_inc.mk \
 	$(LOCAL_DIR)/cvpcs_sapphire_sholes.mk
 

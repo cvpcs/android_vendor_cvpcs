@@ -1,4 +1,4 @@
-HEAD:
+0.8.1:
     Added Notification LED always blinks setting [cvpcs]
         There is now a setting in GEM Settings that enables the notification
         LED to blink regardless of whether the screen is on or not. (defaults

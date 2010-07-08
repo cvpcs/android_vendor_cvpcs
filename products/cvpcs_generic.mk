@@ -1,3 +1,5 @@
+# modified generic config
+
 $(call inherit-product, vendor/cvpcs/products/cvpcs_core.mk)
 
 PRODUCT_NAME := cvpcs_generic

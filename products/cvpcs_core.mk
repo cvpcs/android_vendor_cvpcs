@@ -1,3 +1,5 @@
+# modified core config
+
 PRODUCT_NAME := cvpcs_core
 PRODUCT_BRAND := cvpcs
 PRODUCT_DEVICE :=
