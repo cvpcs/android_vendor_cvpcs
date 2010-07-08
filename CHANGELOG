@@ -1,4 +1,7 @@
 0.8.1:
+    Modifications to Scriptybox [cvpcs]
+        Renamed "original" to "stock" in switchapk music to reduce confusion
+
     Added Notification LED always blinks setting [cvpcs]
         There is now a setting in GEM Settings that enables the notification
         LED to blink regardless of whether the screen is on or not. (defaults
