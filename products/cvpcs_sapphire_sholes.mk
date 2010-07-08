@@ -35,6 +35,7 @@ PRODUCT_PACKAGES += \
 
 # include cvpcs-specific packages
 PRODUCT_PACKAGES += \
+	EliotStockerMusic \
 	GEMSettings
 
 # copy some prebuilts
