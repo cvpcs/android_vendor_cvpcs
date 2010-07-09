@@ -23,7 +23,6 @@ PRODUCT_PACKAGES += \
     Mms \
     Music \
     Protips \
-    QuickSearchBox \
     Settings \
     Sync \
     Updater \
@@ -32,3 +31,4 @@ PRODUCT_PACKAGES += \
 # The below were removed from the list above
 #    Provision \
 #    LatinIME \
+#    QuickSearchBox \

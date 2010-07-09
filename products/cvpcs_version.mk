@@ -3,6 +3,6 @@
 
 build_version_major := 0
 build_version_minor := 8
-build_version_revision := 1
+build_version_revision := 2
 
 include vendor/cvpcs/products/cvpcs_version_build.mk

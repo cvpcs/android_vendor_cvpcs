@@ -1,3 +1,19 @@
+0.8.2:
+    Modifications to scriptybox [cvpcs]
+        freemem:
+            added warning message to be displayed when users change task killer
+            settings
+        rmapk:
+            added "search" to remove extra google quick search widget
+            added "speech" to remove speech recorder
+
+    Changed default battery % color to white [cvpcs]
+        White is easier to read as the background color as the battery drains
+        is black
+
+    Other tweaks:
+        Removed extra quick search app [cvpcs]
+
 0.8.1:
     Modifications to Scriptybox [cvpcs]
         Renamed "original" to "stock" in switchapk music to reduce confusion

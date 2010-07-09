@@ -81,8 +81,9 @@ USE_CAMERA_STUB := false
 PRODUCT_PACKAGES += Superuser
 
 # include proprietaries for now
-USE_MOTOROLA_PROPRIETARIES := true
-USE_GOOGLE_PROPRIETARIES := true
+USE_PROPRIETARIES := \
+	google \
+	motorola
 
 # grab some sounds
 include frameworks/base/data/sounds/OriginalAudio.mk
