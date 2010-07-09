@@ -1,4 +1,9 @@
 0.8.2:
+    Removed native IM app [cvpcs]
+        The interface that the native IM app uses has been removed from android
+        causing the app to force-close indefinitely.  For this reason, this app
+        has been removed from sapphire.
+
     Modifications to scriptybox [cvpcs]
         freemem:
             added warning message to be displayed when users change task killer
