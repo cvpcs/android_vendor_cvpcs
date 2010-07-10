@@ -6,7 +6,7 @@ build_name := Sapphire
 build_version := $(build_version_major).$(build_version_minor).$(build_version_revision)
 
 PRODUCT_NAME := cvpcs_sapphire_sholes
-PRODUCT_BRAND := cvpcs
+PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := sholes
 PRODUCT_MODEL := Droid
 PRODUCT_MANUFACTURER := Motorola
