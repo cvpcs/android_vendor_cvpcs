@@ -1,3 +1,12 @@
+0.8.3:
+    Changed build.prop overrides to fix Market issues [cyanogen]
+        Changed the build prop overrides to match that of FRF84B so that market
+        will believe Sapphire is a standard verizon release
+
+    Added ability to see MOD/ROM version in Settings [cvpcs]
+        This allows for the phone to better mimick verizon's releases, as the
+        Sapphire version is no longer stored in build.display.id
+
 0.8.2:
     Removed native IM app [cvpcs]
         The interface that the native IM app uses has been removed from android
