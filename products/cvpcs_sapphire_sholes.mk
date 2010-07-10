@@ -28,8 +28,6 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
 	USER=android-build
 #	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
 
-PRODUCT_BUILD_PROP_OVERRIDES := \
-
 # grab hdpi versions of this stuff
 PRODUCT_PACKAGES += \
 	LiveWallpapers \
