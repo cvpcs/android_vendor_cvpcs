@@ -1,4 +1,11 @@
 0.8.3:
+    Switched to EliotStocker Music overhaul [eliotstocker]
+        Moved to ES music overhaul by default.  Can switch back to stock using
+        switchapk
+
+    Modified scriptybox [cvpcs]
+        changed switchapk url definition
+
     Changed build.prop overrides to fix Market issues [cyanogen]
         Changed the build prop overrides to match that of FRF84B so that market
         will believe Sapphire is a standard verizon release

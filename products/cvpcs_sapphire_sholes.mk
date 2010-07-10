@@ -69,7 +69,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.notification_sound=Incoming_Message.ogg \
 	ro.config.ringtone=Hana_Maru_Caramell.ogg \
 	ro.modversion=$(product_version) \
-	ro.rommanager.developerid=cvpcs
+	ro.rommanager.developerid=cvpcs \
+	ro.cvpcs.build.name=$(build_name) \
+	ro.cvpcs.build.version=$(build_version)
 
 # use our custom init.rc script for our rootdir
 TARGET_PROVIDES_INIT_RC := true
