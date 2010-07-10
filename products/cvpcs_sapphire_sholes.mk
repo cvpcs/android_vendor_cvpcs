@@ -14,13 +14,21 @@ PRODUCT_MANUFACTURER := Motorola
 product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 
 PRODUCT_BUILD_PROP_OVERRIDES := \
+	BUILD_DATE_UTC=1277333704 \
+	BUILD_DISPLAY_ID=FRF84B \
+	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRF84B/42477:user/release-keys \
 	BUILD_ID=FRF84B \
-	BUILD_DISPLAY_ID=$(product_version) \
+	BUILD_NUMBER=42477 \
+	BUILD_VERSION_TAGS=release-keys \
+	PRIVATE_BUILD_DESC="voles-user 2.2 FRF84B 42477 release-keys" \
 	PRODUCT_NAME=voles \
+	PRODUCT_BRAND=verizon \
 	TARGET_DEVICE=sholes \
-	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
-	PRODUCT_BRAND=verizon
-#	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRF84B/42477:user/release-keys \
+	TARGET_BUILD_TYPE=user \
+	USER=android-build
+#	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
+
+PRODUCT_BUILD_PROP_OVERRIDES := \
 
 # grab hdpi versions of this stuff
 PRODUCT_PACKAGES += \
