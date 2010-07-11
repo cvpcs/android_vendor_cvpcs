@@ -90,7 +90,6 @@ PRODUCT_PACKAGES += Superuser
 
 # include proprietaries for now
 USE_PROPRIETARIES := \
-	google \
 	motorola
 
 # grab some sounds

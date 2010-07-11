@@ -1,3 +1,8 @@
+0.8.4:
+    Removed google apps by default [cvpcs]
+        For legal reasons, google apps have been removed from sapphire by
+        default and must be installed separately
+
 0.8.3:
     Switched to EliotStocker Music overhaul [eliotstocker]
         Moved to ES music overhaul by default.  Can switch back to stock using
