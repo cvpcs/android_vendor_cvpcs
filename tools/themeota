@@ -44,17 +44,21 @@ if [ ! -x "${OPTIOTA}" ] ; then
 fi
 
 # make sure we have enough options set
-if [ $# != 2 ] ; then
-    echo "Usage: ${0} themeotafile origotafile"
+if [ $# -lt 2 ] ; then
+    echo "Usage: ${0} themeotafile origotafile_list"
     exit 1
 fi
 
 # our OTA files
 THEMEOTA="${1}"
-ORIGIOTA="${2}"
+shift 1
+ORIGIOTAS=$@
 
 echo "Theme OTA File: [${THEMEOTA}]"
-echo "Original OTA File: [${ORIGIOTA}]"
+echo "Original OTA Files:"
+for ota in ${ORIGIOTAS}; do
+    echo "  [${ota}]"
+done
 
 # make our work directory
 echo "Creating work directories ..."
@@ -72,9 +76,13 @@ mkdir -p "${NWORK}";
 
 # unpack our ota files
 echo "Unzipping Theme OTA ..."
+echo "  unzipping [${THEMEOTA}]"
 unzip "${THEMEOTA}" -d "${TWORK}" > /dev/null
-echo "Unzipping Original OTA ..."
-unzip "${ORIGIOTA}" -d "${OWORK}" > /dev/null
+echo "Unzipping Original OTAS ..."
+for ota in ${ORIGIOTAS}; do
+    echo "  unzipping [${ota}]"
+    unzip -o "${ota}" -d "${OWORK}" > /dev/null
+done
 
 # begin our transfer
 
