@@ -10,6 +10,114 @@
 	roms:
 	[
 	{
+		name: "Sapphire 0.8.4 (Froyo)",
+		summary: "Stable",
+		device: "sholes",
+		product: "Sapphire",
+		incremental: 0840,
+		modversion: "Sapphire-0.8.4-Droid",
+		file: "files/sapphire/froyo/release/0.8.4/sapphire-0.8.4-update.zip",
+		screenshots:
+		[
+		"http://i.imgur.com/2LpKS.png",
+		"http://i.imgur.com/tjJGR.png"
+		],
+		addons:
+		[
+		{
+			name: "Market Hack",
+			file: "files/sapphire/froyo/release/0.8.4/sapphire-0.8.4-market_hack-update.zip"
+		},
+		{
+			name: "Google Apps",
+			file: "files/sapphire/froyo/release/0.8.4/sapphire-0.8.4-gapps-update.zip"
+		}
+		],
+		choices:
+		[
+		{
+			name: "Kernel",
+			options:
+			[
+			{
+				name: "P3Droid's 125-800mhz Low Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-LV-800.zip"]
+			},
+			{
+				name: "P3Droid's 125-900mhz Low Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-LV-900.zip"]
+			},
+			{
+				name: "P3Droid's 125-1000mhz Low Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-LV-1000.zip"]
+			},
+			{
+				name: "P3Droid's 125-1100mhz Low Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-LV-1100.zip"]
+			},
+			{
+				name: "P3Droid's 125-1200mhz Low Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-LV-1200.zip"]
+			},
+			{
+				name: "P3Droid's 125-1250mhz Low Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-LV-1250.zip"]
+			},
+			{
+				name: "P3Droid's 125-800mhz Standard Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-800.zip"]
+			},
+			{
+				name: "P3Droid's 125-900mhz Standard Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-900.zip"]
+			},
+			{
+				name: "P3Droid's 125-1000mhz Standard Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-1000.zip"]
+			},
+			{
+				name: "P3Droid's 125-1100mhz Standard Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-1100.zip"]
+			},
+			{
+				name: "P3Droid's 125-1200mhz Standard Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-1200.zip"]
+			},
+			{
+				name: "P3Droid's 125-1250mhz Standard Voltage",
+				urls: ["http://www.p3designs.info/sapphire/p3droid-0.32.9-6-1250.zip"]
+			}
+			]
+		},
+		{
+			name: "Theme",
+			options:
+			[
+			{
+				name: "Stock (Default)",
+				file: "files/sapphire/froyo/release/0.8.4/sapphire-0.8.4-stock-update.zip"
+			},
+			{
+				name: "Black Bar",
+				file: "files/sapphire/froyo/release/0.8.4/sapphire-0.8.4-black_bar-update.zip"
+			},
+			{
+				name: "NexTANG",
+				file: "files/sapphire/froyo/release/0.8.4/sapphire-0.8.4-nextang-update.zip"
+			},
+			{
+				name: "Smoked Glass Blue",
+				file: "files/sapphire/froyo/release/0.8.4/sapphire-0.8.4-smoked_glass_blue-update.zip"
+			},
+			{
+				name: "Smoked Glass Blue [NO FONTS]",
+				file: "files/sapphire/froyo/release/0.8.4/sapphire-0.8.4-smoked_glass_blue-nofonts-update.zip"
+			}
+			]
+		}
+		]
+	},
+	{
 		name: "Sapphire 0.7.0 (Froyo)",
 		summary: "Stable",
 		device: "sholes",
