@@ -2,7 +2,5 @@
 # all devices
 
 build_version_major := 0
-build_version_minor := 8
-build_version_revision := 4
-
-include vendor/cvpcs/products/cvpcs_version_build.mk
+build_version_minor := 9
+build_version_revision := 0

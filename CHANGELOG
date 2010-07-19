@@ -1,3 +1,12 @@
+0.9.0:
+    Added ability to lower minimum setting for auto-brightness [cvpcs]
+        You can now reduce the auto-brightness minimum levels using the GEM
+        settings app
+
+    Added persistable compcache option [cvpcs/cyanogen]
+        Allows you to enable compcache via the GEM Settings app, and have the
+        setting persist through reboots
+
 0.8.4:
     Removed google apps by default [cvpcs]
         For legal reasons, google apps have been removed from sapphire by
