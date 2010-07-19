@@ -395,3 +395,17 @@ service dumpstate /system/bin/dumpstate -s
 service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
     disabled
     oneshot
+
+service compcache_on /system/bin/logwrapper /system/xbin/scriptybox compcache on
+    disabled
+    oneshot
+
+service compcache_off /system/bin/logwrapper /system/xbin/scriptybox compcache off
+    disabled
+    oneshot
+
+on property:persist.cvpcs.service.compcache.enable=1
+    start compcache_on
+
+on property:persist.cvpcs.service.compcache.enable=0
+    start compcache_off
