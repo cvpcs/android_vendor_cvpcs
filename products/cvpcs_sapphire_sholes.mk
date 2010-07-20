@@ -15,13 +15,13 @@ product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 
 # 2.2 build prop overrides
 PRODUCT_BUILD_PROP_OVERRIDES := \
-	BUILD_DATE_UTC=1277333704 \
-	BUILD_DISPLAY_ID=FRF84B \
-	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRF84B/42477:user/release-keys \
-	BUILD_ID=FRF84B \
-	BUILD_NUMBER=42477 \
+	BUILD_DATE_UTC=1279140904 \
+	BUILD_DISPLAY_ID=FRG01B \
+	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRG01B/45394:user/release-keys \
+	BUILD_ID=FRG01B \
+	BUILD_NUMBER=45394 \
 	BUILD_VERSION_TAGS=release-keys \
-	PRIVATE_BUILD_DESC="voles-user 2.2 FRF84B 42477 release-keys" \
+	PRIVATE_BUILD_DESC="voles-user 2.2 FRG01B 45394 release-keys" \
 	PRODUCT_NAME=voles \
 	PRODUCT_BRAND=verizon \
 	TARGET_DEVICE=sholes \
