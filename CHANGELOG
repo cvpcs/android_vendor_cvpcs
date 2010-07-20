@@ -1,4 +1,4 @@
-0.9.0:
+0.9.1:
     Added ADW Launcher [anderweb]
         ADW Launcher is now used by default as the launcher 2 replacement.
         Stock launcher can still be accessed using switchapk
@@ -6,6 +6,7 @@
     Added Cytown Phone overhaul [cytown]
         Cytown's phone overhaul can now be included using switchapk
 
+0.9.0:
     Added ability to lower minimum setting for auto-brightness [cvpcs]
         You can now reduce the auto-brightness minimum levels using the GEM
         settings app
