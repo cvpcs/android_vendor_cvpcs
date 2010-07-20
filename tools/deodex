@@ -20,8 +20,8 @@
 # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 #
 
-BAKSMALI="${ANDROID_BUILD_TOP}/vendor/cvpcs/baksmali"
-SMALI="${ANDROID_BUILD_TOP}/vendor/cvpcs/smali"
+BAKSMALI="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/baksmali"
+SMALI="${ANDROID_BUILD_TOP}/vendor/cvpcs/tools/smali"
 
 if [ ! -x "${BAKSMALI}" ] ; then
     echo "Error: Could not find BAKSMALI: [${BAKSMALI}]"
@@ -55,7 +55,13 @@ for i in $(find "${SYSDIR}" -name '*.odex'); do
 
     # baksmali!
     echo -n "  baksmali ... "
-    "${BAKSMALI}" -d "${SYSDIR}/framework" -x -o "${workdir}" "${odexfile}"
+    "${BAKSMALI}" \
+            -c ":$(find "${SYSDIR}/framework" -name '*.jar' \
+                | sed -r 's/^.*\/([^\/]+)$/\1/' \
+                | tr '\n' ':' \
+                | sed -r 's/^(.*):/\1/')" \
+            -d "${SYSDIR}/framework" \
+            -x -o "${workdir}" "${odexfile}"
     echo "done"
 
     # smali!
@@ -68,12 +74,14 @@ for i in $(find "${SYSDIR}" -name '*.odex'); do
         echo -n "  placing in APK file ... "
         zip "${apkfile}" "classes.dex"
         echo "done"
-    else if [ -e "${jarfile}" ] ; then
-        echo -n "  placing in JAR file ... "
-        jar -uvf "${jarfile}" "classes.dex"
-        echo "done"
     else
-        echo "  no location found to place DEX file"
+        if [ -e "${jarfile}" ] ; then
+            echo -n "  placing in JAR file ... "
+            jar -uvf "${jarfile}" "classes.dex"
+            echo "done"
+        else
+            echo "  no location found to place DEX file"
+        fi
     fi
     rm "classes.dex"
 
