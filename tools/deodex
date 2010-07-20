@@ -1,0 +1,85 @@
+#!/bin/bash
+#
+# Deodex
+# Deodexes all .odex files under a given directory
+#
+# Copyright (C) 2010 Austen Dicken (cvpcs)
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+
+BAKSMALI="${ANDROID_BUILD_TOP}/vendor/cvpcs/baksmali"
+SMALI="${ANDROID_BUILD_TOP}/vendor/cvpcs/smali"
+
+if [ ! -x "${BAKSMALI}" ] ; then
+    echo "Error: Could not find BAKSMALI: [${BAKSMALI}]"
+    exit 1
+fi
+
+if [ ! -x "${SMALI}" ] ; then
+    echo "Error: Could not find SMALI: [${SMALI}]"
+    exit 1
+fi
+
+SYSDIR="$1"
+
+if [ ! -d "${SYSDIR}" -o \
+     ! -d "${SYSDIR}/framework" ] ; then
+    echo "Please provide a valid /system directory"
+    exit 1
+fi
+
+# time to deodex!
+for i in $(find "${SYSDIR}" -name '*.odex'); do
+    filename=$(echo $(basename "${i}") | sed -r 's/^(.+)\.odex$/\1/')
+    dirname=$(dirname "${i}")
+    apkfile="${dirname}/${filename}.apk"
+    jarfile="${dirname}/${filename}.jar"
+    odexfile="${dirname}/${filename}.odex"
+    workdir="${dirname}/${filename}.work"
+    dexfile="${dirname}/${filename}.dex"
+
+    echo "Deodexing: [${odexfile}]"
+
+    # baksmali!
+    echo -n "  baksmali ... "
+    "${BAKSMALI}" -d "${SYSDIR}/framework" -x -o "${workdir}" "${odexfile}"
+    echo "done"
+
+    # smali!
+    echo -n "  smali ... "
+    "${SMALI}" -o "${dexfile}" "${workdir}"
+    echo "done"
+
+    cp "${dexfile}" "classes.dex"
+    if [ -e "${apkfile}" ] ; then
+        echo -n "  placing in APK file ... "
+        zip "${apkfile}" "classes.dex"
+        echo "done"
+    else if [ -e "${jarfile}" ] ; then
+        echo -n "  placing in JAR file ... "
+        jar -uvf "${jarfile}" "classes.dex"
+        echo "done"
+    else
+        echo "  no location found to place DEX file"
+    fi
+    rm "classes.dex"
+
+    echo -n "  cleaning ... "
+    rm "${dexfile}"
+    rm -r "${workdir}"
+    rm "${odexfile}"
+    echo "done"
+done
