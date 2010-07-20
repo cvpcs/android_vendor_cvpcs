@@ -56,6 +56,8 @@ PRODUCT_PACKAGES += \
 
 # include cvpcs-specific packages
 PRODUCT_PACKAGES += \
+	ADWLauncher \
+	CytownPhone \
 	EliotStockerMusic \
 	GEMSettings
 
