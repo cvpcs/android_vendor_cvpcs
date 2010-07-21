@@ -7,6 +7,10 @@
         The GEM settings app is now incorporated into the core settings app
         so it may be accessed from the main settings screen
 
+    GEM settings rework [cvpcs]
+        GEM settings has been overhauled to allow it to be more manigable as
+        an app for development.
+
 0.9.2:
     Updated proprietaries for FRG01B leak [cvpcs]
         The leak (courtesy p3droid) has been included in this release
