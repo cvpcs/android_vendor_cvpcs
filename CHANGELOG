@@ -1,3 +1,17 @@
+0.9.4:
+    Updated to custom sapphire kernels [cvpcs]
+        For various reasons, sapphire kernels will be customized by myself
+        (cvpcs) from here on out.  The new kernels are based on P3Droid's
+        original work for sapphire, with overclocking info borrowed from
+        Bekit's work
+
+    Reverted to Stock apps by default (cvpcs)
+        After much consideration, I have reverted the defaults for sapphire
+        apps to those which are stock (this includes Music, Launcher2, etc).
+        There are many reasons for this, but all custom apps such as
+        ADW, EliotStocker, and Cytown, will remain available through the
+        switchapk script in scriptybox
+
 0.9.3:
     Updated to latest p3 kernel [p3droid]
         Latest kernel includes support for more governors
