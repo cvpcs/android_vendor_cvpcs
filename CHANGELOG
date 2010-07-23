@@ -5,12 +5,15 @@
         original work for sapphire, with overclocking info borrowed from
         Bekit's work
 
-    Reverted to Stock apps by default (cvpcs)
+    Reverted to Stock apps by default [cvpcs]
         After much consideration, I have reverted the defaults for sapphire
         apps to those which are stock (this includes Music, Launcher2, etc).
         There are many reasons for this, but all custom apps such as
         ADW, EliotStocker, and Cytown, will remain available through the
         switchapk script in scriptybox
+
+    Other tweaks:
+        Fixed problem with ##PROGRAM menu [cvpcs]
 
 0.9.3:
     Updated to latest p3 kernel [p3droid]
