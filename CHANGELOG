@@ -1,3 +1,17 @@
+0.9.5:
+    Updated sapphire kernels [cvpcs]
+        Made some fixes to the sapphire kernels to fix the omap34xx cpu
+        temp sensor, as well as a camera issue.  This update to the kernel
+        also fixed the battery use issue where battery usage for non-system
+        apps would not show up under phone info.
+
+    Changes to GEM Settings [cvpcs]
+        Added options to GEM settings to set cpu frequency scaling options
+        (i.e. governor, min/max speeds, etc) at boot-time
+
+    Bug fixes:
+        50% signal loss bug [koush]
+
 0.9.4:
     Updated to custom sapphire kernels [cvpcs]
         For various reasons, sapphire kernels will be customized by myself
