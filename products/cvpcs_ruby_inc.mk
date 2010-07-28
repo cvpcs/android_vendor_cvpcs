@@ -8,19 +8,24 @@ build_version := $(build_version_major).$(build_version_minor).$(build_version_r
 PRODUCT_NAME := cvpcs_ruby_inc
 PRODUCT_BRAND := cvpcs
 PRODUCT_DEVICE := inc
-PRODUCT_MODEL := Incredible
+PRODUCT_MODEL := ADR6300
 PRODUCT_MANUFACTURER := HTC
 
 product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 
 PRODUCT_BUILD_PROP_OVERRIDES := \
-	BUILD_ID=FRF84B \
-	BUILD_DISPLAY_ID=$(product_version) \
-	PRODUCT_NAME=voles \
-	TARGET_DEVICE=sholes \
-	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
-	PRODUCT_BRAND=verizon
-#	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRF84B/42477:user/release-keys \
+        BUILD_DATE_UTC=1278156269 \
+        BUILD_DISPLAY_ID=FRF91 \
+        BUILD_FINGERPRINT=verizon_wwe/inc/inc/inc:2.2/FRF91/212490:user/release-keys \
+        BUILD_ID=FRF91 \
+        BUILD_NUMBER=204569 \
+        BUILD_VERSION_TAGS=release-keys \
+        PRIVATE_BUILD_DESC="3.16.605.0 CL203589 release-keys" \
+        PRODUCT_NAME=inc \
+        PRODUCT_BRAND=verizon_wwe \
+        TARGET_DEVICE=inc \
+        TARGET_BUILD_TYPE=user \
+        USER=android-build
 
 # grab hdpi versions of this stuff
 PRODUCT_PACKAGES += \
@@ -35,6 +40,8 @@ PRODUCT_PACKAGES += \
 
 # include cvpcs-specific packages
 PRODUCT_PACKAGES += \
+	ADWLauncher \
+	CytownPhone \
 	EliotStockerMusic \
 	GEMSettings
 
@@ -54,7 +61,6 @@ PRODUCT_COPY_FILES +=  \
 	vendor/cvpcs/prebuilt/common/system/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown \
 	vendor/cvpcs/prebuilt/common/system/media/bootanimation.zip:system/media/bootanimation.zip \
 	vendor/cvpcs/prebuilt/common/system/media/audio/ringtones/Hana_Maru_Caramell.ogg:system/media/audio/ringtones/Hana_Maru_Caramell.ogg \
-	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/droid.ogg:system/media/audio/notifications/droid.ogg \
 	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/Incoming_Message.ogg:system/media/audio/notifications/Incoming_Message.ogg \
 	vendor/cvpcs/prebuilt/inc/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
 
@@ -63,7 +69,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.notification_sound=Incoming_Message.ogg \
 	ro.config.ringtone=Hana_Maru_Caramell.ogg \
 	ro.modversion=$(product_version) \
-	ro.rommanager.developerid=cvpcs
+	ro.rommanager.developerid=cvpcs \
+	ro.cvpcs.build.name=$(build_name) \
+	ro.cvpcs.build.version=$(build_version)
 
 # use our custom init.rc script for our rootdir
 TARGET_PROVIDES_INIT_RC := true
@@ -81,8 +89,8 @@ USE_CAMERA_STUB := false
 PRODUCT_PACKAGES += Superuser
 
 # include proprietaries for now
-USE_HTC_PROPRIETARIES := true
-USE_GOOGLE_PROPRIETARIES := true
+USE_PROPRIETARIES := \
+	htc
 
 # grab some sounds
 include frameworks/base/data/sounds/OriginalAudio.mk
