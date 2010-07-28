@@ -6,7 +6,7 @@ build_name := Ruby
 build_version := $(build_version_major).$(build_version_minor).$(build_version_revision)
 
 PRODUCT_NAME := cvpcs_ruby_inc
-PRODUCT_BRAND := cvpcs
+PRODUCT_BRAND := htc
 PRODUCT_DEVICE := inc
 PRODUCT_MODEL := ADR6300
 PRODUCT_MANUFACTURER := HTC
