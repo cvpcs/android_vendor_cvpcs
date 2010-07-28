@@ -171,7 +171,7 @@ PRODUCT_LOCALES := \
 	uk_UA \
 	vi_VN \
 	zh_CN \
-	zh_TW \
+	zh_TW
 
 # include the device makefile
 $(call inherit-product, device/motorola/sholes/device.mk)
