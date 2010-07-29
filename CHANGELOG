@@ -1,4 +1,8 @@
 0.9.6:
+    Added Lockscreen Music [kmobs]
+        Provides lockscreen music controls (play/pause/next/previous)
+        based on kmob's original work
+
     Added CPUFreq options to boot [cvpcs]
         CPUFreq will now be enabled based on the settings in GEM settings
         at boot time
