@@ -288,6 +288,12 @@ on boot
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
     setprop net.tcp.buffersize.wimax   107380,221184,524288,4096,16384,110208
 
+# The following idea was taken from Cyanogen as a method of running
+# init scripts
+#
+    start sysinit
+
+on property:cvpcs.sysinit.ready=1
     class_start default
 
 ## Daemon processes to be run by init.
@@ -393,8 +399,10 @@ service pbap /system/bin/sdptool add --channel=19 PBAP
 service installd /system/bin/installd
     socket installd stream 600 system system
 
-service flash_recovery /system/etc/install-recovery.sh
-    oneshot
+# Stop recovery from flashing
+#
+#service flash_recovery /system/etc/install-recovery.sh
+#    oneshot
 
 service racoon /system/bin/racoon
     socket racoon stream 600 system system
@@ -437,3 +445,23 @@ service shutdown /system/bin/shutdown
 
 service ipd /system/bin/ipd
     socket ipd stream 666 root inet
+
+# Also taken from cyanogen as part of the system start process.
+#
+service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
+    disabled
+    oneshot
+
+service compcache_on /system/bin/logwrapper /system/xbin/scriptybox compcache on
+    disabled
+    oneshot
+
+service compcache_off /system/bin/logwrapper /system/xbin/scriptybox compcache off
+    disabled
+    oneshot
+
+on property:persist.service.gem.rzswap.on=1
+    start compcache_on
+
+on property:persist.service.gem.rzswap.on=0
+    start compcache_off
