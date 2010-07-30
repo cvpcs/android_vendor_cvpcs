@@ -1,4 +1,9 @@
 0.9.6:
+    Modified next/prev volume button controls [cvpcs]
+        Now if you longpress and hold the up/down volume buttons, it will
+        seek through tracks instead of executing once and then raising or
+        lowering the volume
+
     Added Lockscreen Music [kmobs]
         Provides lockscreen music controls (play/pause/next/previous)
         based on kmob's original work
