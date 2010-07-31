@@ -20,15 +20,20 @@
 # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 #
 
-# first we clear out any symlinks we have sitting around
-for i in /system/lib/modules/*; do
-	if [ -L "${i}" ] ; then
-		rm "${i}"
-	fi
-done
+DEPMOD="$(busybox which depmod)"
 
-# now re-make our symlink for whatever kernel they are currently running
-ln -s ./ "/system/lib/modules/$(uname -r)"
+# we might as well only bother if we can depmod
+if [ ! -z "${DEPMOD}" ] ; then
+	# first we clear out any symlinks we have sitting around
+	for i in /system/lib/modules/*; do
+		if [ -L "${i}" ] ; then
+			rm "${i}"
+		fi
+	done
 
-# and depmod
-depmod
+	# now re-make our symlink for whatever kernel they are currently running
+	ln -s ./ "/system/lib/modules/$(uname -r)"
+
+	# and depmod
+	"${DEPMOD}"
+fi

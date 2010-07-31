@@ -40,10 +40,10 @@ if busybox [ "${CPUFREQ_ENABLE}" == "1" ] ; then
 		# ensure all of the files are there, and that the settings fit otherwise we do nothing
 		if busybox [ -e "${CPUFREQ}/scaling_governor" \
 				-a -e "${CPUFREQ}/scaling_available_governors" \
-				-a ! -z "$(busybox grep '${CPUFREQ_GOVERNOR} ' ${CPUFREQ}/scaling_available_governors)" \
+				-a ! -z "$(busybox grep "${CPUFREQ_GOVERNOR} " ${CPUFREQ}/scaling_available_governors)" \
 				-a -e "${CPUFREQ}/scaling_available_frequencies" \
-				-a ! -z "$(busybox grep '${CPUFREQ_MINIMUM} ' ${CPUFREQ}/scaling_available_frequencies)" \
-				-a ! -z "${busybox grep '${CPUFREQ_MAXIMUM} ' ${CPUFREQ}/scaling_available_frequencies)" \
+				-a ! -z "$(busybox grep "${CPUFREQ_MINIMUM} " ${CPUFREQ}/scaling_available_frequencies)" \
+				-a ! -z "$(busybox grep "${CPUFREQ_MAXIMUM} " ${CPUFREQ}/scaling_available_frequencies)" \
 				-a -e "${CPUFREQ}/cpuinfo_max_freq" \
 				-a -e "${CPUFREQ}/scaling_max_freq" \
 				-a -e "${CPUFREQ}/cpuinfo_min_freq" \
