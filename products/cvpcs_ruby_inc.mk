@@ -59,9 +59,9 @@ PRODUCT_COPY_FILES +=  \
 	vendor/cvpcs/prebuilt/common/system/etc/init.d/99_ready:system/etc/init.d/99_ready \
 	vendor/cvpcs/prebuilt/common/system/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
 	vendor/cvpcs/prebuilt/common/system/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown \
-	vendor/cvpcs/prebuilt/common/system/media/bootanimation.zip:system/media/bootanimation.zip \
 	vendor/cvpcs/prebuilt/common/system/media/audio/ringtones/Hana_Maru_Caramell.ogg:system/media/audio/ringtones/Hana_Maru_Caramell.ogg \
 	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/Incoming_Message.ogg:system/media/audio/notifications/Incoming_Message.ogg \
+	vendor/cvpcs/prebuilt/inc/system/media/bootanimation.zip:system/media/bootanimation.zip \
 	vendor/cvpcs/prebuilt/inc/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
 
 # some standard overrides
