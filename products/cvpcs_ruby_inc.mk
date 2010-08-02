@@ -3,7 +3,7 @@ $(call inherit-product, vendor/cvpcs/products/cvpcs_generic.mk)
 # set up version info
 include vendor/cvpcs/products/cvpcs_version.mk
 build_name := Ruby
-build_version := $(build_version_major).$(build_version_minor).$(build_version_revision)
+build_version := $(build_version_major).$(build_version_minor).$(build_version_revision)_alpha4
 
 PRODUCT_NAME := cvpcs_ruby_inc
 PRODUCT_BRAND := htc
