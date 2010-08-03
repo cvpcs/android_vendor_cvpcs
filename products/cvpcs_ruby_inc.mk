@@ -71,7 +71,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.modversion=$(product_version) \
 	ro.rommanager.developerid=cvpcs \
 	ro.cvpcs.build.name=$(build_name) \
-	ro.cvpcs.build.version=$(build_version)
+	ro.cvpcs.build.version=$(build_version) \
+	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/ruby/froyo/1.0.0
 
 # use our custom init.rc script for our rootdir
 TARGET_PROVIDES_INIT_RC := true

@@ -1,4 +1,7 @@
 1.0.0:
+    Modified scriptybox [cvpcs]
+        Changed where scriptybox retrieves its files url for switchapk
+
     Disabled stagefright player [cvpcs]
         The stagefright player has been disabled in favor of the opencore
         one.  This is likely to change in the future and was only done as
