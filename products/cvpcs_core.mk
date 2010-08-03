@@ -35,7 +35,7 @@ PRODUCT_PACKAGES := \
     Bugreport
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.enable-player=true \
+    media.stagefright.enable-player=false \
     media.stagefright.enable-meta=true   \
     media.stagefright.enable-scan=true   \
     media.stagefright.enable-http=true

@@ -1,3 +1,23 @@
+1.0.0:
+    Disabled stagefright player [cvpcs]
+        The stagefright player has been disabled in favor of the opencore
+        one.  This is likely to change in the future and was only done as
+        some users have reported poor audio quality on some applications
+        using stagefright.
+
+    Updated latest sholes kernels [cvpcs]
+        Added IPv6 support to the base kernel instead of a module.  This
+        fixes a few FC in applications like Google Goggles which try to
+        use IPv6.
+
+    Modified next/prev volume button controls [cvpcs]
+        Fixed some logic in the longpress issues where presses were being
+        sent indefinitely.  Also doubled the amount of time for repeated
+        longpresses for easier track seeking.
+
+    Other tweaks:
+        Added warning to Performance settings if cpu min > max [cvpcs]
+
 0.9.6:
     Modified next/prev volume button controls [cvpcs]
         Now if you longpress and hold the up/down volume buttons, it will
