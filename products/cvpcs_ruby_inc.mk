@@ -68,6 +68,7 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.notification_sound=Incoming_Message.ogg \
 	ro.config.ringtone=Hana_Maru_Caramell.ogg \
+	ro.config.alarm_alert=Alarm_Classic.ogg \
 	ro.modversion=$(product_version) \
 	ro.rommanager.developerid=cvpcs \
 	ro.cvpcs.build.name=$(build_name) \
