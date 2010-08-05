@@ -216,6 +216,7 @@
 			[
 			{
 				name: "Stock (Default)",
+				urls: [""]
 			},
 			{
 				name: "Black Bar",
