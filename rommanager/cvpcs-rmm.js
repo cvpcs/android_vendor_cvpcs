@@ -4,7 +4,9 @@
 	donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=UXH6LPZL9E5XW&lc=US&item_name=CCRoms%20%28CVPCS%29&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted",
 	mirrors:
 	[
-		"http://files.ccroms.net/downloads.php?q="
+		"http://files.ccroms.net/download.php?q=",
+		"http://files.ccroms.net/download.php?m=kover&q=",
+		"http://files.ccroms.net/download.php?m=mdw&q="
 	],
 	roms:
 	[
