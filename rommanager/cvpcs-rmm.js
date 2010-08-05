@@ -21,7 +21,8 @@
 		screenshots:
 		[
 		"http://imgur.com/0gWnc.png",
-		"http://imgur.com/yvyuH.png"
+		"http://imgur.com/yvyuH.png",
+		"http://imgur.com/QPiNR.png"
 		],
 		addons:
 		[
