@@ -1,9 +1,13 @@
 HEAD:
+    Added VolBtn Music Control Enable option to GEM [cvpcs]
+        Added an option in GEM Settings to enable/disable the volume
+        button music controls.
+
     Added Audio DSP settings [alankila]
         Alankila did some awesome things with Audio Digital Signal
         Processing, which have now been incorporated into GEM Settings.
 
-    Re-enabled stagefright player [cvpcs]
+    Re-enabled stagefright player [cvpcs] (thanks google)
         A recent check-in to the froyo source tree has fixed the audio
         issues some were experiencing in stagefright, specifically with
         AAC+ and eAAC streams.  Thus I have synced the fix and re-
