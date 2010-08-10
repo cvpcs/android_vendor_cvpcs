@@ -2,46 +2,33 @@ $(call inherit-product, vendor/cvpcs/products/cvpcs_generic.mk)
 
 # set up version info
 include vendor/cvpcs/products/cvpcs_version.mk
-build_name := Sapphire
+build_name := Obsidian
 build_version := $(build_version_major).$(build_version_minor).$(build_version_revision)
 
-PRODUCT_NAME := cvpcs_sapphire_sholes
+PRODUCT_NAME := cvpcs_obsidian_sholes
 PRODUCT_BRAND := motorola
-PRODUCT_DEVICE := sholes
-PRODUCT_MODEL := Droid
+PRODUCT_DEVICE := shadow
+PRODUCT_MODEL := DROIDX
 PRODUCT_MANUFACTURER := Motorola
 
 product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 
 # 2.2 build prop overrides
 PRODUCT_BUILD_PROP_OVERRIDES := \
-	BUILD_DATE_UTC=1279140904 \
-	BUILD_DISPLAY_ID=FRG01B \
-	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRG01B/45394:user/release-keys \
-	BUILD_ID=FRG01B \
-	BUILD_NUMBER=45394 \
-	BUILD_VERSION_TAGS=release-keys \
-	PRIVATE_BUILD_DESC="voles-user 2.2 FRG01B 45394 release-keys" \
-	PRODUCT_NAME=voles \
+	BUILD_ID=VZW \
+	BUILD_DISPLAY_ID=VZW \
+	BUILD_NUMBER=2.2.1 \
+	BUILD_DATE_UTC=1279121275 \
+	TARGET_BUILD_TYPE=eng \
+	USER=w30471 \
+	BUILD_VERSION_TAGS=debug,test-keys \
+	PRODUCT_MODEL_INTERNAL=MB810 \
 	PRODUCT_BRAND=verizon \
-	TARGET_DEVICE=sholes \
-	TARGET_BUILD_TYPE=user \
-	USER=android-build
-
-# 2.1 build prop overrides (for market hacking)
-#PRODUCT_BUILD_PROP_OVERRIDES := \
-#	BUILD_DATE_UTC=1269304140 \
-#	BUILD_DISPLAY_ID=ESE81 \
-#	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
-#	BUILD_ID=ESE81 \
-#	BUILD_NUMBER=29593 \
-#	BUILD_VERSION_TAGS=release-keys \
-#	PRIVATE_BUILD_DESC="voles-user 2.1-update1 ESE81 29593 release-keys" \
-#	PRODUCT_NAME=voles \
-#	PRODUCT_BRAND=verizon \
-#	TARGET_DEVICE=sholes \
-#	TARGET_BUILD_TYPE=user \
-#	USER=android-build
+	PRODUCT_NAME=shadow_vzw \
+	TARGET_DEVICE=cdma_shadow \
+	BUILD_PRODUCT=shadow_vzw \
+	PRIVATE_BUILD_DESC="cdma_shadow-eng 2.2 VZW 2.2.1 debug,ota-rel-keys,release-keys" \
+	BUILD_FINGERPRINT=verizon/shadow_vzw/cdma_shadow/shadow:2.2/VZW/22.1:eng/debug,ota-rel-keys,release-keys
 
 # grab hdpi versions of this stuff
 PRODUCT_PACKAGES += \
@@ -77,8 +64,8 @@ PRODUCT_COPY_FILES +=  \
 	vendor/cvpcs/prebuilt/common/system/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown \
 	vendor/cvpcs/prebuilt/common/system/media/audio/ringtones/Hana_Maru_Caramell.ogg:system/media/audio/ringtones/Hana_Maru_Caramell.ogg \
 	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/Incoming_Message.ogg:system/media/audio/notifications/Incoming_Message.ogg \
-	vendor/cvpcs/prebuilt/motorola/sholes/system/media/bootanimation.zip:system/media/bootanimation.zip \
-	vendor/cvpcs/prebuilt/motorola/sholes/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
+	vendor/cvpcs/prebuilt/motorola/shadow/system/media/bootanimation.zip:system/media/bootanimation.zip \
+	vendor/cvpcs/prebuilt/motorola/shadow/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
 
 # some standard overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -89,7 +76,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.rommanager.developerid=cvpcs \
 	ro.cvpcs.build.name=$(build_name) \
 	ro.cvpcs.build.version=$(build_version) \
-	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/sapphire/froyo/1.0.0
+	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/shadow/froyo/$(build_version)
 
 # use our custom init.rc script for our rootdir
 TARGET_PROVIDES_INIT_RC := true
@@ -176,4 +163,4 @@ PRODUCT_LOCALES := \
 	zh_TW
 
 # include the device makefile
-$(call inherit-product, device/motorola/sholes/device.mk)
+$(call inherit-product, device/motorola/shadow/device.mk)

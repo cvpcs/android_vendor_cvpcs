@@ -1,3 +1,14 @@
+HEAD:
+    Added Audio DSP settings [alankila]
+        Alankila did some awesome things with Audio Digital Signal
+        Processing, which have now been incorporated into GEM Settings.
+
+    Re-enabled stagefright player [cvpcs]
+        A recent check-in to the froyo source tree has fixed the audio
+        issues some were experiencing in stagefright, specifically with
+        AAC+ and eAAC streams.  Thus I have synced the fix and re-
+	enabled stagefright for media playback.
+
 1.0.0:
     Modified scriptybox [cvpcs]
         Changed where scriptybox retrieves its files url for switchapk
