@@ -5,7 +5,7 @@ include vendor/cvpcs/products/cvpcs_version.mk
 build_name := Obsidian
 build_version := $(build_version_major).$(build_version_minor).$(build_version_revision)
 
-PRODUCT_NAME := cvpcs_obsidian_sholes
+PRODUCT_NAME := cvpcs_obsidian_shadow
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := shadow
 PRODUCT_MODEL := DROIDX
