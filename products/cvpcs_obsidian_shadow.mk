@@ -9,7 +9,7 @@ PRODUCT_NAME := cvpcs_obsidian_shadow
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := shadow
 PRODUCT_MODEL := DROIDX
-PRODUCT_MANUFACTURER := Motorola
+PRODUCT_MANUFACTURER := motorola
 
 product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 
