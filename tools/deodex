@@ -84,10 +84,4 @@ for i in $(find "${SYSDIR}" -name '*.odex'); do
         fi
     fi
     rm "classes.dex"
-
-    echo -n "  cleaning ... "
-    rm "${dexfile}"
-    rm -r "${workdir}"
-    rm "${odexfile}"
-    echo "done"
 done
