@@ -17,18 +17,18 @@ product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 PRODUCT_BUILD_PROP_OVERRIDES := \
 	BUILD_ID=VZW \
 	BUILD_DISPLAY_ID=VZW \
-	BUILD_NUMBER=2.2.1 \
-	BUILD_DATE_UTC=1279121275 \
-	TARGET_BUILD_TYPE=eng \
+	BUILD_NUMBER=2.2.9 \
+	BUILD_DATE_UTC=1279771813 \
+	TARGET_BUILD_TYPE=user \
 	USER=w30471 \
-	BUILD_VERSION_TAGS=debug,test-keys \
+	BUILD_VERSION_TAGS=test-keys \
 	PRODUCT_MODEL_INTERNAL=MB810 \
 	PRODUCT_BRAND=verizon \
 	PRODUCT_NAME=shadow_vzw \
 	TARGET_DEVICE=cdma_shadow \
 	BUILD_PRODUCT=shadow_vzw \
-	PRIVATE_BUILD_DESC="cdma_shadow-eng 2.2 VZW 2.2.1 debug,ota-rel-keys,release-keys" \
-	BUILD_FINGERPRINT=verizon/shadow_vzw/cdma_shadow/shadow:2.2/VZW/22.1:eng/debug,ota-rel-keys,release-keys
+	PRIVATE_BUILD_DESC="cdma_shadow-user 2.2 VZW 2.2.9 ota-rel-keys,release-keys" \
+	BUILD_FINGERPRINT=verizon/shadow_vzw/cdma_shadow/shadow:2.2/VZW/22.9:user/ota-rel-keys,release-keys
 
 # grab hdpi versions of this stuff
 PRODUCT_PACKAGES += \
