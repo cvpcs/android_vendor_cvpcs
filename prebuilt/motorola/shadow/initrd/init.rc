@@ -14,7 +14,7 @@ loglevel 3
     export ANDROID_DATA /data
     export EXTERNAL_STORAGE /mnt/sdcard
     export ASEC_MOUNTPOINT /mnt/asec
-    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/com.motorola.android.frameworks.jar
+    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar
 
 # Backward compatibility
     symlink /system/etc /etc
@@ -440,13 +440,17 @@ service dnsmasq /system/bin/logwrapper /system/bin/dnsmasq -C/data/misc/wifi/dns
     disabled
     oneshot
 
-service mynet_start /system/bin/logwrapper /system/bin/sh /data/misc/wifi/forward_start.sh
+service mynet_start /system/bin/logwrapper /system/bin/sh /system/bin/forward_start.sh
     class post-zygote_services
     disabled
     oneshot
 
-service mynet_stop /system/bin/logwrapper /system/bin/sh /data/misc/wifi/forward_stop.sh
+service mynet_stop /system/bin/logwrapper /system/bin/sh /system/bin/forward_stop.sh
     class post-zygote_services
     disabled
     oneshot
 
+service iptables /system/bin/iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
+    class post-zygote_services
+    user root
+    oneshot
