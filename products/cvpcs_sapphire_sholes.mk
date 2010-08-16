@@ -64,7 +64,6 @@ PRODUCT_PACKAGES += \
 # copy some prebuilts
 PRODUCT_COPY_FILES +=  \
 	vendor/cvpcs/CHANGELOG:system/etc/CHANGELOG-GEM \
-	vendor/cvpcs/prebuilt/common/system/app/ChromeToPhone.apk:system/app/ChromeToPhone.apk \
 	vendor/cvpcs/prebuilt/common/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
 	vendor/cvpcs/prebuilt/common/system/etc/init.d/00_banner:system/etc/init.d/00_banner \
 	vendor/cvpcs/prebuilt/common/system/etc/init.d/01_cpufreq:system/etc/init.d/01_cpufreq \

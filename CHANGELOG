@@ -1,4 +1,8 @@
 HEAD:
+    Removed ChromeToPhone [cvpcs]
+        As ChromeToPhone is now in market, there is no need to include
+        it here.
+
     Added VolBtn Music Control Enable option to GEM [cvpcs]
         Added an option in GEM Settings to enable/disable the volume
         button music controls.
