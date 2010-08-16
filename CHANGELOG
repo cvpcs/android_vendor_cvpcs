@@ -1,4 +1,4 @@
-HEAD:
+1.0.1:
     Removed ChromeToPhone [cvpcs]
         As ChromeToPhone is now in market, there is no need to include
         it here.
