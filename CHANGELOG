@@ -1,4 +1,9 @@
 1.0.1:
+    Added rsync [dylex]
+        As per a request I have added the rsync binary for those who
+        would use it to sync data between their phones and various other
+        sources.
+
     Removed ChromeToPhone [cvpcs]
         As ChromeToPhone is now in market, there is no need to include
         it here.
