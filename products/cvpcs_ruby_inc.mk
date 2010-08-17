@@ -61,8 +61,8 @@ PRODUCT_COPY_FILES +=  \
 	vendor/cvpcs/prebuilt/common/system/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown \
 	vendor/cvpcs/prebuilt/common/system/media/audio/ringtones/Hana_Maru_Caramell.ogg:system/media/audio/ringtones/Hana_Maru_Caramell.ogg \
 	vendor/cvpcs/prebuilt/common/system/media/audio/notifications/Incoming_Message.ogg:system/media/audio/notifications/Incoming_Message.ogg \
-	vendor/cvpcs/prebuilt/inc/system/media/bootanimation.zip:system/media/bootanimation.zip \
-	vendor/cvpcs/prebuilt/inc/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
+	vendor/cvpcs/prebuilt/htc/inc/system/media/bootanimation.zip:system/media/bootanimation.zip \
+	vendor/cvpcs/prebuilt/htc/inc/initrd/init.rc:$(TARGET_ROOT_OUT)/root/init.rc
 
 # some standard overrides
 PRODUCT_PROPERTY_OVERRIDES += \
