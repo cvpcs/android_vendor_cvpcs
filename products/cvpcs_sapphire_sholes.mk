@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	ADWLauncher \
 	CytownPhone \
+	DSPManager \
 	EliotStockerMusic \
 	GEMSettings
 
