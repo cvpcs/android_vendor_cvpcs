@@ -1,3 +1,16 @@
+1.0.2:
+    New kernels [cvpcs]
+        Added some new kernels with interactive governor support, which
+        provides a tradeoff between battery life and performance that
+        leans more towards performance.  Note that ondemand will remain
+        the default as it promotes better battery life.  The stock
+        125-1000LV kernel has also been replaced by the 250-800SV kernel
+        for the purpose of providing more stability out-of-the-box.
+
+    Various fixes:
+        Fixed FC with GEM Settings/DSP Manager [cvpcs]
+        More tweaks to the volume button music controls [cvpcs]
+
 1.0.1:
     Added rsync [dylex]
         As per a request I have added the rsync binary for those who
