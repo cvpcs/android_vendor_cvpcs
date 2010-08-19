@@ -1,7 +1,5 @@
-#!/system/bin/sh
-#
-# Sapphire ROM Startup Script
-# Completes init and sets the desired properties for continuing system startup
+# GEM System Initialization
+# A program that initializes all GEM ROMs prior to completing boot
 #
 # Copyright (C) 2010 Austen Dicken (cvpcs)
 #
@@ -19,4 +17,6 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 #
-setprop cvpcs.sysinit.ready 1
+
+export PATH=/sbin:/system/sbin:/system/bin:/system/xbin
+/system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d

@@ -1,3 +1,10 @@
+1.0.3:
+    Consolidated build [cvpcs (modifications)]
+                       [cyanogen (base idea)]
+        In order to better allow for multiple device support, the build
+        configs are now consolidated across all devices.  This means
+        a more common experience for all systems running a GEM.
+
 1.0.2:
     New kernels [cvpcs]
         Added some new kernels with interactive governor support, which

@@ -39,3 +39,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-meta=true   \
     media.stagefright.enable-scan=true   \
     media.stagefright.enable-http=true
+# end modified core config

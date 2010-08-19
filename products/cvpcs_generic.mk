@@ -32,3 +32,5 @@ PRODUCT_PACKAGES += \
 #    Provision \
 #    LatinIME \
 #    QuickSearchBox \
+
+# end of modified generic config
