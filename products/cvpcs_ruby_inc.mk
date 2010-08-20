@@ -37,7 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.rommanager.developerid=cvpcs \
 	ro.cvpcs.build.name=$(build_name) \
 	ro.cvpcs.build.version=$(build_version) \
-	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/ruby/froyo/1.0.0
+	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/ruby/froyo/$(build_version)
 
 # use edify ota script (for whatever reason)
 TARGET_OTA_SCRIPT_MODE := edify

@@ -15,33 +15,18 @@ product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 
 # 2.2 build prop overrides
 PRODUCT_BUILD_PROP_OVERRIDES := \
-	BUILD_DATE_UTC=1279140904 \
-	BUILD_DISPLAY_ID=FRG01B \
-	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRG01B/45394:user/release-keys \
-	BUILD_ID=FRG01B \
-	BUILD_NUMBER=45394 \
+	BUILD_DATE_UTC=1278317902 \
+	BUILD_DISPLAY_ID=FRG22D \
+	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.2/FRG22D/50454:user/release-keys \
+	BUILD_ID=FRG22D \
+	BUILD_NUMBER=50454 \
 	BUILD_VERSION_TAGS=release-keys \
-	PRIVATE_BUILD_DESC="voles-user 2.2 FRG01B 45394 release-keys" \
+	PRIVATE_BUILD_DESC="voles-user 2.2 FRG22D 50454 release-keys" \
 	PRODUCT_NAME=voles \
 	PRODUCT_BRAND=verizon \
 	TARGET_DEVICE=sholes \
 	TARGET_BUILD_TYPE=user \
 	USER=android-build
-
-# 2.1 build prop overrides (for market hacking)
-#PRODUCT_BUILD_PROP_OVERRIDES := \
-#	BUILD_DATE_UTC=1269304140 \
-#	BUILD_DISPLAY_ID=ESE81 \
-#	BUILD_FINGERPRINT=verizon/voles/sholes/sholes:2.1-update1/ESE81/29593:user/release-keys \
-#	BUILD_ID=ESE81 \
-#	BUILD_NUMBER=29593 \
-#	BUILD_VERSION_TAGS=release-keys \
-#	PRIVATE_BUILD_DESC="voles-user 2.1-update1 ESE81 29593 release-keys" \
-#	PRODUCT_NAME=voles \
-#	PRODUCT_BRAND=verizon \
-#	TARGET_DEVICE=sholes \
-#	TARGET_BUILD_TYPE=user \
-#	USER=android-build
 
 # copy some prebuilts
 PRODUCT_COPY_FILES +=  \
@@ -53,7 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.rommanager.developerid=cvpcs \
 	ro.cvpcs.build.name=$(build_name) \
 	ro.cvpcs.build.version=$(build_version) \
-	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/sapphire/froyo/1.0.0
+	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/sapphire/froyo/$(build_version)
 
 # use edify ota script (for whatever reason)
 TARGET_OTA_SCRIPT_MODE := edify

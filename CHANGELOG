@@ -1,4 +1,8 @@
 1.0.3:
+    Upgraded to new leak proprietaries [p3droid]
+        P3Droid recently released the new proprietaries for the FRG22D
+        build, which have now been included into the release.
+
     Consolidated build [cvpcs (modifications)]
                        [cyanogen (base idea)]
         In order to better allow for multiple device support, the build
