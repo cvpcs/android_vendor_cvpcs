@@ -1,3 +1,5 @@
+#!/system/bin/sh
+#
 # GEM System Initialization
 # A program that initializes all GEM ROMs prior to completing boot
 #
