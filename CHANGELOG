@@ -1,3 +1,12 @@
+1.0.4:
+    Added new, custom kernels, for RUBY [cvpcs]
+        Added some new kernels for ruby so that touch events will once
+        again register.  Thanks to koush/cyanogen for the tip on the
+        touch event config.
+
+    Other tweaks:
+        New (less ugly) boot animation for Ruby [cvpcs]
+
 1.0.3:
     Upgraded to new leak proprietaries [p3droid]
         P3Droid recently released the new proprietaries for the FRG22D
