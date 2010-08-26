@@ -1,3 +1,11 @@
+1.0.5:
+    Upgrade Ruby to new 3.21.605.1 proprietaries [cvpcs]
+        There is a new leak of Froyo for the Droid Incredible, so Ruby
+        has been upgraded to reflect this new leak.
+
+    Bug fixes:
+        Volume button music command fixes [cvpcs]
+
 1.0.4:
     Added new, custom kernels, for RUBY [cvpcs]
         Added some new kernels for ruby so that touch events will once

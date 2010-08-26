@@ -14,13 +14,13 @@ PRODUCT_MANUFACTURER := HTC
 product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 
 PRODUCT_BUILD_PROP_OVERRIDES := \
-        BUILD_DATE_UTC=1278156269 \
+        BUILD_DATE_UTC=1281952899 \
         BUILD_DISPLAY_ID=FRF91 \
-        BUILD_FINGERPRINT=verizon_wwe/inc/inc/inc:2.2/FRF91/212490:user/release-keys \
+        BUILD_FINGERPRINT=verizon_wwe/inc/inc/inc:2.2/FRF91/231334:user/release-keys \
         BUILD_ID=FRF91 \
-        BUILD_NUMBER=204569 \
+        BUILD_NUMBER=231334 \
         BUILD_VERSION_TAGS=release-keys \
-        PRIVATE_BUILD_DESC="3.16.605.0 CL203589 release-keys" \
+        PRIVATE_BUILD_DESC="3.21.605.1 CL231334 release-keys" \
         PRODUCT_NAME=inc \
         PRODUCT_BRAND=verizon_wwe \
         TARGET_DEVICE=inc \
