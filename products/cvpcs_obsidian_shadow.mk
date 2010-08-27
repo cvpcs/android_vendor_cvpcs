@@ -42,18 +42,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.cvpcs.build.version=$(build_version) \
 	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/obsidian/froyo/$(build_version)
 
-# use edify ota script (for whatever reason)
-TARGET_OTA_SCRIPT_MODE := edify
-
-# disable building/inclusion of a recovery image
-TARGET_NO_RECOVERY := true
-
-# we don't want to overwrite the kernel either, as the bootloader is signed
-TARGET_NO_KERNEL := true
-
-# we have a camera, don't stubbify
-USE_CAMERA_STUB := false
-
 # include proprietaries for now
 USE_PROPRIETARIES := \
 	motorola
