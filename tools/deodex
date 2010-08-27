@@ -61,8 +61,22 @@ for i in $(find "${SYSDIR}" -name '*.odex'); do
                 | tr '\n' ':' \
                 | sed -r 's/^(.*):/\1/')" \
             -d "${SYSDIR}/framework" \
-            -x -o "${workdir}" "${odexfile}"
-    echo "done"
+            -x -o "${workdir}" "${odexfile}" 2>/dev/null
+
+    if [ $? -eq 0 ] ; then
+        echo "done"
+    else
+        echo "failed"
+        echo -n "  baksmali while ignoring errors ... "
+        "${BAKSMALI}" \
+                -c ":$(find "${SYSDIR}/framework" -name '*.jar' \
+                    | sed -r 's/^.*\/([^\/]+)$/\1/' \
+                    | tr '\n' ':' \
+                    | sed -r 's/^(.*):/\1/')" \
+                -d "${SYSDIR}/framework" \
+                -I -x -o "${workdir}" "${odexfile}" 2>/dev/null
+        echo "done"
+    fi
 
     # smali!
     echo -n "  smali ... "
