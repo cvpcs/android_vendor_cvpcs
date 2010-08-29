@@ -1,4 +1,11 @@
 1.0.5:
+    Added Emerald (HTC Evo/Supersonic) build [cvpcs]
+        Added a vendor setup for the HTC Evo to begin some work on that
+        as well, being it has similar hardware to the Incredible.
+
+    Added custom kernel for Emerald [cvpcs]
+        Added some custom kernalage for the evo!
+
     Upgrade Ruby to new 3.21.605.1 proprietaries [cvpcs]
         There is a new leak of Froyo for the Droid Incredible, so Ruby
         has been upgraded to reflect this new leak.

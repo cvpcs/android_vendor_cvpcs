@@ -20,6 +20,8 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
+add_lunch_combo cvpcs_emerald_supersonic-userdebug
+add_lunch_combo cvpcs_emerald_supersonic-eng
 add_lunch_combo cvpcs_ruby_inc-userdebug
 add_lunch_combo cvpcs_ruby_inc-eng
 add_lunch_combo cvpcs_obsidian_shadow-userdebug
