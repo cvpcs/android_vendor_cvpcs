@@ -1,4 +1,9 @@
 1.0.5:
+    Added hijacking to the build [cvpcs (build-related)]
+                                 [koush (original source)]
+        I have incorporated some of koush's source for his hijack script
+        for devices that don't support an unlocked bootloader.
+
     Added Emerald (HTC Evo/Supersonic) build [cvpcs]
         Added a vendor setup for the HTC Evo to begin some work on that
         as well, being it has similar hardware to the Incredible.
