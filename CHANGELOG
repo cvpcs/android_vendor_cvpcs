@@ -15,8 +15,12 @@
         There is a new leak of Froyo for the Droid Incredible, so Ruby
         has been upgraded to reflect this new leak.
 
+    Added ability for multiple devices to mount [koush]
+        Ruby can now mount internal storage to /mnt/emmc
+
     Bug fixes:
         Volume button music command fixes [cvpcs]
+        Mms fix for Ruby [koush]
 
 1.0.4:
     Added new, custom kernels, for RUBY [cvpcs]
