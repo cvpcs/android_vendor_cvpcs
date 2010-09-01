@@ -29,4 +29,5 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/cvpcs_emerald_supersonic.mk \
 	$(LOCAL_DIR)/cvpcs_ruby_inc.mk \
 	$(LOCAL_DIR)/cvpcs_obsidian_shadow.mk \
-	$(LOCAL_DIR)/cvpcs_sapphire_sholes.mk
+	$(LOCAL_DIR)/cvpcs_sapphire_sholes.mk \
+	$(LOCAL_DIR)/cvpcs_tanzanite_droid2.mk
