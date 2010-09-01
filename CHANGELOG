@@ -1,3 +1,8 @@
+1.1.0:
+    Updated Obsidian to 2.3.9 [cvpcs]
+        Updated the obisidan build to the latest proprietary leak,
+        courtesy of P3Droid.
+
 1.0.5:
     Added hijacking to the build [cvpcs (build-related)]
                                  [koush (original source)]

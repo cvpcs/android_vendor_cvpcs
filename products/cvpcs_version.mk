@@ -2,5 +2,5 @@
 # all devices
 
 build_version_major := 1
-build_version_minor := 0
-build_version_revision := 5
+build_version_minor := 1
+build_version_revision := 0
