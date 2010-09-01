@@ -957,4 +957,5 @@
   <apn carrier="Zain SA" mcc="420" mnc="04" apn="zain" user="" server="" password="" mmsc="http://10.122.200.12:8002" mmsproxy="10.122.200.10" mmsport="8080" type="default,mms"/>
   <apn carrier="Zong" mcc="410" mnc="04" apn="zonginternet" user="" server="" password="" mmsc="" type="default"/>
   <apn carrier="Zong MMS" mcc="410" mnc="04" apn="zongmms" user="" server="" password="" mmsc="10.81.6.11" mmsproxy="10.81.6.11" mmsport="8080" type="mms"/>
+  <apn name="Production" numeric="310012" mcc="310" mnc="012" apn="1" user="null" server="null" password="null" proxy="null" port="" mmsproxy="" mmsport="" mmsprotocol="2.0" mmsc="http://mms.vtext.com/servlets/mms" type="mms" />
 </apns>

@@ -3,10 +3,12 @@
         Updated the obisidan build to the latest proprietary leak,
         courtesy of P3Droid.
 
-    Added Tanzanite [cvpcs]
+    Added Tanzanite (Droid 2) build [cvpcs]
         Added a tanzanite build to test if it has similar problems to the
-        obsidian build.  Will be on hold for awhile until other projects
-        are caught up on.
+        obsidian build.
+
+    Bug fixes:
+        Fix to MMS for Ruby [koush]
 
 1.0.5:
     Added hijacking to the build [cvpcs (build-related)]
@@ -30,7 +32,6 @@
 
     Bug fixes:
         Volume button music command fixes [cvpcs]
-        Mms fix for Ruby [koush]
 
 1.0.4:
     Added new, custom kernels, for RUBY [cvpcs]
