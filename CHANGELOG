@@ -3,6 +3,11 @@
         Updated the obisidan build to the latest proprietary leak,
         courtesy of P3Droid.
 
+    Added Tanzanite [cvpcs]
+        Added a tanzanite build to test if it has similar problems to the
+        obsidian build.  Will be on hold for awhile until other projects
+        are caught up on.
+
 1.0.5:
     Added hijacking to the build [cvpcs (build-related)]
                                  [koush (original source)]
