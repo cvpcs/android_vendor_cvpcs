@@ -87,6 +87,16 @@ if [ -f "${WORK}/system/build.prop" ] ; then
         | sed -e "s/^.*=//g")
     echo "Found modversion: [${MODVERSION}]"
 
+    # grab the cvpcs build name
+    CVPCS_BUILD_NAME=$(grep "ro.cvpcs.build.name" "${WORK}/system/build.prop" \
+        | sed -e "s/^.*=//g")
+    echo "Found cvpcs.build.name: [${CVPCS_BUILD_NAME}]"
+
+    # grab the cvpcs build version
+    CVPCS_BUILD_VERSION=$(grep "ro.cvpcs.build.version" "${WORK}/system/build.prop" \
+        | sed -e "s/^.*=//g")
+    echo "Found cvpcs.build.version: [${CVPCS_BUILD_VERSION}]"
+
     # modify build prop to our liking
     echo "Modifying build.prop: [${WORK}/system/build.prop]"
     grep -v "ro.kernel.android.checkjni" "${WORK}/system/build.prop" \
@@ -99,17 +109,50 @@ fi
 rm -fr "${WORK}/recovery"
 echo "Removed recovery: [${WORK}/recovery]"
 
-# if we don't have a modversion, don't bother with a header for the script
-if [ ! -z "${MODVERSION}" ] ; then
-    # place a header at the top of the updater script
-    echo "Adding header to updater-script..."
+# if we have a build name and version, then use that to modify the script
+if [ ! -z "${CVPCS_BUILD_NAME}" -a ! -z "${CVPCS_BUILD_VERSION}" ] ; then
+    echo "Adding cvpcs build name/version to updater-script..."
+
+    # copy the original script
     cp "${WORK}/META-INF/com/google/android/updater-script" \
         "${WORK}/META-INF/com/google/android/updater-script.tmp"
-    echo "ui_print(\"Welcome to ${MODVERSION}!\");" \
+
+    # ui_print("Welcome to [BUILD]-[VERSION]! (ccroms.net)")
+    echo "ui_print(\"Welcome to ${CVPCS_BUILD_NAME}-${CVPCS_BUILD_VERSION}! (ccroms.net)\");" \
         > "${WORK}/META-INF/com/google/android/updater-script"
+
+    # ui_print("Beginning installation ...")
+    echo "ui_print(\"Beginning installation ...\");" \
+        >> "${WORK}/META-INF/com/google/android/updater-script"
+
+    # copy the actual install script over
     cat "${WORK}/META-INF/com/google/android/updater-script.tmp" \
         >> "${WORK}/META-INF/com/google/android/updater-script"
+
+    # ui_print("Installation complete.")
+    echo "ui_print(\"Installation complete.\");" \
+        >> "${WORK}/META-INF/com/google/android/updater-script"
+
+    # ui_print("Thank you for choosing [BUILD]!")
+    echo "ui_print(\"Thank you for choosing ${CVPCS_BUILD_NAME}!\");" \
+        >> "${WORK}/META-INF/com/google/android/updater-script"
+
+    # remove the temp script
     rm "${WORK}/META-INF/com/google/android/updater-script.tmp"
+else
+    # if we don't have a build name/ver, then see if we have a modversion and
+    # use that
+    if [ ! -z "${MODVERSION}" ] ; then
+        # place a header at the top of the updater script
+        echo "Adding modversion header to updater-script..."
+        cp "${WORK}/META-INF/com/google/android/updater-script" \
+            "${WORK}/META-INF/com/google/android/updater-script.tmp"
+        echo "ui_print(\"Welcome to ${MODVERSION}!\");" \
+            > "${WORK}/META-INF/com/google/android/updater-script"
+        cat "${WORK}/META-INF/com/google/android/updater-script.tmp" \
+            >> "${WORK}/META-INF/com/google/android/updater-script"
+        rm "${WORK}/META-INF/com/google/android/updater-script.tmp"
+    fi
 fi
 
 # time for zipping!
