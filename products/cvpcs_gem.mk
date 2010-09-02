@@ -39,6 +39,7 @@ PRODUCT_COPY_FILES += \
     vendor/cvpcs/prebuilt/common/system/etc/init.d/10_sysrw:system/etc/init.d/10_sysrw \
     vendor/cvpcs/prebuilt/common/system/etc/init.d/11_depmod:system/etc/init.d/11_depmod \
     vendor/cvpcs/prebuilt/common/system/etc/init.d/19_sysro:system/etc/init.d/19_sysro \
+    vendor/cvpcs/prebuilt/common/system/etc/init.d/20_arcfirstboot:system/etc/init.d/20_arcfirstboot \
     vendor/cvpcs/prebuilt/common/system/etc/init.d/98_cron:system/etc/init.d/98_cron \
     vendor/cvpcs/prebuilt/common/system/etc/init.gem.rc:system/etc/init.gem.rc \
     vendor/cvpcs/prebuilt/common/system/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
