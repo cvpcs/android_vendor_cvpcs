@@ -1,4 +1,8 @@
 1.1.1:
+    Added Bluetooth MAC settings [koush] (Ruby)
+        Added some bluetooth MAC settings to support Bluetooth Audio
+        streaming
+
     Moved from libloc to libgps [koush] (Ruby)
         Libloc is a deprecated api for GPS, while libgps is newer.
 
