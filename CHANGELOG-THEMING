@@ -4,11 +4,12 @@ themers of what files need to be re-made when up-porting to the latest
 release.  The format is as follows:
 
 [oldversion] to [newversion]:
-	[list of files that have changed]
+	[file path] [description of what happened file-wise
+                     (think created/renamed/etc)]
 
 I hope this helps the themers out!
 
 -------------------------------------------------------------------------------
 
 1.1.0 to 1.1.1:
-	/system/app/MediaProvider.apk
+	/system/app/MediaProvider.apk [modified]
