@@ -1,3 +1,12 @@
+1.1.1:
+    Moved from libloc to libgps [koush] (Ruby)
+        Libloc is a deprecated api for GPS, while libgps is newer.
+
+    Scan all mounted directories for Media [koush]
+        Added the ability to scan all of the mounted directories for
+        media.  This allows internal and external storage on some
+        devices to have their media show up in Gallery/Music/etc.
+
 1.1.0:
     New boot animations [Ludacrosse05]
         Luda has been nice enough to make some truly kick-ass boot
@@ -8,8 +17,8 @@
         courtesy of P3Droid.
 
     Added Tanzanite (Droid 2) build [cvpcs]
-        Added a tanzanite build to test if it has similar problems to the
-        obsidian build.
+        Added a tanzanite build to test if it has similar problems to
+        the obsidian build.
 
     Bug fixes:
         Fix to MMS for Ruby [koush]
