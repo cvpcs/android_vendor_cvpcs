@@ -1,4 +1,8 @@
 1.1.1:
+    Added more new boot animations [Ludacrosse05] (Emerald, Obsidian)
+        Added the new boot animations from Luda for the emerald and
+        obsidian builds
+
     Added Bluetooth MAC settings [koush] (Ruby)
         Added some bluetooth MAC settings to support Bluetooth Audio
         streaming
