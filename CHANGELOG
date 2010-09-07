@@ -1,3 +1,7 @@
+HEAD:
+    Tweaks:
+        Better looking reboot icon [pandroid]
+
 1.1.1:
     Added better camera/camcorder resolution support [cyanogen]
         Provides more support for encoding video, audio, and imagery
