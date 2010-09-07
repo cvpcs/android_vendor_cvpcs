@@ -16,5 +16,11 @@ I hope this helps the themers out!
 
 1.1.0 to 1.1.1:
 	/system/app/Camera.apk [modified]
+	/system/app/GoogleQuickSearchBox.apk [removed from gapps package in
+                                              favor of market download]
+	/system/app/Gmail.apk [updated to v2.2.1 in gapps package]
 	/system/app/MediaProvider.apk [modified]
+	/system/app/VoiceSearch.apk [removed from gapps package in favor of
+                                     market download]
 	/system/framework/framework.jar [modified]
+
