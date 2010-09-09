@@ -12,6 +12,66 @@
 	[
 	// ========================================================================================================= //
 	//                                                                                                           //
+	// EMERALD BUILD                                                                                             //
+	//                                                                                                           //
+	// HTC PC36100 (Evo 4G)                                                                                      //
+	//                                                                                                           //
+	// ========================================================================================================= //
+	{
+		name: "Emerald 1.1.1 (Froyo)",
+		summary: "Alpha Testing",
+		device: "supersonic",
+		product: "Emerald",
+		incremental: 1110,
+		modversion: "Emerald-1.1.1-PC36100",
+		file: "emerald/froyo/1.1.1/release/emerald-1.1.1-update.zip",
+		screenshots:
+		[
+		"http://imgur.com/rnrHl.png",
+		"http://imgur.com/9NTTB.png"
+		],
+		choices:
+		[
+		{
+			name: "Google Apps",
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "emerald/froyo/1.1.1/release/emerald-1.1.1-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+			]
+		},
+		{
+			name: "Theme",
+			options:
+			[
+			{
+				name: "Stock (Default)",
+				urls: [""]
+			},
+			{
+				name: "Black Bar",
+				file: "emerald/froyo/1.1.1/themes/black_bar-1.1.1-update.zip"
+			},
+			{
+				name: "Incognito",
+				file: "emerald/froyo/1.1.1/themes/incognito-1.1.1-update.zip"
+			},
+			{
+				name: "Incognito (Red)",
+				file: "emerald/froyo/1.1.1/themes/incognito_red-1.1.1-update.zip"
+			}
+			]
+		}
+		]
+	},
+	// ========================================================================================================= //
+	//                                                                                                           //
 	// RUBY BUILD                                                                                                //
 	//                                                                                                           //
 	// HTC ADR6300 (INCREDIBLE)                                                                                  //
