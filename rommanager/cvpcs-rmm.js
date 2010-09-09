@@ -44,6 +44,7 @@
 				name: "Don't install Google Apps",
 				urls: [""]
 			}
+			]
 		},
 		{
 			name: "Theme",
@@ -123,6 +124,7 @@
 				name: "Don't install Google Apps",
 				urls: [""]
 			}
+			]
 		},
 		{
 			name: "Kernel",
