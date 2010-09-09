@@ -30,15 +30,21 @@
 		"http://imgur.com/rnrHl.png",
 		"http://imgur.com/R3n0O.png"
 		],
-		addons:
+		choices:
 		[
 		{
 			name: "Google Apps",
-			file: "ruby/froyo/1.1.1/release/ruby-1.1.1-gapps-update.zip"
-		}
-		],
-		choices:
-		[
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "ruby/froyo/1.1.1/release/ruby-1.1.1-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+		},
 		{
 			name: "Theme",
 			options:
@@ -103,15 +109,21 @@
 		"http://imgur.com/rnrHl.png",
 		"http://imgur.com/SaRQr.png"
 		],
-		addons:
+		choices:
 		[
 		{
 			name: "Google Apps",
-			file: "sapphire/froyo/1.1.1/release/sapphire-1.1.1-gapps-update.zip"
-		}
-		],
-		choices:
-		[
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "sapphire/froyo/1.1.1/release/sapphire-1.1.1-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+		},
 		{
 			name: "Kernel",
 			options:
