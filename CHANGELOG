@@ -1,4 +1,8 @@
 HEAD:
+    Added rotary lockscreen [cvpcs]
+        Through gem settings you can now choose to replace the default
+        tab lockscreen with a rotary one
+
     Tweaks:
         Better looking reboot icon [pandroid]
 
