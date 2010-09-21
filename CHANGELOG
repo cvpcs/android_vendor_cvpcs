@@ -1,11 +1,17 @@
-HEAD:
+1.1.2:
+    First functional build of Obsidian [cvpcs] (Obsidian)
+        This build marks the first properly booting release of
+        Obsidian (AOSP for Droid X), however there are still MANY bugs
+        some of which are critical (i.e. audio doesn't work), which
+        need to be worked out.
+
     Added rotary lockscreen [cvpcs]
         Through gem settings you can now choose to replace the default
         tab lockscreen with a rotary one
 
     Tweaks:
         Better looking reboot icon [pandroid]
-        Updated obsidian to 2.3.13 props [cvpcs]
+        Updated obsidian to 2.3.13 props (Obsidian) [cvpcs]
 
 1.1.1:
     Added better camera/camcorder resolution support [cyanogen]
