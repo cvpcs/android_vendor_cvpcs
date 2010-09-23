@@ -1,3 +1,14 @@
+1.1.3:
+    Moved Obsidian to a chroot environment [cvpcs] (Obsidian)
+        Obsidian is now inside a jailed root environment (chroot), which
+        allows it to remain distinct and oblivious to the motorola init
+        that spawns it. (huzzah!)
+
+    Bug fixes:
+        Battery daemon now starts properly on boot [cvpcs] (Obsidian)
+        Wifi works! [cvpcs] (Obsidian)
+        Bluetooth works! [cvpcs] (Obsidian)
+
 1.1.2:
     First functional build of Obsidian [cvpcs] (Obsidian)
         This build marks the first properly booting release of
