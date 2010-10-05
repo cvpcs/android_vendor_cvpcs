@@ -3,4 +3,4 @@
 
 build_version_major := 1
 build_version_minor := 1
-build_version_revision := 3
+build_version_revision := 4

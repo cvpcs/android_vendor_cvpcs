@@ -1,3 +1,9 @@
+1.1.4:
+    Updated to AOSP Froyo 2.2.1 [cvpcs]
+        AOSP recently pushed a group of updates corresponding to a new
+        froyo release (2.2.1), which have now been incorporated into
+        the build.
+
 1.1.3:
     Moved Obsidian to a chroot environment [cvpcs] (Obsidian)
         Obsidian is now inside a jailed root environment (chroot), which
