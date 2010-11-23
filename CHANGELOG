@@ -1,3 +1,7 @@
+1.1.5 [HEAD]:
+    Updated AOSP Froyo [cvpcs]
+        Once again merged AOSP froyo's recent changes
+
 1.1.4:
     Updated to AOSP Froyo 2.2.1 [cvpcs]
         AOSP recently pushed a group of updates corresponding to a new
