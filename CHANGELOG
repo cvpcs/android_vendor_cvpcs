@@ -2,6 +2,11 @@
     Updated AOSP Froyo [cvpcs]
         Once again merged AOSP froyo's recent changes
 
+    Added CWiiD WiiMote Connectivity [cvpcs/nehresmann]
+        CWiiD is a library that enabled wiimotes to connect via
+        bluetooth to your device.  They can then be used as remote
+        controls as a virtual keyboard.
+
 1.1.4:
     Updated to AOSP Froyo 2.2.1 [cvpcs]
         AOSP recently pushed a group of updates corresponding to a new
