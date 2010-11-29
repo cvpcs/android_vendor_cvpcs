@@ -1,3 +1,4 @@
+# Compcache (RamZSwap) stuff
 service compcache_on /system/bin/logwrapper /system/xbin/scriptybox compcache on
     disabled
     oneshot
@@ -11,3 +12,18 @@ on property:persist.service.gem.rzswap.on=1
 
 on property:persist.service.gem.rzswap.on=0
     start compcache_off
+
+# CWiiD stuff
+service cwiid_on /system/bin/logwrapper /system/xbin/scriptybox cwiid on
+    disabled
+    oneshot
+
+service cwiid_off /system/bin/logwrapper /system/xbin/scriptybox cwiid off
+    disabled
+    oneshot
+
+on property:persist.service.gem.cwiid.on=1
+    start cwiid_on
+
+on property:persist.service.gem.cwiid.on=0
+    start cwiid_off
