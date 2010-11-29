@@ -1,4 +1,9 @@
 1.1.5 [HEAD]:
+    Reverted to 2.1 volume rocker behavior [erasmux]
+        Reverted to the original 2.1 volume rocker behavior that will
+        go from sound -> vibrate -> silent when using the volume rocker
+        to adjust ring volume.
+
     Updated AOSP Froyo [cvpcs]
         Once again merged AOSP froyo's recent changes
 
