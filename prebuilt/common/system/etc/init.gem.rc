@@ -22,8 +22,8 @@ service cwiid_off /system/bin/logwrapper /system/xbin/scriptybox cwiid off
     disabled
     oneshot
 
-on property:service.gem.cwiid.on=1
+on property:gem.cwiid.on=1
     start cwiid_on
 
-on property:service.gem.cwiid.on=0
+on property:gem.cwiid.on=0
     start cwiid_off
