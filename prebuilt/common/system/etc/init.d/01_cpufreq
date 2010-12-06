@@ -21,10 +21,10 @@
 #
 LOG="log -p i -t cvpcs"
 CPUFREQ="/sys/devices/system/cpu/cpu0/cpufreq"
-CPUFREQ_ENABLE="$(getprop persist.sys.gem.cpufreq.on)"
-CPUFREQ_GOVERNOR="$(getprop persist.sys.gem.cpufreq.gov)"
-CPUFREQ_MINIMUM="$(getprop persist.sys.gem.cpufreq.min)"
-CPUFREQ_MAXIMUM="$(getprop persist.sys.gem.cpufreq.max)"
+CPUFREQ_ENABLE="$(getprop persist.gem.cpufreq.on)"
+CPUFREQ_GOVERNOR="$(getprop persist.gem.cpufreq.gov)"
+CPUFREQ_MINIMUM="$(getprop persist.gem.cpufreq.min)"
+CPUFREQ_MAXIMUM="$(getprop persist.gem.cpufreq.max)"
 
 # set some defaults
 if busybox [ -z "${CPUFREQ_ENABLE}" ] ; then

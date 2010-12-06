@@ -7,10 +7,10 @@ service compcache_off /system/bin/logwrapper /system/xbin/scriptybox compcache o
     disabled
     oneshot
 
-on property:persist.service.gem.rzswap.on=1
+on property:persist.gem.rzswap.on=1
     start compcache_on
 
-on property:persist.service.gem.rzswap.on=0
+on property:persist.gem.rzswap.on=0
     start compcache_off
 
 # CWiiD stuff
