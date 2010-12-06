@@ -1,4 +1,11 @@
 1.1.5 [HEAD]:
+    Added GEM system user [cvpcs]
+        Instead of running low-level system apps as the uber-powerful,
+        all-knowing SYSTEM... (que TRON music here) ... I have opted to
+        create a less powerful (but still equally epic) user named "gem"
+        which only has access to what is required to run custom system
+        apps such as GEMSettings and CWiiDConfig
+
     Reverted to 2.1 volume rocker behavior [erasmux]
         Reverted to the original 2.1 volume rocker behavior that will
         go from sound -> vibrate -> silent when using the volume rocker
