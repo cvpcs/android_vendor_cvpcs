@@ -17,8 +17,8 @@ product_version := $(build_name)-$(build_version)-$(PRODUCT_MODEL)
 PRODUCT_BUILD_PROP_OVERRIDES := \
 	BUILD_ID=VZW \
 	BUILD_DISPLAY_ID=VZW \
-	BUILD_NUMBER=2.3.13 \
-	BUILD_DATE_UTC=1282798200 \
+	BUILD_NUMBER=2.3.340 \
+	BUILD_DATE_UTC=1289194863 \
 	TARGET_BUILD_TYPE=user \
 	USER=w30471 \
 	BUILD_VERSION_TAGS=test-keys \
@@ -27,8 +27,8 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
 	PRODUCT_NAME=shadow_vzw \
 	TARGET_DEVICE=cdma_shadow \
 	BUILD_PRODUCT=shadow_vzw \
-	PRIVATE_BUILD_DESC="cdma_shadow-user 2.2 VZW 2.3.13 ota-rel-keys,release-keys" \
-	BUILD_FINGERPRINT=verizon/shadow_vzw/cdma_shadow/shadow:2.2/VZW/23.13:user/ota-rel-keys,release-keys
+	PRIVATE_BUILD_DESC="cdma_shadow-user 2.2.1 VZW 2.3.340 ota-rel-keys,release-keys" \
+	BUILD_FINGERPRINT=verizon/shadow_vzw/cdma_shadow/shadow:2.2.1/VZW/23.340:user/ota-rel-keys,release-keys
 
 # copy some prebuilts
 PRODUCT_COPY_FILES +=  \

@@ -1,4 +1,8 @@
-1.1.5 [HEAD]:
+1.1.6 [HEAD]:
+    Updated shadow props to 2.3.340 [cvpcs] (Obsidian)
+        Updated the latest proprietaries for the obsidian build.
+
+1.1.5:
     Added GEM system user [cvpcs]
         Instead of running low-level system apps as the uber-powerful,
         all-knowing SYSTEM... (que TRON music here) ... I have opted to
