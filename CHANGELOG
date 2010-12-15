@@ -2,6 +2,10 @@
     Updated shadow props to 2.3.340 [cvpcs] (Obsidian)
         Updated the latest proprietaries for the obsidian build.
 
+    Bug fixes:
+        Screen wake reboot [blackdroid/cvpcs] (Obsidian)
+        Audio from source [cvpcs] (Obsidian)
+
 1.1.5:
     Added GEM system user [cvpcs]
         Instead of running low-level system apps as the uber-powerful,
