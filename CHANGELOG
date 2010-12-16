@@ -1,4 +1,11 @@
-1.1.6 [HEAD]:
+1.1.7 [HEAD]:
+    Push notifications [cvpcs]
+        Users will be able to register to receive the latest GEM
+        updates as soon as they come out using Google's cloud-to-
+        device messaging system.  (NOTE: this feature is purely
+        opt-in)
+
+1.1.6:
     Updated shadow props to 2.3.340 [cvpcs] (Obsidian)
         Updated the latest proprietaries for the obsidian build.
 
