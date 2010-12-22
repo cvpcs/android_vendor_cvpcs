@@ -1,4 +1,8 @@
 1.1.7 [HEAD]:
+    New EVO kernels [cvpcs] (Emerald)
+        Updated the supersonic (HTC Evo 4G) kernels to work with
+        the latest 3.30.651.2 props and whatnot.
+
     Updated SuperUser [cvpcs]
         Moved to the more up-to-date SuperUser app by ChainsDD
         included in CyanogenMod.  This should allow installation
