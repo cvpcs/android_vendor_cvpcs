@@ -1,4 +1,7 @@
 1.1.7 [HEAD]:
+    Updated supersonic props to 3.30.651.2 [cvpcs] (Emerald)
+        Updated the latest proprietaries for the emerald build.
+
     Push notifications [cvpcs]
         Users will be able to register to receive the latest GEM
         updates as soon as they come out using Google's cloud-to-
