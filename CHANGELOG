@@ -1,4 +1,9 @@
 1.1.7 [HEAD]:
+    Updated SuperUser [cvpcs]
+        Moved to the more up-to-date SuperUser app by ChainsDD
+        included in CyanogenMod.  This should allow installation
+        of updates from Market to work.
+
     Updated supersonic props to 3.30.651.2 [cvpcs] (Emerald)
         Updated the latest proprietaries for the emerald build.
 
