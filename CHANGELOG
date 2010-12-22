@@ -1,4 +1,15 @@
-1.1.7 [HEAD]:
+1.1.8 [HEAD]:
+    Working, simple push notifications [cvpcs]
+        Push notifications are now working in a usable sense.  At
+        this point, however, they are exteremely simplistic.  They
+        will simply be used to notify users the moment an update
+        or patch is available, and clicking on the notification
+        simply opens a page in the browser to more information.
+        The app will be extended in the future to become more
+        robust.  Push notifications were also moved into GEM Settings
+        so as not to clutter the launcher.
+
+1.1.7:
     New EVO kernels [cvpcs] (Emerald)
         Updated the supersonic (HTC Evo 4G) kernels to work with
         the latest 3.30.651.2 props and whatnot.
