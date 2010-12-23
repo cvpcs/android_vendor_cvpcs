@@ -19,10 +19,10 @@ PRODUCT_PACKAGES += \
 
 # include gem-specific packages
 PRODUCT_PACKAGES += \
-    ADWLauncher \
-    CytownPhone \
+    AppWidgetPicker \
+    CWiiDConfig \
     DSPManager \
-    EliotStockerMusic \
+    GEMNotifications \
     GEMSettings
 
 # include superuser
