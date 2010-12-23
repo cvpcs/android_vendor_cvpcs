@@ -1,4 +1,16 @@
-1.1.8 [HEAD]:
+2.0.0 [HEAD]:
+    Removed all market apps from the build [cvpcs]
+        All market apps have been removed in favor of downloading them from
+        the market (ADW, Musicmod, Gmail, GoogleMaps, etc).  The reason for
+        this is to promote stability by reducing issues updating these apps.
+        For apps that were once available in scriptybox, they have been removed
+        from the switchapk script pending a more stable method of replacing
+        system apps (which will be included in 2.0.0 as well)
+
+    Bugfixes:
+        Fixed search button issue with google search from market [cvpcs]
+
+1.1.8:
     Longpress BACK kills current process [evan charlton/cvpcs]
         If users opt-in, long-pressing BACK will kill the current
         foreground process.  This setting can be modified in GEM
