@@ -1,4 +1,9 @@
 1.1.8 [HEAD]:
+    Added MIUI RIL for Incredible [cvpcs] (Ruby)
+        The HTC RIL that was hacked by the MIUI group is now baked
+        into the HTC Droid Incredible Ruby ROM (no more need to patch
+        it)
+
     Working, simple push notifications [cvpcs]
         Push notifications are now working in a usable sense.  At
         this point, however, they are exteremely simplistic.  They
