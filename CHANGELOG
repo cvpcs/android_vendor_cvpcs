@@ -1,4 +1,9 @@
 1.1.8 [HEAD]:
+    Longpress BACK kills current process [evan charlton/cvpcs]
+        If users opt-in, long-pressing BACK will kill the current
+        foreground process.  This setting can be modified in GEM
+        Settings.
+
     New AppWidgetPicker [boombuler]
         Groups widgets by package when selecting which ones to
         place on the home screen.
