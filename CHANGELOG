@@ -1,6 +1,7 @@
 2.0.0 [HEAD]:
-    Added Matroska container support [aosp]
+    Added simple Matroska container support [aosp]
         Pulled in support for the Matroska media container from gingerbread.
+        This is somewhat buggy and will need to be worked on.
 
     Removed all market apps from the build [cvpcs]
         All market apps have been removed in favor of downloading them from
