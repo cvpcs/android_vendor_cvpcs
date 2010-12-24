@@ -5,10 +5,12 @@
         this is to promote stability by reducing issues updating these apps.
         For apps that were once available in scriptybox, they have been removed
         from the switchapk script pending a more stable method of replacing
-        system apps (which will be included in 2.0.0 as well)
+        system apps (which will be included later)
 
     Bugfixes:
         Fixed search button issue with google search from market [cvpcs]
+        Fixed music continuous skip (hopefully?) [cvpcs]
+        Fixed a problem with longpress back kill dialog [cvpcs]
 
 1.1.8:
     Longpress BACK kills current process [evan charlton/cvpcs]
