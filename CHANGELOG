@@ -1,4 +1,7 @@
 2.0.0 [HEAD]:
+    Added Matroska container support [aosp]
+        Pulled in support for the Matroska media container from gingerbread.
+
     Removed all market apps from the build [cvpcs]
         All market apps have been removed in favor of downloading them from
         the market (ADW, Musicmod, Gmail, GoogleMaps, etc).  The reason for
