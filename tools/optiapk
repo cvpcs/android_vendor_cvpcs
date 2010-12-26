@@ -186,3 +186,5 @@ rm "${APKFILE}.old"
 rm "${APKFILE}.new"
 rm "${APKFILE}.signed"
 
+# wipe out the work directory
+rm -fr "${WORK}"
