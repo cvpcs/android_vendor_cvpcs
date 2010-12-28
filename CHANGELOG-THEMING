@@ -11,7 +11,7 @@ I hope this helps the themers out!
 
 -------------------------------------------------------------------------------
 
-1.1.3 to HEAD:
+1.1.3 to 2.0.0:
 	Complete rework required.  Several AOSP updates across the board to
 	Froyo v2.2.1
 
@@ -27,4 +27,3 @@ I hope this helps the themers out!
 	/system/app/VoiceSearch.apk [removed from gapps package in favor of
                                      market download]
 	/system/framework/framework.jar [modified]
-
