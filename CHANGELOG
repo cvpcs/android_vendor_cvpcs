@@ -16,6 +16,8 @@
         Fixed music continuous skip (hopefully?) [cvpcs]
         Fixed a problem with longpress back kill dialog [cvpcs]
         Working usb for DX/D2 (Obsidian/Tanzanite) [cvpcs]
+        Fixed battery drain on DX/D2 (Obsidian/Tanzanite) [cvpcs] 
+        Improved performance on the DX/D2 (Obsidian/Tanzanite) [cvpcs]
 
 1.1.8:
     Longpress BACK kills current process [evan charlton/cvpcs]
