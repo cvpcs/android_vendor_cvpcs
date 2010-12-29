@@ -78,6 +78,37 @@
 	//                                                                                                           //
 	// ========================================================================================================= //
 	{
+		name: "Ruby 2.0.0 (Froyo)",
+		summary: "Stable",
+		device: "inc",
+		product: "Ruby",
+		incremental: 2000,
+		modversion: "Ruby-2.0.0-ADR6300",
+		file: "ruby/froyo/2.0.0/release/ruby-2.0.0-update.zip",
+		screenshots:
+		[
+		"http://i.imgur.com/Mfjr8.png",
+		"http://i.imgur.com/RqCTS.png"
+		],
+		choices:
+		[
+		{
+			name: "Google Apps",
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "ruby/froyo/2.0.0/release/ruby-2.0.0-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+			]
+		}
+		]
+	},
+	{
 		name: "Ruby 1.1.1 (Froyo)",
 		summary: "Stable",
 		device: "inc",
@@ -157,6 +188,211 @@
 	// MOTOROLA DROID                                                                                            //
 	//                                                                                                           //
 	// ========================================================================================================= //
+	{
+		name: "Sapphire 2.0.0 (Froyo)",
+		summary: "Stable",
+		device: "sholes",
+		product: "Sapphire",
+		incremental: 2000,
+		modversion: "Sapphire-2.0.0-Droid",
+		file: "sapphire/froyo/2.0.0/release/sapphire-2.0.0-update.zip",
+		screenshots:
+		[
+		"http://i.imgur.com/Mfjr8.png",
+		"http://i.imgur.com/RqCTS.png"
+		],
+		choices:
+		[
+		{
+			name: "Google Apps",
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "sapphire/froyo/2.0.0/release/sapphire-2.0.0-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+			]
+		},
+		{
+			name: "Kernel",
+			options:
+			[
+			{
+				name: "cvpcs 7-slot 125-800 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-800LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-800 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-800SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-800 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-800IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-900 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-900LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-900 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-900SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-900 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-900IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1000 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1000LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1000 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1000SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1000 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1000IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1100 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1100LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1100 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1100SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1100 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1100IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1200 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1200LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1200 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1200SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1200 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1200IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1250 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1250LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1250 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1250SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1250 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1250IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1320 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1320LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1320 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1320SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1320 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x125-1320IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-800 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-800LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-800 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-800SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-800 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-800IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-900 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-900LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-900 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-900SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-900 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-900IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1000 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1000LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1000 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1000SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1000 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1000IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1100 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1100LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1100 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1100SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1100 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1100IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1200 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1200LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1200 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1200SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1200 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1200IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1250 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1250LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1250 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1250SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1250 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1250IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1320 mhz low voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1320LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1320 mhz standard voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1320SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1320 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.0/kernels/latest/sholes_sapphire_7x250-1320IV.zip"
+			}
+			]
+		}
+		]
+	},
 	{
 		name: "Sapphire 1.1.1 (Froyo)",
 		summary: "Stable",
