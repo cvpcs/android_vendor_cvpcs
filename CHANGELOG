@@ -1,4 +1,8 @@
-2.0.0 [HEAD]:
+2.0.1 [HEAD]:
+    Bugfixes:
+        An ACTUAL fix for battery drain/performance on DX (Obsidian) [cvpcs]
+
+2.0.0:
     Added simple Matroska container support [aosp]
         Pulled in support for the Matroska media container from gingerbread.
         This is somewhat buggy and will need to be worked on.
