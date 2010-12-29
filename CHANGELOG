@@ -7,6 +7,7 @@
 
     Bugfixes:
         An ACTUAL fix for battery drain/performance on DX (Obsidian) [cvpcs]
+        Fix a bug related to cwiid starting (Obsidian) [cvpcs]
 
 2.0.0:
     Added simple Matroska container support [aosp]
