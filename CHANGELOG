@@ -1,4 +1,10 @@
 2.0.1 [HEAD]:
+    Moved boot/recovery update packages (Obsidian) [cvpcs]
+        The boot package for obsidian has been moved to /system and the
+        custom recovery has been removed in favor of utilizing koush's
+        bootstrap recovery.  This will allow users to make complete nandroid
+        flashes back and forth between obsidian and other roms.
+
     Bugfixes:
         An ACTUAL fix for battery drain/performance on DX (Obsidian) [cvpcs]
 
