@@ -1,4 +1,11 @@
-2.0.1 [HEAD]:
+2.0.2 [HEAD]:
+    Fixed compcache detection in GEMSettings [cvpcs]
+        Compcache is now detected by the presence of its kernel module
+        as well as swap support.  This ensures that a system with swap
+        support but no compcache module doesn't falsly get detected
+        as having support.
+
+2.0.1:
     Moved boot/recovery update packages (Obsidian/Tanzanite) [cvpcs]
         The boot package for obsidian and tanzanite has been moved
         to /system and the custom recovery has been removed in favor
