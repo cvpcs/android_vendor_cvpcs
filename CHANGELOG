@@ -1,4 +1,7 @@
 2.0.2 [HEAD]:
+    Updated props for evo (Emerald) [cvpcs]
+        Updated to the 3.70 props for HTC Evo 4G
+
     Fixed compcache detection in GEMSettings [cvpcs]
         Compcache is now detected by the presence of its kernel module
         as well as swap support.  This ensures that a system with swap
