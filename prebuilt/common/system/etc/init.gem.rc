@@ -27,3 +27,9 @@ on property:gem.cwiid.on=1
 
 on property:gem.cwiid.on=0
     start cwiid_off
+
+# Scriptybox-GUI interface
+service scriptybox_exec /system/bin/logwrapper /system/xbin/scriptybox
+
+on property:gem.sb.exec=1
+    start scriptybox_exec
