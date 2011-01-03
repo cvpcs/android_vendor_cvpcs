@@ -13,6 +13,11 @@ I hope this helps the themers out!
 
 2.0.1 to 2.0.2:
         /system/app/GEMSettings.apk [modified]
+	/system/app/CarHomeGoogle.apk [removed from gapps package]
+	/system/app/CarHomeLauncher.apk [removed from gapps package]
+	/system/app/com.amazon.mp3.apk [removed from gapps package]
+	/system/app/Vending.apk [updated to 2.2.7 in gapps package]
+	/system/app/VVMStub.apk [removed from build]
 
 2.0.0 to 2.0.1:
         Nothing changed (2.0.0 themes work on 2.0.1)

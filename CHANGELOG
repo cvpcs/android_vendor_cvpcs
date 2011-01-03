@@ -1,4 +1,16 @@
 2.0.2 [HEAD]:
+    Removed Visual Voice Mail from props (Sapphire) [cvpcs]
+        This is (a) a poorly written app and also (b) available on
+        market anyway.
+
+    Updated market to 2.2.7 [cvpcs]
+        Updated gapps package to the new market.
+
+    Removed more unnecessary items form gapps package [cvpcs]
+        It was brought to my attention that some of the gapps items
+        (namely amazon mp3 and car home) are available on market, so
+        they have been removed from the gapps package.
+
     Updated kernel for evo (Emerald) [cvpcs]
         Updated to a more stable kernel.
 
