@@ -30,6 +30,8 @@ on property:gem.cwiid.on=0
 
 # Scriptybox-GUI interface
 service scriptybox_exec /system/bin/logwrapper /system/xbin/scriptybox
+    disabled
+    oneshot
 
 on property:gem.sb.exec=1
     start scriptybox_exec
