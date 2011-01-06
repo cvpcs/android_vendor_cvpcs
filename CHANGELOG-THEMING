@@ -18,6 +18,9 @@ I hope this helps the themers out!
 	/system/app/com.amazon.mp3.apk [removed from gapps package]
 	/system/app/Vending.apk [updated to 2.2.7 in gapps package]
 	/system/app/VVMStub.apk [removed from build]
+        /system/framework/framework.jar [modified]
+        /system/framework/framework-res.apk [modified]
+        /system/framework/services.jar [modified]
 
 2.0.0 to 2.0.1:
         Nothing changed (2.0.0 themes work on 2.0.1)
