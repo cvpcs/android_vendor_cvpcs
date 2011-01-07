@@ -1,4 +1,9 @@
 2.0.2 [HEAD]:
+    Removed need for libc-ext [koush]:
+        Koush made modifications to busybox that meant we no longer
+        required this external library that was added so many eons
+        ago when the gems were so young.  It will be missed.
+
     Spare parts/Dev Tools moved into GEM Settings [cvpcs/robstemen]
         Spare Parts/Dev Tools are great tools but are not generally
         used on a day-to-day basis.  For this reason they have been
