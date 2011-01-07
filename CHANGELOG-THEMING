@@ -5,39 +5,42 @@ release.  The format is as follows:
 
 [oldversion] to [newversion]:
 	[file path] [description of what happened file-wise
-                     (think created/renamed/etc)]
+     (think created/renamed/etc)]
 
 I hope this helps the themers out!
 
 -------------------------------------------------------------------------------
 
 2.0.1 to 2.0.2:
-        /system/app/GEMSettings.apk [modified]
 	/system/app/CarHomeGoogle.apk [removed from gapps package]
 	/system/app/CarHomeLauncher.apk [removed from gapps package]
 	/system/app/com.amazon.mp3.apk [removed from gapps package]
+	/system/app/Development.apk [modified]
+	/system/app/GEMNotifications.apk [modified]
+	/system/app/GEMSettings.apk [modified]
+	/system/app/SpareParts.apk [modified]
 	/system/app/Vending.apk [updated to 2.2.7 in gapps package]
 	/system/app/VVMStub.apk [removed from build]
-        /system/framework/framework.jar [modified]
-        /system/framework/framework-res.apk [modified]
-        /system/framework/services.jar [modified]
+	/system/framework/framework.jar [modified]
+	/system/framework/framework-res.apk [modified]
+	/system/framework/services.jar [modified]
 
 2.0.0 to 2.0.1:
-        Nothing changed (2.0.0 themes work on 2.0.1)
+	Nothing changed (2.0.0 themes work on 2.0.1)
 
 1.1.3 to 2.0.0:
 	Complete rework required.  Several AOSP updates across the board to
 	Froyo v2.2.1
 
 1.1.1 to 1.1.3:
-        /system/framework/framework-res.apk [modified]
+	/system/framework/framework-res.apk [modified]
 
 1.1.0 to 1.1.1:
 	/system/app/Camera.apk [modified]
 	/system/app/GoogleQuickSearchBox.apk [removed from gapps package in
-                                              favor of market download]
+	                                      favor of market download]
 	/system/app/Gmail.apk [updated to v2.2.1 in gapps package]
 	/system/app/MediaProvider.apk [modified]
 	/system/app/VoiceSearch.apk [removed from gapps package in favor of
-                                     market download]
+	                             market download]
 	/system/framework/framework.jar [modified]
