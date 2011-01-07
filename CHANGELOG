@@ -1,4 +1,26 @@
 2.0.2 [HEAD]:
+    Spare parts/Dev Tools moved into GEM Settings [cvpcs/robstemen]
+        Spare Parts/Dev Tools are great tools but are not generally
+        used on a day-to-day basis.  For this reason they have been
+        removed from the launcher and put in GEM Settings.
+
+    Complete rewrite of GEM Settings [cvpcs/robstemen (rework)]
+                                     [drz (graphics)]
+        GEM Settings have been completely rewritten to be more stable
+        and better organized.  Icons have been added as well in order
+        to make the screens more plesant and professional.  The way
+        in which settings are handled has changed to stop settings
+        from not being set on occassion, and organization has changed
+        to make things easier to find.
+
+    Added Galaxy S Power Widget [cvpcs (rework)]
+                                [drz (some graphics)]
+                                [pedlar/mtwebster/nadlabak (base)]
+        Added a power widget similar in form to that which is present
+        in the pulldown of the Galaxy S stock phones.  This code was
+        largely rewritten from the CM implementation so thanks to the
+        CM team for their original work.
+
     Removed Visual Voice Mail from props (Sapphire) [cvpcs]
         This is (a) a poorly written app and also (b) available on
         market anyway.
