@@ -1,4 +1,11 @@
 2.0.2 [HEAD]:
+    Added swype-to-clear individaul notification [Evan Charlton]
+        Evan Charlton added this handy feature to CM awhile back and
+        as I've personally wanted the ability to clear a single
+        notification more times than I can remember, it's been added!
+        It's done by swiping left or right over the top of any
+        cancellable notification.
+
     Removed need for libc-ext [koush]:
         Koush made modifications to busybox that meant we no longer
         required this external library that was added so many eons
