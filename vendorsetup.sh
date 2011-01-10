@@ -22,10 +22,12 @@
 
 add_lunch_combo cvpcs_emerald_supersonic-userdebug
 add_lunch_combo cvpcs_emerald_supersonic-eng
-add_lunch_combo cvpcs_ruby_inc-userdebug
-add_lunch_combo cvpcs_ruby_inc-eng
+add_lunch_combo cvpcs_titanite_mecha-userdebug
+add_lunch_combo cvpcs_titanite_mecha-eng
 add_lunch_combo cvpcs_obsidian_shadow-userdebug
 add_lunch_combo cvpcs_obsidian_shadow-eng
+add_lunch_combo cvpcs_ruby_inc-userdebug
+add_lunch_combo cvpcs_ruby_inc-eng
 add_lunch_combo cvpcs_sapphire_sholes-userdebug
 add_lunch_combo cvpcs_sapphire_sholes-eng
 add_lunch_combo cvpcs_tanzanite_droid2-userdebug

@@ -1,4 +1,9 @@
 2.0.2 [HEAD]:
+    Added beginnings of a vendor for the mecha (Titanite) [cvpcs]
+        With an available system dump for the HTC Thunderbolt (mecha),
+        decided it would be a good idea to get rolling on a basic
+        vendor for it.
+
     Added swype-to-clear individaul notification [Evan Charlton]
         Evan Charlton added this handy feature to CM awhile back and
         as I've personally wanted the ability to clear a single
