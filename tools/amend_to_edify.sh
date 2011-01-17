@@ -38,53 +38,53 @@ case $arg0 in
 		;;
 	format)
 		echo "format(\"MTD\", \"$arg1\");" |
-			sed -r 's/SYSTEM:/system/' |
-			sed -r 's/DATA:/data/' |
-			sed -r 's/CACHE:/cache/' >> "${EDIFY}"
+			sed -r 's/SYSTEM:/system/g' |
+			sed -r 's/DATA:/data/g' |
+			sed -r 's/CACHE:/cache/g' >> "${EDIFY}"
 		;;
 	copy_dir)
 		echo "package_extract_dir(\"$arg1\", \"$arg2\");" |
-			sed -r 's/PACKAGE://' |
-			sed -r 's/SYSTEM:/\/system/' |
-			sed -r 's/DATA:/\/data/' |
-			sed -r 's/CACHE:/\/cache/' >> "${EDIFY}"
+			sed -r 's/PACKAGE://g' |
+			sed -r 's/SYSTEM:/\/system/g' |
+			sed -r 's/DATA:/\/data/g' |
+			sed -r 's/CACHE:/\/cache/g' >> "${EDIFY}"
 		;;
 	symlink)
 		echo "symlink(\"$arg1\", \"$arg2\");" |
-			sed -r 's/SYSTEM:/\/system\//' |
-			sed -r 's/DATA:/\/data\//' |
-			sed -r 's/CACHE:/\/cache\//' >> "${EDIFY}"
+			sed -r 's/SYSTEM:/\/system\//g' |
+			sed -r 's/DATA:/\/data\//g' |
+			sed -r 's/CACHE:/\/cache\//g' >> "${EDIFY}"
 		;;
 	set_perm_recursive)
 		echo "set_perm_recursive($arg1, $arg2, $arg3, $arg4, \"$arg5\");" |
-			sed -r 's/SYSTEM:/\/system\//' |
-			sed -r 's/DATA:/\/data\//' |
-			sed -r 's/CACHE:/\/cache\//' >> "${EDIFY}"
+			sed -r 's/SYSTEM:/\/system\//g' |
+			sed -r 's/DATA:/\/data\//g' |
+			sed -r 's/CACHE:/\/cache\//g' >> "${EDIFY}"
 		;;
 	set_perm)
 		echo "set_perm($arg1, $arg2, $arg3, \"$arg4\");" |
-			sed -r 's/SYSTEM:/\/system\//' |
-			sed -r 's/DATA:/\/data\//' |
-			sed -r 's/CACHE:/\/cache\//' >> "${EDIFY}"
+			sed -r 's/SYSTEM:/\/system\//g' |
+			sed -r 's/DATA:/\/data\//g' |
+			sed -r 's/CACHE:/\/cache\//g' >> "${EDIFY}"
 		;;
 	write_raw_image)
 		echo "assert(package_extract_file(\"$arg1\", \"/tmp/$arg1\")," |
-			sed -r 's/PACKAGE://' >> "${EDIFY}"
+			sed -r 's/PACKAGE://g' >> "${EDIFY}"
 		echo "       write_raw_image(\"/tmp/$arg1\", \"$arg2\")," |
-			sed -r 's/PACKAGE://' |
-			sed -r 's/BOOT:/boot/' >> "${EDIFY}"
+			sed -r 's/PACKAGE://g' |
+			sed -r 's/BOOT:/boot/g' >> "${EDIFY}"
 		echo "       delete(\"/tmp/$arg1\"));" |
-			sed -r 's/PACKAGE://' >> "${EDIFY}"
+			sed -r 's/PACKAGE://g' >> "${EDIFY}"
 		;;
 	run_program)
 		echo "assert(package_extract_file(\"$arg1\", \"/tmp/$arg1\")," |
-			sed -r 's/PACKAGE://' >> "${EDIFY}"
+			sed -r 's/PACKAGE://g' >> "${EDIFY}"
 		echo "       set_perm(0, 0, 0755, \"/tmp/$arg1\")," |
-			sed -r 's/PACKAGE://' >> "${EDIFY}"
+			sed -r 's/PACKAGE://g' >> "${EDIFY}"
 		echo "       run_program(\"/tmp/$arg1\")," |
-			sed -r 's/PACKAGE://' >> "${EDIFY}"
+			sed -r 's/PACKAGE://g' >> "${EDIFY}"
 		echo "       delete(\"/tmp/$arg1\"));" |
-			sed -r 's/PACKAGE://' >> "${EDIFY}"
+			sed -r 's/PACKAGE://g' >> "${EDIFY}"
 		;;
 	*)
 		echo "${line}" >> "${EDIFY}"
