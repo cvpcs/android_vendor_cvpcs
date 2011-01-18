@@ -12,8 +12,6 @@ I hope this helps the themers out!
 -------------------------------------------------------------------------------
 
 2.0.1 to 2.0.2:
-	/system/app/CarHomeGoogle.apk [removed from gapps package]
-	/system/app/CarHomeLauncher.apk [removed from gapps package]
 	/system/app/com.amazon.mp3.apk [removed from gapps package]
 	/system/app/Development.apk [modified]
 	/system/app/LatinImeGoogle.apk [removed from gapps package in favor of
