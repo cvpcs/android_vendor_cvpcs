@@ -171,7 +171,11 @@ java -Xmx2048m \
 
 # time for release!
 mv "${WORK}/update-signed.zip" "${RELEASEPACKAGE}"
-"${MD5}" "${RELEASEPACKAGE}" \
+
+# make our md5sum
+cd "${RELEASEDIR}"
+echo $(cd "$(dirname "${RELEASEPACKAGE}")" && \
+    "${MD5}" "$(basename "${RELEASEPACKAGE}")") \
     > "${RELEASEPACKAGE}.md5sum"
 MD5SUM=$(cat "${RELEASEPACKAGE}.md5sum" | awk '{print $1}')
 
