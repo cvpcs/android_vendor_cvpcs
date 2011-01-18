@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     DrmProvider \
     Email \
     Gallery3D \
+    LatinIME \
     Launcher2 \
     Mms \
     Music \
@@ -30,7 +31,6 @@ PRODUCT_PACKAGES += \
     SyncProvider
 # The below were removed from the list above
 #    Provision \
-#    LatinIME \
 #    QuickSearchBox \
 
 # end of modified generic config

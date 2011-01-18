@@ -1,4 +1,7 @@
 2.0.2 [HEAD]:
+    Updated to market 2.2.11 [cvpcs]
+        Updated to the latest market in the gapps package.
+
     Added beginnings of a vendor for the mecha (Titanite) [cvpcs]
         With an available system dump for the HTC Thunderbolt (mecha),
         decided it would be a good idea to get rolling on a basic
