@@ -4,12 +4,88 @@
 	donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=UXH6LPZL9E5XW&lc=US&item_name=CCRoms%20%28CVPCS%29&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted",
 	mirrors:
 	[
-		"http://files.ccroms.net/download.php?q=",
-		"http://files.ccroms.net/download.php?m=kover&q=",
-		"http://files.ccroms.net/download.php?m=mdw&q="
+		"http://files.ccroms.net/download.php?q="
 	],
 	roms:
 	[
+	// ========================================================================================================= //
+	//                                                                                                           //
+	// TANZANITE BUILD                                                                                           //
+	//                                                                                                           //
+	// MOTOROLA DROID2 (Droid 2)                                                                                 //
+	//                                                                                                           //
+	// ========================================================================================================= //
+	{
+		name: "Tanzanite 2.0.2 (Froyo)",
+		summary: "Beta",
+		device: "droid2",
+		product: "Tanzanite",
+		incremental: 2020,
+		modversion: "Tanzanite-2.0.2-DROID2",
+		file: "tanzanite/froyo/2.0.2/release/tanzanite-2.0.2-update.zip",
+		screenshots:
+		[
+		"http://i.imgur.com/Mfjr8.png",
+		"http://i.imgur.com/RqCTS.png",
+		"http://i.imgur.com/9NLJL.png"
+		],
+		choices:
+		[
+		{
+			name: "Google Apps",
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "tanzanite/froyo/2.0.2/release/tanzanite-2.0.2-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+			]
+		}
+		]
+	},
+	// ========================================================================================================= //
+	//                                                                                                           //
+	// OBSIDIAN BUILD                                                                                            //
+	//                                                                                                           //
+	// MOTOROLA DROIDX/SHADOW (Droid X)                                                                          //
+	//                                                                                                           //
+	// ========================================================================================================= //
+	{
+		name: "Obsidian 2.0.2 (Froyo)",
+		summary: "Beta",
+		device: "droidx",
+		product: "Obsidian",
+		incremental: 2020,
+		modversion: "Obsidian-2.0.2-DROIDX",
+		file: "obsidian/froyo/2.0.2/release/obsidian-2.0.2-update.zip",
+		screenshots:
+		[
+		"http://i.imgur.com/Mfjr8.png",
+		"http://i.imgur.com/RqCTS.png",
+		"http://i.imgur.com/9NLJL.png"
+		],
+		choices:
+		[
+		{
+			name: "Google Apps",
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "obsidian/froyo/2.0.2/release/obsidian-2.0.2-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+			]
+		}
+		]
+	},
 	// ========================================================================================================= //
 	//                                                                                                           //
 	// EMERALD BUILD                                                                                             //
@@ -17,6 +93,38 @@
 	// HTC PC36100 (Evo 4G)                                                                                      //
 	//                                                                                                           //
 	// ========================================================================================================= //
+	{
+		name: "Emerald 2.0.2 (Froyo)",
+		summary: "Stable",
+		device: "supersonic",
+		product: "Emerald",
+		incremental: 2020,
+		modversion: "Emerald-2.0.2-PC36100",
+		file: "emerald/froyo/2.0.2/release/emerald-2.0.2-update.zip",
+		screenshots:
+		[
+		"http://i.imgur.com/Mfjr8.png",
+		"http://i.imgur.com/RqCTS.png",
+		"http://i.imgur.com/9NLJL.png"
+		],
+		choices:
+		[
+		{
+			name: "Google Apps",
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "emerald/froyo/2.0.2/release/emerald-2.0.2-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+			]
+		}
+		]
+	},
 	{
 		name: "Emerald 1.1.1 (Froyo)",
 		summary: "Alpha Testing",
@@ -77,6 +185,38 @@
 	// HTC ADR6300 (INCREDIBLE)                                                                                  //
 	//                                                                                                           //
 	// ========================================================================================================= //
+	{
+		name: "Ruby 2.0.2 (Froyo)",
+		summary: "Stable",
+		device: "inc",
+		product: "Ruby",
+		incremental: 2020,
+		modversion: "Ruby-2.0.2-ADR6300",
+		file: "ruby/froyo/2.0.2/release/ruby-2.0.2-update.zip",
+		screenshots:
+		[
+		"http://i.imgur.com/Mfjr8.png",
+		"http://i.imgur.com/RqCTS.png",
+		"http://i.imgur.com/9NLJL.png"
+		],
+		choices:
+		[
+		{
+			name: "Google Apps",
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "ruby/froyo/2.0.2/release/ruby-2.0.2-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+			]
+		}
+		]
+	},
 	{
 		name: "Ruby 2.0.0 (Froyo)",
 		summary: "Stable",
@@ -188,6 +328,212 @@
 	// MOTOROLA DROID                                                                                            //
 	//                                                                                                           //
 	// ========================================================================================================= //
+	{
+		name: "Sapphire 2.0.2 (Froyo)",
+		summary: "Stable",
+		device: "sholes",
+		product: "Sapphire",
+		incremental: 2020,
+		modversion: "Sapphire-2.0.2-Droid",
+		file: "sapphire/froyo/2.0.2/release/sapphire-2.0.2-update.zip",
+		screenshots:
+		[
+		"http://i.imgur.com/Mfjr8.png",
+		"http://i.imgur.com/RqCTS.png",
+		"http://i.imgur.com/9NLJL.png"
+		],
+		choices:
+		[
+		{
+			name: "Google Apps",
+			options:
+			[
+			{
+				name: "Install Google Apps",
+				file: "sapphire/froyo/2.0.2/release/sapphire-2.0.2-gapps-update.zip"
+			},
+			{
+				name: "Don't install Google Apps",
+				urls: [""]
+			}
+			]
+		},
+		{
+			name: "Kernel",
+			options:
+			[
+			{
+				name: "cvpcs 7-slot 125-800 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-800LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-800 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-800SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-800 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-800IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-900 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-900LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-900 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-900SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-900 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-900IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1000 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1000LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1000 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1000SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1000 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1000IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1100 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1100LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1100 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1100SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1100 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1100IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1200 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1200LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1200 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1200SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1200 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1200IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1250 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1250LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1250 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1250SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1250 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1250IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1320 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1320LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1320 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1320SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 125-1320 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x125-1320IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-800 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-800LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-800 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-800SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-800 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-800IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-900 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-900LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-900 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-900SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-900 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-900IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1000 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1000LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1000 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1000SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1000 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1000IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1100 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1100LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1100 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1100SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1100 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1100IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1200 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1200LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1200 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1200SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1200 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1200IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1250 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1250LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1250 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1250SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1250 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1250IV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1320 mhz low voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1320LV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1320 mhz standard voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1320SV.zip"
+			},
+			{
+				name: "cvpcs 7-slot 250-1320 mhz increasing voltage",
+				file: "sapphire/froyo/2.0.2/kernels/latest/sholes_sapphire_7x250-1320IV.zip"
+			}
+			]
+		}
+		]
+	},
 	{
 		name: "Sapphire 2.0.0 (Froyo)",
 		summary: "Stable",
