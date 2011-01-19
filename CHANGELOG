@@ -1,4 +1,11 @@
-2.0.2 [HEAD]:
+2.0.3 [HEAD]:
+    Added XZ/LZMA compression utilities [cvpcs]
+        This is more of an addition for future use, but I have added
+        from-source builds for the xz (lzma) program, which can be
+        used by other parts of the system in the future to provide
+        lzma (think 7zip) compression.
+
+2.0.2:
     Updated to market 2.2.11 [cvpcs]
         Updated to the latest market in the gapps package.
 
