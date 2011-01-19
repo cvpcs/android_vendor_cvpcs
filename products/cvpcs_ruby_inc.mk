@@ -37,7 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.rommanager.developerid=cvpcs \
 	ro.cvpcs.build.name=$(build_name) \
 	ro.cvpcs.build.version=$(build_version) \
-	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/ruby/froyo/$(build_version)
+	ro.cvpcs.scriptybox.files_url=http://files.ccroms.net/ruby/gingerbread/$(build_version)
 
 # include proprietaries for now
 USE_PROPRIETARIES := \

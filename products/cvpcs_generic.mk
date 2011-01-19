@@ -1,14 +1,7 @@
 # modified generic config
 
-$(call inherit-product, vendor/cvpcs/products/cvpcs_core.mk)
-
-PRODUCT_NAME := cvpcs_generic
-PRODUCT_BRAND := cvpcs
-PRODUCT_DEVICE :=
-
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES := \
     AccountAndSyncSettings \
-    CarHome \
     DeskClock \
     AlarmProvider \
     Bluetooth \
@@ -26,11 +19,19 @@ PRODUCT_PACKAGES += \
     Protips \
     Settings \
     Sync \
+    SystemUI \
     Updater \
     CalendarProvider \
     SyncProvider
 # The below were removed from the list above
 #    Provision \
 #    QuickSearchBox \
+
+$(call inherit-product, vendor/cvpcs/products/cvpcs_core.mk)
+
+# Overrides
+PRODUCT_BRAND := cvpcs
+PRODUCT_DEVICE := generic
+PRODUCT_NAME := cvpcs_generic
 
 # end of modified generic config

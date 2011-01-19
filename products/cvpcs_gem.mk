@@ -4,14 +4,13 @@ $(call inherit-product, vendor/cvpcs/products/cvpcs_generic.mk)
 
 PRODUCT_NAME := cvpcs_gem
 PRODUCT_BRAND := cvpcs
-PRODUCT_DEVICE :=
+PRODUCT_DEVICE := generic
 
 # include hdpi packages
 PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     MagicSmokeWallpapers \
-    SoundRecorder \
     VisualizationWallpapers \
     VoiceDialer \
     libRS \
